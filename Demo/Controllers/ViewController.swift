@@ -15,11 +15,11 @@ class ViewController: BaseViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print("hi mom!")
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		self.logo.rotateAnimation(key: "load", rep: .infinity, duration: 2.5)
+		self.view.addRippleEffect(pos: self.view.center, size: self.logo.frame)
 	}
 	
 	
