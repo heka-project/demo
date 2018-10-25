@@ -20,11 +20,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="JhG-Na-chT">
                                 <rect key="frame" x="119" y="337.66666666666669" width="137" height="137"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-R3-c6o">
+                                <rect key="frame" x="142" y="482" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647058823529" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
                             <constraint firstItem="JhG-Na-chT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="00g-hY-wye"/>
+                            <constraint firstItem="oso-R3-c6o" firstAttribute="top" secondItem="JhG-Na-chT" secondAttribute="bottom" constant="7.3333333333333144" id="Cgd-24-TS5"/>
                             <constraint firstItem="JhG-Na-chT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VZw-Fw-NnW"/>
+                            <constraint firstItem="oso-R3-c6o" firstAttribute="centerX" secondItem="JhG-Na-chT" secondAttribute="centerX" id="wLe-PM-B6d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

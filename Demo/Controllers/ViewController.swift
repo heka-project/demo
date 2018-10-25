@@ -22,5 +22,4 @@ class ViewController: BaseViewController {
 		self.view.addRippleEffect(pos: self.view.center, size: self.logo.frame)
 	}
 	
-	
 }
