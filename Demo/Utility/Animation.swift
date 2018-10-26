@@ -12,7 +12,7 @@ import UIKit
 extension UIView {
 	func rotateAnimation(key: String, rep: Float, duration: Float) {
 		let anim = CABasicAnimation.init(keyPath: "transform.rotation.z")
-		anim.toValue = NSNumber(value: M_PI * 2.0)
+		anim.toValue = .pi * 2.0
 		anim.duration = CFTimeInterval(duration)
 		anim.isCumulative = true
 		anim.repeatCount = rep

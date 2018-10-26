@@ -20,7 +20,7 @@ class Service: NSObject {
 		return session
 	}()
 	
-	private let serviceType = "example-type"
+	private let serviceType = "test-service"
 	private let peerID = MCPeerID(displayName: UIDevice.current.name)
 	
 	private let serviceAdvertiser: MCNearbyServiceAdvertiser
