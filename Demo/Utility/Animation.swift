@@ -11,13 +11,13 @@ import UIKit
 
 extension UIView {
 	func rotateAnimation(key: String, rep: Float, duration: Float) {
-		let anim = CABasicAnimation.init(keyPath: "transform.rotation.z")
-		anim.toValue = .pi * 2.0
-		anim.duration = CFTimeInterval(duration)
-		anim.isCumulative = true
-		anim.repeatCount = rep
-		anim.timingFunction = CAMediaTimingFunction(name: .linear)
-		self.layer.add(anim, forKey: key)
+		let rotateAnim = CABasicAnimation.init(keyPath: "transform.rotation.z")
+		rotateAnim.toValue = .pi * 2.0
+		rotateAnim.duration = CFTimeInterval(duration)
+		rotateAnim.isCumulative = true
+		rotateAnim.repeatCount = rep
+		rotateAnim.timingFunction = CAMediaTimingFunction(name: .linear)
+		self.layer.add(rotateAnim, forKey: key)
 	}
 	
 	func addRippleEffect(pos: CGPoint, size: CGRect) {
@@ -34,11 +34,11 @@ extension UIView {
 		
 		let scaleAnim = CABasicAnimation(keyPath: "transform.scale")
 		scaleAnim.fromValue = NSValue.init(caTransform3D: CATransform3DIdentity)
-		scaleAnim.toValue = NSValue(caTransform3D: CATransform3DMakeScale(6, 4.5, 1))
+		scaleAnim.toValue = NSValue(caTransform3D: CATransform3DMakeScale(5, 5, 2))
 		
 		let opacityAnim = CABasicAnimation(keyPath: "opacity")
 		opacityAnim.fromValue = 1
-		opacityAnim.toValue = nil
+		opacityAnim.toValue = 0
 		
 		let animation = CAAnimationGroup()
 		animation.animations = [scaleAnim, opacityAnim]

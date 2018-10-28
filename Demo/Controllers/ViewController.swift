@@ -24,16 +24,19 @@ class ViewController: BaseViewController {
 		let cell = CAEmitterCell()
 		cell.birthRate = 3
 		cell.emissionRange = .pi * 2
-		cell.color = UIColor.appPink(a: 0.5).cgColor
+		cell.color = UIColor.appPink(a: 1.0).cgColor
 		cell.alphaRange = 1.0
-		cell.lifetime = 10
-		cell.velocity = 100
-		cell.scale = 0.3
+		cell.lifetime = 5
+		cell.velocity = 80
+		cell.scale = 0.6
+		cell.scaleRange = 0.5
+		cell.redRange = 10
 		cell.contents = UIImage.init(imageLiteralResourceName: "particle").cgImage
 		emitterTest.emitterCells = [cell]
 		self.view.layer.addSublayer(emitterTest)
 		self.logo.rotateAnimation(key: "load", rep: .infinity, duration: 2.5)
 		self.view.addRippleEffect(pos: self.view.center, size: self.logo.frame)
+		self.view.bringSubviewToFront(self.logo)
 	}
 	
 }
