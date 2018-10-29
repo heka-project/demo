@@ -10,6 +10,25 @@ import Foundation
 import UIKit
 
 extension UIView {
+	
+	func addParticleEffect(center: CGPoint) {
+		let emitterTest = CAEmitterLayer()
+		emitterTest.emitterPosition = center
+		let cell = CAEmitterCell()
+		cell.birthRate = 3
+		cell.emissionRange = .pi * 2
+		cell.color = UIColor.appPink(a: 1.0).cgColor
+		cell.alphaRange = 1.0
+		cell.lifetime = 5
+		cell.velocity = 80
+		cell.scale = 0.6
+		cell.scaleRange = 0.5
+		cell.redRange = 10
+		cell.contents = UIImage.init(imageLiteralResourceName: "particle").cgImage
+		emitterTest.emitterCells = [cell]
+		self.layer.addSublayer(emitterTest)
+	}
+	
 	func rotateAnimation(key: String, rep: Float, duration: Float) {
 		let rotateAnim = CABasicAnimation.init(keyPath: "transform.rotation.z")
 		rotateAnim.toValue = .pi * 2.0

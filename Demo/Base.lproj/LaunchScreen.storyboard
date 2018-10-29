@@ -16,16 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="q8F-fQ-TMW">
-                                <rect key="frame" x="119" y="337.66666666666669" width="137" height="137"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
-                        <constraints>
-                            <constraint firstItem="q8F-fQ-TMW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="023-aY-SHe"/>
-                            <constraint firstItem="q8F-fQ-TMW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YhA-qE-LJS"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -34,7 +25,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo" width="137.66667175292969" height="137.66667175292969"/>
-    </resources>
 </document>
