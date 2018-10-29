@@ -19,7 +19,6 @@
 		9700EA9B2186C54600A6E4DA /* manrope-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA8F2186C54500A6E4DA /* manrope-light.ttf */; };
 		9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA902186C54500A6E4DA /* manrope-medium.ttf */; };
 		9700EA9D2186C54600A6E4DA /* manrope-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA912186C54600A6E4DA /* manrope-bold.otf */; };
-		97586ACA2187281900A05971 /* P2PListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586AC92187281900A05971 /* P2PListener.swift */; };
 		97586ACC21874DAE00A05971 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97586ACB21874DAE00A05971 /* Secrets.plist */; };
 		97586ACE218754DC00A05971 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586ACD218754DC00A05971 /* Global.swift */; };
 		97664386217F1FAE00EB4C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97664385217F1FAE00EB4C5F /* AppDelegate.swift */; };
@@ -52,7 +51,6 @@
 		9700EA8F2186C54500A6E4DA /* manrope-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-light.ttf"; sourceTree = "<group>"; };
 		9700EA902186C54500A6E4DA /* manrope-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-medium.ttf"; sourceTree = "<group>"; };
 		9700EA912186C54600A6E4DA /* manrope-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.otf"; sourceTree = "<group>"; };
-		97586AC92187281900A05971 /* P2PListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PListener.swift; sourceTree = "<group>"; };
 		97586ACB21874DAE00A05971 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		97586ACD218754DC00A05971 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		97664382217F1FAE00EB4C5F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				97DB2B7B2181B90A0060CA50 /* P2PService.swift */,
-				97586AC92187281900A05971 /* P2PListener.swift */,
 				97DB2B7D2181B97B0060CA50 /* Advertiser.swift */,
 				97DB2B7F2181B9B40060CA50 /* Browser.swift */,
 				97DB2B812181B9DB0060CA50 /* Session.swift */,
@@ -299,7 +296,6 @@
 				97586ACE218754DC00A05971 /* Global.swift in Sources */,
 				97869C3821815643007B0C73 /* LoadingView.swift in Sources */,
 				97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */,
-				97586ACA2187281900A05971 /* P2PListener.swift in Sources */,
 				97DB2B802181B9B40060CA50 /* Browser.swift in Sources */,
 				97664388217F1FAE00EB4C5F /* BaseViewController.swift in Sources */,
 				97869C3C218159B6007B0C73 /* Animation.swift in Sources */,
