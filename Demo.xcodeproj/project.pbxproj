@@ -20,6 +20,8 @@
 		9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA902186C54500A6E4DA /* manrope-medium.ttf */; };
 		9700EA9D2186C54600A6E4DA /* manrope-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA912186C54600A6E4DA /* manrope-bold.otf */; };
 		97586ACA2187281900A05971 /* P2PListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586AC92187281900A05971 /* P2PListener.swift */; };
+		97586ACC21874DAE00A05971 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97586ACB21874DAE00A05971 /* Secrets.plist */; };
+		97586ACE218754DC00A05971 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586ACD218754DC00A05971 /* Global.swift */; };
 		97664386217F1FAE00EB4C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97664385217F1FAE00EB4C5F /* AppDelegate.swift */; };
 		97664388217F1FAE00EB4C5F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97664387217F1FAE00EB4C5F /* BaseViewController.swift */; };
 		9766438B217F1FAE00EB4C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97664389217F1FAE00EB4C5F /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		9700EA902186C54500A6E4DA /* manrope-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-medium.ttf"; sourceTree = "<group>"; };
 		9700EA912186C54600A6E4DA /* manrope-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.otf"; sourceTree = "<group>"; };
 		97586AC92187281900A05971 /* P2PListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PListener.swift; sourceTree = "<group>"; };
+		97586ACB21874DAE00A05971 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		97586ACD218754DC00A05971 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		97664382217F1FAE00EB4C5F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97664385217F1FAE00EB4C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97664387217F1FAE00EB4C5F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				9766438C217F1FB000EB4C5F /* Assets.xcassets */,
 				9766438E217F1FB000EB4C5F /* LaunchScreen.storyboard */,
 				97664391217F1FB000EB4C5F /* Info.plist */,
+				97586ACB21874DAE00A05971 /* Secrets.plist */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			children = (
 				97869C3B218159B6007B0C73 /* Animation.swift */,
 				97DB2B77218170B60060CA50 /* Color.swift */,
+				97586ACD218754DC00A05971 /* Global.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -173,12 +179,12 @@
 		97DB2B7621816D760060CA50 /* P2P */ = {
 			isa = PBXGroup;
 			children = (
-				97DB2B792181B9020060CA50 /* P2PServiceDelegate.swift */,
 				97DB2B7B2181B90A0060CA50 /* P2PService.swift */,
 				97586AC92187281900A05971 /* P2PListener.swift */,
 				97DB2B7D2181B97B0060CA50 /* Advertiser.swift */,
 				97DB2B7F2181B9B40060CA50 /* Browser.swift */,
 				97DB2B812181B9DB0060CA50 /* Session.swift */,
+				97DB2B792181B9020060CA50 /* P2PServiceDelegate.swift */,
 			);
 			path = P2P;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97586ACC21874DAE00A05971 /* Secrets.plist in Resources */,
 				9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */,
 				9700EA992186C54600A6E4DA /* manrope-medium.otf in Resources */,
 				9700EA932186C54600A6E4DA /* manrope-regular.ttf in Resources */,
@@ -289,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DB2B822181B9DB0060CA50 /* Session.swift in Sources */,
+				97586ACE218754DC00A05971 /* Global.swift in Sources */,
 				97869C3821815643007B0C73 /* LoadingView.swift in Sources */,
 				97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */,
 				97586ACA2187281900A05971 /* P2PListener.swift in Sources */,

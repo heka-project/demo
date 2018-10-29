@@ -13,8 +13,13 @@ class LoadingView: BaseViewController {
 	
 	@IBOutlet var logo: UIImageView!
 	
+	let service = P2PService()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		service.delegate = self
+		
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -31,5 +36,17 @@ class LoadingView: BaseViewController {
 		self.view.addRippleEffect(pos: self.view.center, size: self.logo.frame)
 		self.view.bringSubviewToFront(self.logo)
 	}
+	
+}
+
+extension LoadingView: P2PServiceDelegate {
+	func connectedNodesChanged(manager: P2PService, connectedNodes: [String]) {
+		print("connected to node \(connectedNodes)")
+	}
+	
+	func colorChanged(manager: P2PService, colorString: String) {
+		
+	}
+	
 	
 }

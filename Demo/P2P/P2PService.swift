@@ -20,7 +20,7 @@ class P2PService: NSObject {
 		return session
 	}()
 	
-	private let serviceType = "test-service"
+	private let serviceType = secrets.value(forKey: "root") as! String
 	private let peerID = MCPeerID(displayName: UIDevice.current.name)
 	
 	private let serviceAdvertiser: MCNearbyServiceAdvertiser
@@ -37,6 +37,8 @@ class P2PService: NSObject {
 		
 		self.serviceBrowser.delegate = self
 		self.serviceBrowser.startBrowsingForPeers()
+		
+		print("Initialised service class with service key \(self.serviceType)")
 		
 	}
 	
