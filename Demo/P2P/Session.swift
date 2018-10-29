@@ -9,7 +9,7 @@
 import Foundation
 import MultipeerConnectivity
 
-extension Service: MCSessionDelegate {
+extension P2PService: MCSessionDelegate {
 	func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
 		print("Peer \(peerID) changed state \(state.rawValue)")
 		self.delegate?.connectedNodesChanged(manager: self, connectedNodes: session.connectedPeers.map{$0.displayName})

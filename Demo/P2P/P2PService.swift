@@ -10,9 +10,9 @@ import Foundation
 import MultipeerConnectivity
 
 
-class Service: NSObject {
+class P2PService: NSObject {
 	
-	var delegate: ServiceDelegate? 
+	var delegate: P2PServiceDelegate?
 	
 	lazy var session: MCSession = {
 		let session = MCSession(peer: self.peerID, securityIdentity: nil, encryptionPreference: .required)

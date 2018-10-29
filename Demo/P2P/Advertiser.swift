@@ -9,7 +9,7 @@
 import Foundation
 import MultipeerConnectivity
 
-extension Service: MCNearbyServiceAdvertiserDelegate {
+extension P2PService: MCNearbyServiceAdvertiserDelegate {
 	
 	func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
 		print("didNotStartAdvertisingPeer: \(error)")

@@ -9,7 +9,7 @@
 import Foundation
 import MultipeerConnectivity
 
-extension Service: MCNearbyServiceBrowserDelegate {
+extension P2PService: MCNearbyServiceBrowserDelegate {
 	func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
 		NSLog("%@", "foundPeer: \(peerID)")
 		print("Inviting peer \(peerID) ...")

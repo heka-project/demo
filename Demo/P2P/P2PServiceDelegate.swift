@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol ServiceDelegate {
-	func connectedNodesChanged(manager: Service, connectedNodes: [String])
+protocol P2PServiceDelegate {
+	func connectedNodesChanged(manager: P2PService, connectedNodes: [String])
 	// Color example
-	func colorChanged(manager: Service, colorString: String)
+	func colorChanged(manager: P2PService, colorString: String)
 }
