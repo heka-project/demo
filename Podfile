@@ -6,5 +6,6 @@ target 'Demo' do
   use_frameworks!
 
   # Pods for Demo
+  pod 'BarcodeScanner'
 
 end
