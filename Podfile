@@ -7,6 +7,7 @@ use_frameworks!
 
 # Pods for Demo
 pod 'SwiftyJSON', '~> 4.0'
+pod 'BarcodeScanner'
 
 
 end
