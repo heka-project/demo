@@ -29,6 +29,8 @@
 		979A13222191435E0019A29E /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 979A13212191435E0019A29E /* Onboarding.storyboard */; };
 		979A1324219146130019A29E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1323219146130019A29E /* OnboardingView.swift */; };
 		979A1326219182B10019A29E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1325219182B10019A29E /* UIView.swift */; };
+		979A1329219192B30019A29E /* NetworkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1328219192B30019A29E /* NetworkData.swift */; };
+		979A132B2191A0570019A29E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A132A2191A0570019A29E /* Node.swift */; };
 		97C3EAE1218A8D6600E70C50 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE0218A8D6600E70C50 /* Secrets.plist */; };
 		97C3EAE3218AF0FF00E70C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */; };
 		97DB2B78218170B60060CA50 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B77218170B60060CA50 /* Color.swift */; };
@@ -66,6 +68,8 @@
 		979A13212191435E0019A29E /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		979A1323219146130019A29E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		979A1325219182B10019A29E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		979A1328219192B30019A29E /* NetworkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkData.swift; sourceTree = "<group>"; };
+		979A132A2191A0570019A29E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		97C3EAE0218A8D6600E70C50 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97DB2B77218170B60060CA50 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */,
+				9700EA852186C52C00A6E4DA /* Assets */,
 				97664384217F1FAE00EB4C5F /* Demo */,
 				97664383217F1FAE00EB4C5F /* Products */,
 				3E581CEB744BFAE98DF07FD4 /* Pods */,
@@ -149,10 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				979A1320219143470019A29E /* Storyboards */,
-				9700EA852186C52C00A6E4DA /* Assets */,
+				97869C392181591B007B0C73 /* Controllers */,
+				979A1327219192730019A29E /* Model */,
 				97DB2B7621816D760060CA50 /* P2P */,
 				97869C3A2181594B007B0C73 /* Utility */,
-				97869C392181591B007B0C73 /* Controllers */,
 				97664385217F1FAE00EB4C5F /* AppDelegate.swift */,
 				97664391217F1FB000EB4C5F /* Info.plist */,
 				97C3EAE0218A8D6600E70C50 /* Secrets.plist */,
@@ -191,14 +196,23 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		979A1327219192730019A29E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				979A1328219192B30019A29E /* NetworkData.swift */,
+				979A132A2191A0570019A29E /* Node.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		97DB2B7621816D760060CA50 /* P2P */ = {
 			isa = PBXGroup;
 			children = (
 				97DB2B7B2181B90A0060CA50 /* P2PService.swift */,
+				97DB2B792181B9020060CA50 /* P2PServiceDelegate.swift */,
 				97DB2B7D2181B97B0060CA50 /* Advertiser.swift */,
 				97DB2B7F2181B9B40060CA50 /* Browser.swift */,
 				97DB2B812181B9DB0060CA50 /* Session.swift */,
-				97DB2B792181B9020060CA50 /* P2PServiceDelegate.swift */,
 			);
 			path = P2P;
 			sourceTree = "<group>";
@@ -295,12 +309,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +353,9 @@
 				97DB2B822181B9DB0060CA50 /* Session.swift in Sources */,
 				97586ACE218754DC00A05971 /* Global.swift in Sources */,
 				97869C3821815643007B0C73 /* LoadingView.swift in Sources */,
+				979A1329219192B30019A29E /* NetworkData.swift in Sources */,
 				97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */,
+				979A132B2191A0570019A29E /* Node.swift in Sources */,
 				97DB2B802181B9B40060CA50 /* Browser.swift in Sources */,
 				97664388217F1FAE00EB4C5F /* BaseViewController.swift in Sources */,
 				97869C3C218159B6007B0C73 /* Animation.swift in Sources */,
@@ -502,7 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = heka.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -521,7 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = heka.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

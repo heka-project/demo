@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import ObjectMapper
+
+class Node: Mappable {
+	var name: String?
+	var id: String?
+	var qty: Int?
+	
+	required init?(map: Map) {
+		
+	}
+	
+	func mapping(map: Map) {
+		name <- map["name"]
+		id <- map["id"]
+		qty <- map["qty"]
+	}
+}
