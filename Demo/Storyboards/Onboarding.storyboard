@@ -79,13 +79,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prev" translatesAutoresizingMaskIntoConstraints="NO" id="Nn9-Cg-7s2">
-                                <rect key="frame" x="16" y="732" width="56" height="46"/>
+                                <rect key="frame" x="16" y="722" width="56" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="jMY-AE-yue"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="fb9-nJ-FVm">
-                                <rect key="frame" x="303" y="733" width="56" height="45"/>
+                                <rect key="frame" x="303" y="723" width="56" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="iMM-NO-EPW"/>
                                 </constraints>
@@ -94,7 +94,7 @@
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
                             <constraint firstItem="Nn9-Cg-7s2" firstAttribute="leading" secondItem="ZlL-KG-Ovp" secondAttribute="leading" constant="16" id="4gd-vF-6zl"/>
-                            <constraint firstItem="Nn9-Cg-7s2" firstAttribute="bottom" secondItem="ZlL-KG-Ovp" secondAttribute="bottom" id="7XM-he-8kR"/>
+                            <constraint firstItem="Nn9-Cg-7s2" firstAttribute="bottom" secondItem="ZlL-KG-Ovp" secondAttribute="bottom" constant="-10" id="7XM-he-8kR"/>
                             <constraint firstItem="H4X-vz-b91" firstAttribute="top" secondItem="wNu-6K-b6I" secondAttribute="bottom" constant="30" id="8It-M4-wzX"/>
                             <constraint firstItem="wNu-6K-b6I" firstAttribute="width" secondItem="H4X-vz-b91" secondAttribute="width" multiplier="0.5" id="D3c-qQ-Lsm"/>
                             <constraint firstItem="Q2r-Xh-5WP" firstAttribute="leading" secondItem="H4X-vz-b91" secondAttribute="leading" id="GfJ-VT-Ihu"/>
@@ -104,7 +104,7 @@
                             <constraint firstItem="H4X-vz-b91" firstAttribute="centerY" secondItem="zXK-AL-C9h" secondAttribute="centerY" constant="50" id="ZKi-Qu-EAu"/>
                             <constraint firstAttribute="trailing" secondItem="Q2r-Xh-5WP" secondAttribute="trailing" constant="60" id="c4y-Mp-Uty"/>
                             <constraint firstItem="H4X-vz-b91" firstAttribute="leading" secondItem="ZlL-KG-Ovp" secondAttribute="leading" constant="50" id="cjM-Y1-XMW"/>
-                            <constraint firstItem="fb9-nJ-FVm" firstAttribute="bottom" secondItem="ZlL-KG-Ovp" secondAttribute="bottom" id="enB-ye-Lbh"/>
+                            <constraint firstItem="fb9-nJ-FVm" firstAttribute="bottom" secondItem="ZlL-KG-Ovp" secondAttribute="bottom" constant="-10" id="enB-ye-Lbh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZlL-KG-Ovp"/>
                     </view>

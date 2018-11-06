@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import ObjectMapper
+
+class NetworkData: Mappable {
+	var 
+	
+	required init?(map: Map) {
+		
+	}
+	
+	func mapping(map: Map) {
+		
+	}
+}
