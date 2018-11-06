@@ -9,6 +9,6 @@ use_frameworks!
 pod 'SwiftyJSON', '~> 4.0'
 pod 'BarcodeScanner'
 pod 'Hero'
-
+pod 'ObjectMapper'
 
 end
