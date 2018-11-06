@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="manrope-semibold.ttf">
+        <array key="manrope-semibold.otf">
             <string>Manrope-Semibold</string>
         </array>
     </customFonts>
@@ -29,18 +29,30 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Ztv-vU-D6r"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-R3-c6o">
-                                <rect key="frame" x="136" y="488.33333333333331" width="103" height="23.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for nearby devices…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-R3-c6o">
+                                <rect key="frame" x="66.333333333333329" y="488.33333333333331" width="242.33333333333337" height="23.999999999999943"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Neo-Mf-yL0">
+                                <rect key="frame" x="164.66666666666666" y="659" width="46" height="40"/>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="20"/>
+                                <state key="normal" title="Ping">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ping:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oMI-b1-jBe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647058823529" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
                             <constraint firstItem="JhG-Na-chT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="00g-hY-wye"/>
                             <constraint firstItem="oso-R3-c6o" firstAttribute="top" secondItem="JhG-Na-chT" secondAttribute="bottom" constant="7.3333333333333144" id="Cgd-24-TS5"/>
                             <constraint firstItem="JhG-Na-chT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VZw-Fw-NnW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Neo-Mf-yL0" secondAttribute="bottom" constant="79" id="cHS-e3-pp2"/>
+                            <constraint firstItem="Neo-Mf-yL0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dPG-iZ-Iwn"/>
                             <constraint firstItem="JhG-Na-chT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="jGJ-OB-Deq"/>
                             <constraint firstItem="oso-R3-c6o" firstAttribute="centerX" secondItem="JhG-Na-chT" secondAttribute="centerX" id="wLe-PM-B6d"/>
                         </constraints>
@@ -52,6 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.69950738916256"/>
         </scene>
     </scenes>
     <resources>

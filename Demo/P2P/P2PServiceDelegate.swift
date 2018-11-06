@@ -10,6 +10,5 @@ import Foundation
 
 protocol P2PServiceDelegate {
 	func connectedNodesChanged(manager: P2PService, connectedNodes: [String])
-	// Color example
-	func colorChanged(manager: P2PService, colorString: String)
+	func dataChanged(manager: P2PService, data: NetworkData)
 }

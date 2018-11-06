@@ -37,9 +37,7 @@ class P2PService: NSObject {
 		
 		self.serviceBrowser.delegate = self
 		self.serviceBrowser.startBrowsingForPeers()
-		
-		print("Initialised service class with service key \(self.serviceType)")
-		
+				
 	}
 	
 	deinit {
@@ -47,11 +45,12 @@ class P2PService: NSObject {
 		self.serviceBrowser.stopBrowsingForPeers()
 	}
 	
-	// Color example
-	func send(colorName: String) {
+	// send empty network
+	func send(networkData: NetworkData) {
+		print("sending... \(networkData.toJSON())")
 		if session.connectedPeers.count > 0 {
 			do {
-				try self.session.send(colorName.data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
+				try self.session.send(try! networkData.toJSON().rawData(), toPeers: session.connectedPeers, with: .reliable)
 			} catch {
 				print(error.localizedDescription)
 			}

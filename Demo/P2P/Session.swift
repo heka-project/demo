@@ -8,6 +8,8 @@
 
 import Foundation
 import MultipeerConnectivity
+import SwiftyJSON
+import ObjectMapper
 
 extension P2PService: MCSessionDelegate {
 	func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
@@ -18,7 +20,10 @@ extension P2PService: MCSessionDelegate {
 	func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
 		print("Received data from \(peerID)")
 		let str = String(data: data, encoding: .utf8)!
-		self.delegate?.colorChanged(manager: self, colorString: str)
+		print(str)
+		let networkJSON = try! JSON(data: data)
+		let networkData = Mapper<NetworkData>().map(JSON: networkJSON.dictionaryObject!)
+		self.delegate?.dataChanged(manager: self, data: networkData!)
 	}
 	
 	func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

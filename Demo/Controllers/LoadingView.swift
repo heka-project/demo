@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import ObjectMapper
+import SwiftyJSON
 
 class LoadingView: BaseView {
 	
@@ -37,16 +39,26 @@ class LoadingView: BaseView {
 		self.view.bringSubviewToFront(self.logo)
 	}
 	
+	@IBAction func ping(_ sender: Any) {
+		let blankNetwork = NetworkData(map: Map.init(mappingType: .fromJSON, JSON: [:]))
+		blankNetwork?.nodes = []
+		blankNetwork?.currentNodes = [
+			"from": "1",
+			"to": "2"
+		]
+		
+		service.send(networkData: blankNetwork!)
+	}
+	
 }
 
 extension LoadingView: P2PServiceDelegate {
+	func dataChanged(manager: P2PService, data: NetworkData) {
+		print("Received data: \(data.nodes?.count) Nodes in the network")
+	}
+	
 	func connectedNodesChanged(manager: P2PService, connectedNodes: [String]) {
 		print("connected to node \(connectedNodes)")
 	}
-	
-	func colorChanged(manager: P2PService, colorString: String) {
-		
-	}
-	
 	
 }
