@@ -1,20 +1,24 @@
 PODS:
   - BarcodeScanner (4.1.3)
+  - Hero (1.3.1)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - BarcodeScanner
+  - Hero
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BarcodeScanner
+    - Hero
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   BarcodeScanner: fce1ad2b3f28286b1ab5091fe0979789618bee27
+  Hero: 782578cbbb9f681c65985fad362cf4df928cb2fd
   SwiftyJSON: 4605deb82c5ce2ea044e06ce0c295adf721d892f
 
-PODFILE CHECKSUM: 9f13b45da707a2f76c3d2f8348ecc0a7be53e266
+PODFILE CHECKSUM: d9c5b1388cb6651c286de3ee33091a3d1bdadc99
 
 COCOAPODS: 1.5.3

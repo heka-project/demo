@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoadingView: BaseViewController {
+class LoadingView: BaseView {
 	
 	@IBOutlet var logo: UIImageView!
 	
