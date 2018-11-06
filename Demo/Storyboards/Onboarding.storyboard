@@ -155,8 +155,8 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egL-p3-qLN">
-                                <rect key="frame" x="49.999999999999986" y="390.33333333333331" width="207.66666666666663" height="63.333333333333314"/>
-                                <string key="text">You are a part of a
+                                <rect key="frame" x="49.999999999999986" y="390.33333333333331" width="188.66666666666663" height="63.333333333333314"/>
+                                <string key="text">You are part of a
 Community,</string>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="23"/>
                                 <color key="textColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
