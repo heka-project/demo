@@ -12,7 +12,7 @@
         <array key="manrope-regular.ttf">
             <string>Manrope-Regular</string>
         </array>
-        <array key="manrope-semibold.ttf">
+        <array key="manrope-semibold.otf">
             <string>Manrope-Semibold</string>
         </array>
     </customFonts>
@@ -43,7 +43,7 @@
         <!--Onboard 1-->
         <scene sceneID="V8z-UR-e8P">
             <objects>
-                <viewController title="Onboard 1" id="Bbn-cC-9tq" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboard1" title="Onboard 1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bbn-cC-9tq" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zXK-AL-C9h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,17 +75,33 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="s"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prev" translatesAutoresizingMaskIntoConstraints="NO" id="Nn9-Cg-7s2">
+                                <rect key="frame" x="16" y="732" width="56" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="jMY-AE-yue"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="fb9-nJ-FVm">
+                                <rect key="frame" x="303" y="733" width="56" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="iMM-NO-EPW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
+                            <constraint firstItem="Nn9-Cg-7s2" firstAttribute="leading" secondItem="ZlL-KG-Ovp" secondAttribute="leading" constant="16" id="4gd-vF-6zl"/>
+                            <constraint firstItem="Nn9-Cg-7s2" firstAttribute="bottom" secondItem="ZlL-KG-Ovp" secondAttribute="bottom" id="7XM-he-8kR"/>
                             <constraint firstItem="H4X-vz-b91" firstAttribute="top" secondItem="wNu-6K-b6I" secondAttribute="bottom" constant="30" id="8It-M4-wzX"/>
                             <constraint firstItem="wNu-6K-b6I" firstAttribute="width" secondItem="H4X-vz-b91" secondAttribute="width" multiplier="0.5" id="D3c-qQ-Lsm"/>
                             <constraint firstItem="Q2r-Xh-5WP" firstAttribute="leading" secondItem="H4X-vz-b91" secondAttribute="leading" id="GfJ-VT-Ihu"/>
+                            <constraint firstItem="ZlL-KG-Ovp" firstAttribute="trailing" secondItem="fb9-nJ-FVm" secondAttribute="trailing" constant="16" id="HDn-IF-bYh"/>
                             <constraint firstItem="wNu-6K-b6I" firstAttribute="leading" secondItem="H4X-vz-b91" secondAttribute="leading" id="IV3-wg-Q2y"/>
                             <constraint firstItem="Q2r-Xh-5WP" firstAttribute="top" secondItem="H4X-vz-b91" secondAttribute="bottom" constant="10" id="Xka-ns-NXF"/>
                             <constraint firstItem="H4X-vz-b91" firstAttribute="centerY" secondItem="zXK-AL-C9h" secondAttribute="centerY" constant="50" id="ZKi-Qu-EAu"/>
                             <constraint firstAttribute="trailing" secondItem="Q2r-Xh-5WP" secondAttribute="trailing" constant="60" id="c4y-Mp-Uty"/>
                             <constraint firstItem="H4X-vz-b91" firstAttribute="leading" secondItem="ZlL-KG-Ovp" secondAttribute="leading" constant="50" id="cjM-Y1-XMW"/>
+                            <constraint firstItem="fb9-nJ-FVm" firstAttribute="bottom" secondItem="ZlL-KG-Ovp" secondAttribute="bottom" id="enB-ye-Lbh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZlL-KG-Ovp"/>
                     </view>
@@ -104,7 +120,7 @@
         <!--Onboard 2-->
         <scene sceneID="ixl-2h-iJi">
             <objects>
-                <viewController title="Onboard 2" id="yGP-F0-8vx" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboard2" title="Onboard 2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yGP-F0-8vx" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qEK-bO-Leo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +202,7 @@ Community,</string>
         <!--Onboard 3-->
         <scene sceneID="uI3-5z-i7b">
             <objects>
-                <viewController title="Onboard 3" id="V6E-H1-rsM" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboard3" title="Onboard 3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V6E-H1-rsM" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jp0-VY-1eX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,7 +284,7 @@ communities in your zone,</string>
         <!--Onboard 4-->
         <scene sceneID="tyt-Y0-Gic">
             <objects>
-                <viewController title="Onboard 4" id="hd8-tC-Hgx" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboard4" title="Onboard 4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hd8-tC-Hgx" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAX-an-Mik">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,12 +443,12 @@ communities in your zone,</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tML-Lw-twd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="811.33004926108379"/>
+            <point key="canvasLocation" x="54" y="804"/>
         </scene>
         <!--Onboard 5-->
         <scene sceneID="e7w-dc-lWf">
             <objects>
-                <viewController title="Onboard 5" id="76A-3C-4GZ" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboard5" title="Onboard 5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="76A-3C-4GZ" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gGs-eY-cad">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,12 +542,12 @@ the progress</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Aw-fN-PZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861.60000000000002" y="810.59113300492618"/>
+            <point key="canvasLocation" x="862" y="803"/>
         </scene>
         <!--Onboard 6-->
         <scene sceneID="EAy-tC-wl3">
             <objects>
-                <viewController title="Onboard 6" id="EvZ-IE-kIY" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboard6" title="Onboard 6" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EvZ-IE-kIY" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ZL-2U-PSG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -615,19 +631,88 @@ your share,</string>
                     <connections>
                         <outlet property="subtitleLabel" destination="nic-59-1be" id="Pr8-NF-qTG"/>
                         <outlet property="titleLabel" destination="Pr3-Pq-fGm" id="QFp-eZ-zjX"/>
+                        <segue destination="EC7-cG-DsW" kind="show" identifier="next" id="w9u-PT-v4M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQV-kY-LFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1669.5999999999999" y="810.59113300492618"/>
+            <point key="canvasLocation" x="1670" y="803"/>
+        </scene>
+        <!--Onboard 7-->
+        <scene sceneID="4Wg-ou-ieI">
+            <objects>
+                <viewController storyboardIdentifier="onboard7" title="Onboard 7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EC7-cG-DsW" customClass="OnboardingView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ye3-l6-kiD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="just push the big button and we’ll notify all medical personnel around your zone." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ll-BN-l1V">
+                                <rect key="frame" x="50" y="497.66666666666669" width="265" height="74.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O80-6W-pSz">
+                                <rect key="frame" x="49.999999999999986" y="424.33333333333331" width="230.66666666666663" height="63.333333333333314"/>
+                                <string key="text">If you urgently need
+medical assistance,</string>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="23"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone3" translatesAutoresizingMaskIntoConstraints="NO" id="Ksi-Ls-85S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="384.33333333333331"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <constraints>
+                            <constraint firstItem="O80-6W-pSz" firstAttribute="centerY" secondItem="ye3-l6-kiD" secondAttribute="centerY" constant="50" id="36l-pq-u9P"/>
+                            <constraint firstAttribute="trailing" secondItem="7Ll-BN-l1V" secondAttribute="trailing" constant="60" id="3fK-Na-cyE"/>
+                            <constraint firstItem="Ksi-Ls-85S" firstAttribute="top" secondItem="ye3-l6-kiD" secondAttribute="top" id="4dT-LA-Z4B"/>
+                            <constraint firstItem="7Ll-BN-l1V" firstAttribute="top" secondItem="O80-6W-pSz" secondAttribute="bottom" constant="10" id="NBw-o8-CjP"/>
+                            <constraint firstItem="Ksi-Ls-85S" firstAttribute="trailing" secondItem="gUA-TJ-ae4" secondAttribute="trailing" id="iqR-Mx-hKT"/>
+                            <constraint firstItem="O80-6W-pSz" firstAttribute="leading" secondItem="gUA-TJ-ae4" secondAttribute="leading" constant="50" id="nUf-Zs-Hh7"/>
+                            <constraint firstItem="O80-6W-pSz" firstAttribute="top" secondItem="Ksi-Ls-85S" secondAttribute="bottom" constant="40" id="oC3-mC-ncr"/>
+                            <constraint firstItem="Ksi-Ls-85S" firstAttribute="leading" secondItem="gUA-TJ-ae4" secondAttribute="leading" id="q9E-0S-jYB"/>
+                            <constraint firstItem="7Ll-BN-l1V" firstAttribute="leading" secondItem="O80-6W-pSz" secondAttribute="leading" id="w2z-aY-Rzd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gUA-TJ-ae4"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="5qp-bE-R6h"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="7Ll-BN-l1V" id="9a4-kX-wfh"/>
+                        <outlet property="titleLabel" destination="O80-6W-pSz" id="d9d-DV-O8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0t0-2t-GuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="1543.5960591133005"/>
         </scene>
     </scenes>
     <resources>
+        <image name="next" width="27" height="45"/>
         <image name="onboard-1" width="55.666667938232422" height="55.666667938232422"/>
         <image name="onboard-2" width="618.33331298828125" height="494"/>
         <image name="onboard-2.5" width="277.33334350585938" height="221.66667175292969"/>
         <image name="onboard-3" width="603.33331298828125" height="423.33334350585938"/>
         <image name="onboard-phone" width="89" height="172.33332824707031"/>
         <image name="onboard-phone2" width="89" height="172.33332824707031"/>
+        <image name="onboard-phone3" width="268" height="449.33334350585938"/>
+        <image name="prev" width="27.333333969116211" height="46"/>
     </resources>
 </document>
