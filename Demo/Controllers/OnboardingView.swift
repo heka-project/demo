@@ -14,6 +14,7 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 	
 	@IBOutlet var titleLabel: UILabel!
 	@IBOutlet var subtitleLabel: UILabel!
+	@IBOutlet var doneButton: UIButton!
 	
 	var animationType: HeroDefaultAnimationType {
 		switch self.restorationIdentifier {
@@ -22,10 +23,25 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 		}
 	}
 	
+	var onboardCompletion: Float {
+		return (["onboard1" : 1, "onboard2" : 2, "onboard3" : 3, "onboard4" : 4, "onboard5" : 5, "onboard6" : 6, "onboard7" : 7][self.restorationIdentifier] ?? 1 ) / 7
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.navigationController?.hero.navigationAnimationType = animationType
 		self.setupGestures()
+		
+		doneButton?.roundify(5.0)
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		let progressIndicator = UIProgressView.init(frame: CGRect.init(x: 0, y: self.view.frame.height - 2, width: self.view.frame.width, height: 20))
+		progressIndicator.tintColor = UIColor.appPink(a: 1)
+		progressIndicator.trackTintColor = .clear
+		progressIndicator.setProgress(onboardCompletion, animated: false)
+		progressIndicator.hero.id = "progress"
+		self.view.addSubview(progressIndicator)
 	}
 	
 	@objc func swipedLeft() {

@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="manrope-bold.otf">
+            <string>Manrope-Bold</string>
+        </array>
         <array key="manrope-regular.ttf">
             <string>Manrope-Regular</string>
         </array>
@@ -671,13 +674,27 @@ medical assistance,</string>
                             <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone3" translatesAutoresizingMaskIntoConstraints="NO" id="Ksi-Ls-85S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="384.33333333333331"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8c-5r-FXv">
+                                <rect key="frame" x="55" y="663" width="265" height="55"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="z8c-5r-FXv" secondAttribute="height" multiplier="53:11" id="GRh-fm-sZE"/>
+                                    <constraint firstAttribute="height" constant="55" id="omn-YZ-eP9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="16"/>
+                                <state key="normal" title="Set up account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
+                            <constraint firstItem="gUA-TJ-ae4" firstAttribute="bottom" secondItem="z8c-5r-FXv" secondAttribute="bottom" constant="60" id="1p3-sm-Eqe"/>
                             <constraint firstItem="O80-6W-pSz" firstAttribute="centerY" secondItem="ye3-l6-kiD" secondAttribute="centerY" constant="50" id="36l-pq-u9P"/>
                             <constraint firstAttribute="trailing" secondItem="7Ll-BN-l1V" secondAttribute="trailing" constant="60" id="3fK-Na-cyE"/>
                             <constraint firstItem="Ksi-Ls-85S" firstAttribute="top" secondItem="ye3-l6-kiD" secondAttribute="top" id="4dT-LA-Z4B"/>
                             <constraint firstItem="7Ll-BN-l1V" firstAttribute="top" secondItem="O80-6W-pSz" secondAttribute="bottom" constant="10" id="NBw-o8-CjP"/>
+                            <constraint firstItem="z8c-5r-FXv" firstAttribute="centerX" secondItem="ye3-l6-kiD" secondAttribute="centerX" id="iFb-lQ-wIi"/>
                             <constraint firstItem="Ksi-Ls-85S" firstAttribute="trailing" secondItem="gUA-TJ-ae4" secondAttribute="trailing" id="iqR-Mx-hKT"/>
                             <constraint firstItem="O80-6W-pSz" firstAttribute="leading" secondItem="gUA-TJ-ae4" secondAttribute="leading" constant="50" id="nUf-Zs-Hh7"/>
                             <constraint firstItem="O80-6W-pSz" firstAttribute="top" secondItem="Ksi-Ls-85S" secondAttribute="bottom" constant="40" id="oC3-mC-ncr"/>
@@ -695,6 +712,7 @@ medical assistance,</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="doneButton" destination="z8c-5r-FXv" id="mQk-9e-qDs"/>
                         <outlet property="subtitleLabel" destination="7Ll-BN-l1V" id="9a4-kX-wfh"/>
                         <outlet property="titleLabel" destination="O80-6W-pSz" id="d9d-DV-O8U"/>
                     </connections>
