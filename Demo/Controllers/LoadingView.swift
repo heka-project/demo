@@ -19,12 +19,10 @@ class LoadingView: BaseView {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		service.delegate = self
-		
 	}
 	
-	override func viewDidAppear(_ animated: Bool) {
+	override func willBecomeActive() {
 		self.animateLoadScreen()
 	}
 	
@@ -37,28 +35,21 @@ class LoadingView: BaseView {
 		self.logo.rotateAnimation(key: "load", rep: .infinity, duration: 2.5)
 		self.view.addRippleEffect(pos: self.view.center, size: self.logo.frame)
 		self.view.bringSubviewToFront(self.logo)
+	
 	}
 	
 	@IBAction func ping(_ sender: Any) {
-		let blankNetwork = NetworkData(map: Map.init(mappingType: .fromJSON, JSON: [:]))
-		blankNetwork?.nodes = []
-		blankNetwork?.currentNodes = [
-			"from": "1",
-			"to": "2"
-		]
-		
-		service.send(networkData: blankNetwork!)
 	}
 	
 }
 
 extension LoadingView: P2PServiceDelegate {
-	func dataChanged(manager: P2PService, data: NetworkData) {
-		print("Received data: \(data.nodes?.count) Nodes in the network")
+	func receivedUpdate(manager: P2PService, fragment: ChainFragment) {
+		
 	}
 	
-	func connectedNodesChanged(manager: P2PService, connectedNodes: [String]) {
-		print("connected to node \(connectedNodes)")
+	func receivedHello(manager: P2PService, fragment: ChainFragment) {
+		
 	}
 	
 }

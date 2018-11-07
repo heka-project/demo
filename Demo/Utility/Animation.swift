@@ -59,6 +59,7 @@ extension UIView {
 		opacityAnim.fromValue = 1
 		opacityAnim.toValue = 0
 		
+		
 		let animation = CAAnimationGroup()
 		animation.animations = [scaleAnim, opacityAnim]
 		animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
@@ -67,6 +68,7 @@ extension UIView {
 		animation.isRemovedOnCompletion = true
 		
 		self.layer.addSublayer(shape)
+		
 		shape.add(animation, forKey: "rippleEffect")
 		
 	}

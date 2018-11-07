@@ -30,7 +30,6 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.navigationController?.hero.navigationAnimationType = animationType
-		self.setupGestures()
 		
 		let progressIndicator = UIProgressView.init(frame: CGRect.init(x: 0, y: self.view.frame.height - 2, width: self.view.frame.width, height: 20))
 		progressIndicator.tintColor = UIColor.appPink(a: 1)
@@ -42,26 +41,14 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 		doneButton?.roundify(5.0)
 	}
 	
-	@objc func swipedLeft() {
-		if self.restorationIdentifier != "onboard7" {
-			self.performSegue(withIdentifier: "next", sender: self)
+	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+		let point = touches.first?.location(in: self.view)
+		if point!.x > self.view.frame.width/2 && self.restorationIdentifier != "onboard7" {
+				self.performSegue(withIdentifier: "next", sender: self)
+		} else if point!.x < self.view.frame.width/2 {
+			self.navigationController?.popViewController(animated: true)
 		}
-	}
-	
-	@objc func swipedRight() {
-		self.navigationController?.popViewController(animated: true)
-	}
-	
-	func setupGestures() {
-		let leftGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(OnboardingView.swipedLeft))
-		leftGesture.direction = .left
-		leftGesture.delegate = self
-		self.view.addGestureRecognizer(leftGesture)
 		
-		let rightGesture = UISwipeGestureRecognizer.init(target: self, action: #selector(OnboardingView.swipedRight))
-		rightGesture.direction = .right
-		rightGesture.delegate = self
-		self.view.addGestureRecognizer(rightGesture)
 	}
 	
 }
