@@ -18,7 +18,8 @@ extension P2PService: MCNearbyServiceBrowserDelegate {
 		browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 10)
 	}
 	
-	func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {		NSLog("%@", "lostPeer: \(peerID)")
+	func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+		NSLog("%@", "lostPeer: \(peerID)")
 	}
 	
 	func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {

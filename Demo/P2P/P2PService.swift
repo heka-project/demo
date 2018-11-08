@@ -8,7 +8,8 @@
 
 import Foundation
 import MultipeerConnectivity
-
+import ObjectMapper
+import SwiftyJSON
 
 class P2PService: NSObject {
 	
@@ -45,15 +46,21 @@ class P2PService: NSObject {
 		self.serviceBrowser.stopBrowsingForPeers()
 	}
 	
-	// send empty network
-	func send(networkData: NetworkData) {
-		print("sending... \(networkData.toJSON())")
+	private func send(fragment: ChainFragment) {
 		if session.connectedPeers.count > 0 {
 			do {
-				try self.session.send(try! networkData.toJSON().rawData(), toPeers: session.connectedPeers, with: .reliable)
+				try self.session.send(try! JSON(parseJSON: fragment.toJSONString() ?? "{}").rawData(), toPeers: session.connectedPeers, with: .reliable)
 			} catch {
-				print(error.localizedDescription)
+				print("Fragment delivery failed with error \(error.localizedDescription)")
 			}
 		}
+	}
+	
+	// Dumps current fragment
+	func sayHello() {
+		print("Saying hello...")
+		let fragment = ChainFragment(type: .SAY_HELLO, nodes: ["node1" : ["name": "rootNode", "id": "root"]], currentNode: self.peerID.displayName)
+		print("Raw JSON value: \(fragment.toJSONString())")
+		self.send(fragment: fragment)
 	}
 }
