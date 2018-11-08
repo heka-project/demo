@@ -19,11 +19,11 @@ class BaseView: UIViewController {
 		super.viewDidLoad()
 		self.navigationController?.hero.navigationAnimationType = .fade
 		UILabel.appearance(whenContainedInInstancesOf: [UIAlertController.self]).numberOfLines = 0
-		transitionSetup()
+		
+		NotificationCenter.default.addObserver(self, selector: #selector(BaseView.willBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
 	}
 	
-	func transitionSetup() {}
-
+	@objc func willBecomeActive() {}
 
 }
 
