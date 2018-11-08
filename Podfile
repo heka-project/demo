@@ -10,5 +10,7 @@ pod 'SwiftyJSON', '~> 4.0'
 pod 'BarcodeScanner'
 pod 'Hero'
 pod 'ObjectMapper'
+pod 'SwiftHash'
+
 
 end
