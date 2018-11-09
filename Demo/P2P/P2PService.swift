@@ -21,6 +21,8 @@ class P2PService: NSObject {
 		return session
 	}()
 	
+	var fragmentCache: Fragment?
+	
 	private let serviceType = secrets.value(forKey: "root") as! String
 	private let peerID = MCPeerID(displayName: UIDevice.current.name)
 	
@@ -38,6 +40,8 @@ class P2PService: NSObject {
 		
 		self.serviceBrowser.delegate = self
 		self.serviceBrowser.startBrowsingForPeers()
+		
+		self.fragmentCache = Fragment(deviceID: self.peerID.displayName, meta: ["Name": "cheff", "qty": 10])
 				
 	}
 	
@@ -46,7 +50,7 @@ class P2PService: NSObject {
 		self.serviceBrowser.stopBrowsingForPeers()
 	}
 	
-	private func send(fragment: ChainFragment) {
+	private func send(fragment: FragmentMessage) {
 		if session.connectedPeers.count > 0 {
 			do {
 				try self.session.send(try! JSON(parseJSON: fragment.toJSONString() ?? "{}").rawData(), toPeers: session.connectedPeers, with: .reliable)
@@ -59,8 +63,7 @@ class P2PService: NSObject {
 	// Dumps current fragment
 	func sayHello() {
 		print("Saying hello...")
-		let fragment = ChainFragment(type: .SAY_HELLO, nodes: ["node1" : ["name": "rootNode", "id": "root"]], currentNode: self.peerID.displayName)
-		print("Raw JSON value: \(fragment.toJSONString())")
-		self.send(fragment: fragment)
+		let fragmentMessage = FragmentMessage(type: .SAY_HELLO, fragment: self.fragmentCache!)
+		self.send(fragment: fragmentMessage)
 	}
 }

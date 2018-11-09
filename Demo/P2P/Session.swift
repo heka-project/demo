@@ -32,8 +32,8 @@ extension P2PService: MCSessionDelegate {
 			return
 		}
 		print("Received JSON \(networkJSON)")
-		let fragment = Mapper<ChainFragment>().map(JSON: networkJSON.dictionaryObject!)
-		print(fragment!.type)
+		let fragment = Mapper<FragmentMessage>().map(JSON: networkJSON.dictionaryObject!)
+		print(fragment!.type ?? "Unknown fragment type")
 	}
 	
 	func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {

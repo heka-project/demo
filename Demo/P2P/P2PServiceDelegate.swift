@@ -9,6 +9,6 @@
 import Foundation
 
 protocol P2PServiceDelegate {
-	func receivedUpdate(manager: P2PService, fragment: ChainFragment)
-	func receivedHello(manager: P2PService, fragment: ChainFragment)
+	func receivedUpdate(manager: P2PService, fragment: FragmentMessage)
+	func receivedHello(manager: P2PService, fragment: FragmentMessage)
 }
