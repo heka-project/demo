@@ -21,10 +21,9 @@ enum MessageType: String {
 class FragmentMessage: Mappable {
 	
 	var type: MessageType?
-	var fragment: Fragment?
+	var fragment: Fragment = Fragment()
 	
 	required init?(map: Map) {
-		self.fragment = Fragment()
 	}
 	
 	init(type: MessageType, fragment: Fragment) {
@@ -34,8 +33,8 @@ class FragmentMessage: Mappable {
 	
 	func mapping(map: Map) {
 		type <- map["type"]
-		self.fragment!.nodes <- map["nodes"]
-		self.fragment!.md5 <- map["md5"]
+		self.fragment.nodes <- map["nodes"]
+		self.fragment.md5 <- map["md5"]
 	}
 	
 }

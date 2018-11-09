@@ -25,9 +25,8 @@ class Fragment {
 		self.updateHash()
 	}
 	
-	private func updateHash() {
-		self.md5 = MD5(JSON(["nodes": nodes,
-			]).stringValue)
+	func updateHash() {
+		self.md5 = MD5(JSON(["nodes": self.nodes!]).rawString()!)
 	}
 	
 	
