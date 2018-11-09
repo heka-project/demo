@@ -31,9 +31,22 @@ extension P2PService: MCSessionDelegate {
 			print("⚠️ - Failed to parse JSON. Raw: \(str)")
 			return
 		}
-		print("Received JSON \(networkJSON)")
-		let fragment = Mapper<FragmentMessage>().map(JSON: networkJSON.dictionaryObject!)
-		print(fragment!.type ?? "Unknown fragment type")
+		print("|==> \(networkJSON)")
+		
+		let fragmentMessage = Mapper<FragmentMessage>().map(JSON: networkJSON.dictionaryObject!)
+		
+		switch fragmentMessage!.type! {
+		case .SAY_HELLO:
+			self.fragmentCache = fragmentMessage!.fragment
+			self.fragmentCache?.addNode(meta: ["Name": "test", "qty": 2, "id":
+				"cool-id"])
+			print(self.fragmentCache?.nodes)
+			self.updatePeers()
+		case .UPDATE:
+			print("Received update with hash \(fragmentMessage?.fragment.md5), vs \(self.fragmentCache?.md5)")
+		default:
+			break
+		}
 	}
 	
 	func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {

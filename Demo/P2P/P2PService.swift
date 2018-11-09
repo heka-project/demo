@@ -41,7 +41,8 @@ class P2PService: NSObject {
 		self.serviceBrowser.delegate = self
 		self.serviceBrowser.startBrowsingForPeers()
 		
-		self.fragmentCache = Fragment(deviceID: self.peerID.displayName, meta: ["Name": "cheff", "qty": 10])
+		self.fragmentCache = Fragment(meta: ["Name": "test", "qty": 9, "id":
+			"cool-id"])
 				
 	}
 	
@@ -50,7 +51,8 @@ class P2PService: NSObject {
 		self.serviceBrowser.stopBrowsingForPeers()
 	}
 	
-	private func send(fragment: FragmentMessage) {
+	private func send(_ fragment: FragmentMessage) {
+		print("<== \(try! JSON(data: fragment.toJSONString()!.data(using: .utf8)!))")
 		if session.connectedPeers.count > 0 {
 			do {
 				try self.session.send(try! JSON(parseJSON: fragment.toJSONString() ?? "{}").rawData(), toPeers: session.connectedPeers, with: .reliable)
@@ -61,9 +63,15 @@ class P2PService: NSObject {
 	}
 	
 	// Dumps current fragment
-	func sayHello() {
-		print("Saying hello...")
+	internal func sayHello() {
+		print("👋 Saying hello...")
 		let fragmentMessage = FragmentMessage(type: .SAY_HELLO, fragment: self.fragmentCache!)
-		self.send(fragment: fragmentMessage)
+		self.send(fragmentMessage)
+	}
+	
+	internal func updatePeers() {
+		print("🔗 Updating peers...")
+		let fragmentMessage = FragmentMessage(type: .UPDATE, fragment: self.fragmentCache!)
+		self.send(fragmentMessage)
 	}
 }

@@ -14,19 +14,27 @@ import SwiftHash
 class Fragment {
 	
 	var md5: String?
-	var nodes: [String: Any]?
+	var nodes: [[String: Any]] = []
 	
 	init() {
 		
 	}
 	
-	init(deviceID: String, meta: [String: Any]) {
-		self.nodes = [deviceID: meta]
+	init(meta: [String: Any]) {
+		self.nodes.append(meta)
+		self.updateHash()
+	}
+	
+	func addNode(meta: [String: Any]) {
+		self.nodes.append(meta)
+		self.nodes = self.nodes.sorted{
+			return ($0["qty"] as! Int) < ($1["qty"] as! Int)
+		}
 		self.updateHash()
 	}
 	
 	func updateHash() {
-		self.md5 = MD5(JSON(["nodes": self.nodes!]).rawString()!)
+		self.md5 = MD5(JSON(["nodes": self.nodes]).rawString()!)
 	}
 	
 	
