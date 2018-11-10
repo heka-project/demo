@@ -14,8 +14,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		p2pClientID = UUID().uuidString
-		P2PManager()
+		self.window = UIWindow(frame: UIScreen.main.bounds)
+		let signedUp = UserDefaults.standard.bool(forKey: "signedUp")
+		var storyboard: UIStoryboard?
+		if signedUp == nil || !signedUp {
+			storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+		} else {
+			// P2P id
+			P2PClientID = UUID().uuidString
+			P2PManager()
+			storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+		}
+		
+		let initialViewController = storyboard!.instantiateInitialViewController()
+		
+		self.window?.rootViewController = initialViewController
+		self.window?.makeKeyAndVisible()
+		
 		return true
 	}
 

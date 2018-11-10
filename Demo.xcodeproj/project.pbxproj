@@ -21,8 +21,9 @@
 		9700EA9D2186C54600A6E4DA /* manrope-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA912186C54600A6E4DA /* manrope-bold.otf */; };
 		97586ACE218754DC00A05971 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586ACD218754DC00A05971 /* Global.swift */; };
 		975BD1602196898A00F0ADA7 /* P2PManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BD15F2196898A00F0ADA7 /* P2PManager.swift */; };
+		975BD1622196D7E600F0ADA7 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975BD1612196D7E600F0ADA7 /* SignUp.storyboard */; };
 		97664386217F1FAE00EB4C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97664385217F1FAE00EB4C5F /* AppDelegate.swift */; };
-		97664388217F1FAE00EB4C5F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97664387217F1FAE00EB4C5F /* BaseViewController.swift */; };
+		97664388217F1FAE00EB4C5F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97664387217F1FAE00EB4C5F /* BaseView.swift */; };
 		9766438B217F1FAE00EB4C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97664389217F1FAE00EB4C5F /* Main.storyboard */; };
 		97664390217F1FB000EB4C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9766438E217F1FB000EB4C5F /* LaunchScreen.storyboard */; };
 		97869C3821815643007B0C73 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97869C3721815643007B0C73 /* LoadingView.swift */; };
@@ -59,9 +60,10 @@
 		9700EA912186C54600A6E4DA /* manrope-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.otf"; sourceTree = "<group>"; };
 		97586ACD218754DC00A05971 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		975BD15F2196898A00F0ADA7 /* P2PManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PManager.swift; sourceTree = "<group>"; };
+		975BD1612196D7E600F0ADA7 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		97664382217F1FAE00EB4C5F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97664385217F1FAE00EB4C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97664387217F1FAE00EB4C5F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		97664387217F1FAE00EB4C5F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9766438A217F1FAE00EB4C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9766438F217F1FB000EB4C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97664391217F1FB000EB4C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,9 +172,9 @@
 		97869C392181591B007B0C73 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				97664387217F1FAE00EB4C5F /* BaseViewController.swift */,
-				97869C3721815643007B0C73 /* LoadingView.swift */,
+				97664387217F1FAE00EB4C5F /* BaseView.swift */,
 				979A1323219146130019A29E /* OnboardingView.swift */,
+				97869C3721815643007B0C73 /* LoadingView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +196,7 @@
 				979A13212191435E0019A29E /* Onboarding.storyboard */,
 				97664389217F1FAE00EB4C5F /* Main.storyboard */,
 				9766438E217F1FB000EB4C5F /* LaunchScreen.storyboard */,
+				975BD1612196D7E600F0ADA7 /* SignUp.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				97C3EAE1218A8D6600E70C50 /* Secrets.plist in Resources */,
 				9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */,
+				975BD1622196D7E600F0ADA7 /* SignUp.storyboard in Resources */,
 				9700EA992186C54600A6E4DA /* manrope-medium.otf in Resources */,
 				9700EA932186C54600A6E4DA /* manrope-regular.ttf in Resources */,
 				9700EA972186C54600A6E4DA /* manrope-semibold.ttf in Resources */,
@@ -363,7 +367,7 @@
 				97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */,
 				97DB2B802181B9B40060CA50 /* Browser.swift in Sources */,
 				975BD1602196898A00F0ADA7 /* P2PManager.swift in Sources */,
-				97664388217F1FAE00EB4C5F /* BaseViewController.swift in Sources */,
+				97664388217F1FAE00EB4C5F /* BaseView.swift in Sources */,
 				97869C3C218159B6007B0C73 /* Animation.swift in Sources */,
 				97DB2B7E2181B97B0060CA50 /* Advertiser.swift in Sources */,
 				979A1324219146130019A29E /* OnboardingView.swift in Sources */,

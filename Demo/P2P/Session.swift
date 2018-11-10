@@ -33,9 +33,8 @@ extension P2PService: MCSessionDelegate {
 	}
 	
 	func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-		let str = String(data: data, encoding: .utf8)!
 		guard let networkJSON = try? JSON(data: data) else {
-			print("P2P: ⚠️ - Failed to parse JSON. Raw: \(str)")
+			print("P2P: ⚠️ - Failed to parse JSON. Raw: \(String(data: data, encoding: .utf8)!)")
 			return
 		}
 		
@@ -52,7 +51,7 @@ extension P2PService: MCSessionDelegate {
 		switch fragmentMessage.type! {
 		case .SAY_HELLO:
 			self.fragmentCache = fragmentMessage.fragment
-			self.fragmentCache!.addNode(meta: ["name": userName, "qty": String(userQuantity), "id":
+			self.fragmentCache!.addNode(meta: ["name": userName!, "qty": userNrics!, "id":
 				self.peerID.displayName])
 			self.updatePeers()
 		case .UPDATE:
