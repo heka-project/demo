@@ -41,7 +41,7 @@ class P2PService: NSObject {
 		self.serviceBrowser.delegate = self
 		self.serviceBrowser.startBrowsingForPeers()
 		
-		self.fragmentCache = Fragment(meta: ["name": userName, "qty": userQuantity, "id": peerID.displayName])
+		self.fragmentCache = Fragment(meta: ["name": userName, "qty": String(userQuantity), "id": peerID.displayName])
 	}
 	
 	deinit {

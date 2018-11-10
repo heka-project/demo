@@ -21,7 +21,6 @@ extension P2PService: MCSessionDelegate {
 			print("✅ - Connected to peer \(peerID)")
 			self.sayHello()
 		case .notConnected:
-			// TODO: pop disconnected node and update
 			print("⚠️ - Lost connection to peer \(peerID)")
 			fragmentCache!.removeNode(id: peerID.displayName)
 			if fragmentCache!.nodes.count <= 1 {
@@ -51,15 +50,16 @@ extension P2PService: MCSessionDelegate {
 		switch fragmentMessage.type! {
 		case .SAY_HELLO:
 			self.fragmentCache = fragmentMessage.fragment
-			self.fragmentCache!.addNode(meta: ["name": userName, "qty": userQuantity, "id":
+			self.fragmentCache!.addNode(meta: ["name": userName, "qty": String(userQuantity), "id":
 				self.peerID.displayName])
 			self.updatePeers()
 		case .UPDATE:
 			if fragmentMessage.fragment.md5 != self.fragmentCache!.md5 {
 				print("⚠️ Will update self and peers...")
 				// TODO: temp naive fragment updating, need to add a merge helper
-				self.fragmentCache = fragmentMessage.fragment
-				self.fragmentCache!.updateHash() // Update hash (no helper method yet)
+//				self.fragmentCache = fragmentMessage.fragment
+//				self.fragmentCache!.updateHash() // Update hash (no helper method yet)
+				self.fragmentCache!.updateFragment(newFragment: fragmentMessage.fragment)
 				
 				// Update other peers on the network
 				self.updatePeers()
