@@ -26,21 +26,21 @@ class P2PManager: P2PServiceDelegate {
 		self.listeners.removeAll()
 	}
 	
-	static func receivedUpdate(manager: P2PService, fragment: FragmentMessage) {
-		self.listeners.forEach { listener in
-			listener.receivedUpdate(manager: manager, fragment: fragment)
+	func networkUpdated(manager: P2PService, fragment: FragmentMessage) {
+		P2PManager.listeners.forEach { listener in
 		}
 	}
 	
-	static func receivedHello(manager: P2PService, fragment: FragmentMessage) {
-		self.listeners.forEach { listener in
-			listener.receivedHello(manager: manager, fragment: fragment)
+	func receivedHello(manager: P2PService, fragment: FragmentMessage) {
+		P2PManager.listeners.forEach { listener in
+			listener.joinedNetwork()
 		}
 	}
 	
-	static func log(manager: P2PService, content: String) {
-		self.listeners.forEach { listener in
-			listener.log(manager: manager, content: content)
+	func lostConnection(manager: P2PService) {
+		P2PManager.listeners.forEach { listener in
+			listener.disconnectedNetwork()
 		}
 	}
+	
 }

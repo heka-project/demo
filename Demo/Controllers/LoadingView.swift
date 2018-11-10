@@ -42,16 +42,12 @@ class LoadingView: BaseView {
 }
 
 extension LoadingView: P2PServiceListener {
-	func receivedUpdate(manager: P2PService, fragment: FragmentMessage) {
-		
+	func joinedNetwork() {
+		print("🍉 - Connected to network!")
 	}
 	
-	func receivedHello(manager: P2PService, fragment: FragmentMessage) {
-		
-	}
-	
-	func log(manager: P2PService, content: String) {
-		
+	func disconnectedNetwork() {
+		print("🍉 - Lost connection to network!")
 	}
 	
 }

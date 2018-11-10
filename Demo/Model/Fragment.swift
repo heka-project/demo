@@ -26,9 +26,15 @@ class Fragment {
 	}
 	
 	func addNode(meta: [String: Any]) {
+		self.nodes.append(meta)
 		self.nodes = self.nodes.sorted{
-			return ($0["qty"] as! Int) < ($1["qty"] as! Int)
+			return ($0["id"] as! String) < ($1["id"] as! String)
 		}
+		self.updateHash()
+	}
+	
+	func removeNode(id: String) {
+		self.nodes = self.nodes.filter {$0["id"] as! String != id}
 		self.updateHash()
 	}
 	

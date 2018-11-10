@@ -10,3 +10,7 @@ import Foundation
 
 let secrets = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "Secrets", ofType: "plist") ?? "" )!
 
+let userName = "CHeff"
+let userQuantity = 99
+var p2pClientID: String?
+
