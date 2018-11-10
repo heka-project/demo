@@ -62,7 +62,6 @@ class P2PService: NSObject {
 		}
 	}
 	
-	// Dumps current fragment
 	internal func sayHello() {
 		print("👋 Saying hello...")
 		let fragmentMessage = FragmentMessage(type: .SAY_HELLO, fragment: self.fragmentCache!)

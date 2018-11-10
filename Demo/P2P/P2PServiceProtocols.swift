@@ -11,4 +11,5 @@ import Foundation
 protocol P2PServiceDelegate {
 	func receivedUpdate(manager: P2PService, fragment: FragmentMessage)
 	func receivedHello(manager: P2PService, fragment: FragmentMessage)
+	func log(manager: P2PService, content: String)
 }

@@ -20,7 +20,8 @@ extension P2PService: MCSessionDelegate {
 		case .connected:
 			print("✅ - Connected to peer \(peerID)")
 			self.sayHello()
-		default:
+		case .notConnected:
+			// TODO: pop disconnected node and update
 			break
 		}
 	}
@@ -38,12 +39,21 @@ extension P2PService: MCSessionDelegate {
 		switch fragmentMessage!.type! {
 		case .SAY_HELLO:
 			self.fragmentCache = fragmentMessage!.fragment
-			self.fragmentCache?.addNode(meta: ["Name": "test", "qty": 2, "id":
+			self.fragmentCache!.addNode(meta: ["Name": "test", "qty": 2, "id":
 				"cool-id"])
-			print(self.fragmentCache?.nodes)
 			self.updatePeers()
 		case .UPDATE:
-			print("Received update with hash \(fragmentMessage?.fragment.md5), vs \(self.fragmentCache?.md5)")
+			if fragmentMessage!.fragment.md5 != self.fragmentCache!.md5 {
+				print("⚠️ Will update self and peers...")
+				// TODO: temp naive fragment updating, need to add a merge helper
+				self.fragmentCache = fragmentMessage!.fragment
+				self.fragmentCache!.updateHash() // Update hash (no helper method yet)
+				
+				// Update other peers on the network
+				self.updatePeers()
+			} else {
+				print("⚠️ Node already has latest fragment, not updating.")
+			}
 		default:
 			break
 		}

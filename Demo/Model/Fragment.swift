@@ -34,7 +34,17 @@ class Fragment {
 	}
 	
 	func updateHash() {
-		self.md5 = MD5(JSON(["nodes": self.nodes]).rawString()!)
+		let stringRepresentation = mapToString()
+		// Generate a hash of self
+		self.md5 = MD5(stringRepresentation)
+		print("Generated hash \(self.md5)")
+	}
+	
+	// Map contents to a string
+	private func mapToString() -> String {
+		return JSON([
+			"nodes": self.nodes.map{$0.description}
+			]).rawString()!
 	}
 	
 	

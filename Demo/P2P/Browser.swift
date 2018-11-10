@@ -11,19 +11,17 @@ import MultipeerConnectivity
 
 extension P2PService: MCNearbyServiceBrowserDelegate {
 	func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-		NSLog("%@", "foundPeer: \(peerID)")
-		print("Inviting peer \(peerID) ...")
+		print("⚠️ P2P: Found peer \(peerID) ...")
 		
 		// Invite all peers that we find
 		browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 10)
 	}
 	
 	func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
-		NSLog("%@", "lostPeer: \(peerID)")
+		print("⚠️ P2P: lostPeer: \(peerID)")
 	}
 	
 	func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
-		NSLog("%@", "didNotStartBrowsingForPeers: \(error)")
 		
 	}
 }
