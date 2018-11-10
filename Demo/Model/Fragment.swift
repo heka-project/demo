@@ -26,7 +26,6 @@ class Fragment {
 	}
 	
 	func addNode(meta: [String: Any]) {
-		self.nodes.append(meta)
 		self.nodes = self.nodes.sorted{
 			return ($0["qty"] as! Int) < ($1["qty"] as! Int)
 		}
@@ -37,13 +36,14 @@ class Fragment {
 		let stringRepresentation = mapToString()
 		// Generate a hash of self
 		self.md5 = MD5(stringRepresentation)
-		print("Generated hash \(self.md5)")
 	}
 	
 	// Map contents to a string
 	private func mapToString() -> String {
+		// Sort nodes
+		let sortedNodes = self.nodes.map{$0.sorted{$0.key < $1.key}}
 		return JSON([
-			"nodes": self.nodes.map{$0.description}
+			"nodes": sortedNodes.description
 			]).rawString()!
 	}
 	
