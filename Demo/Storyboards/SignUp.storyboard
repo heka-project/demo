@@ -1,7 +1,104 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8c-ld-Ap4">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="manrope-regular.otf">
+            <string>Manrope-Regular</string>
+        </array>
+        <array key="manrope-semibold.ttf">
+            <string>Manrope-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tYP-SF-seu">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="P8c-ld-Ap4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8ez-qu-j3n">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A26-xs-pdp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="2XO-X0-rXb" kind="relationship" relationship="rootViewController" id="maA-3P-gEC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tcz-Dv-Ag5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839" y="121"/>
+        </scene>
+        <!--Signup View-->
+        <scene sceneID="zCJ-8M-1qQ">
+            <objects>
+                <viewController id="2XO-X0-rXb" customClass="SignupView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S2G-RS-vAD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-qW-Bie">
+                                <rect key="frame" x="42" y="336" width="146" height="25"/>
+                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lee Yong Kang" placeholder="Enter name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWh-QL-nCN">
+                                <rect key="frame" x="42" y="381" width="209" height="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cCB-4s-Oi6"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="28"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-8v-yTl">
+                                <rect key="frame" x="42" y="584" width="291" height="50"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kWu-Bm-eae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="2XO-X0-rXb" eventType="touchUpInside" id="I3G-zU-e7e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <constraints>
+                            <constraint firstItem="hJE-8v-yTl" firstAttribute="top" secondItem="BWh-QL-nCN" secondAttribute="bottom" constant="153" id="1bC-FP-IeX"/>
+                            <constraint firstItem="BWh-QL-nCN" firstAttribute="leading" secondItem="gOz-qW-Bie" secondAttribute="leading" id="2Nz-be-FVY"/>
+                            <constraint firstItem="gOz-qW-Bie" firstAttribute="leading" secondItem="h4c-tN-aid" secondAttribute="leading" constant="42" id="OWu-fd-vgs"/>
+                            <constraint firstItem="hJE-8v-yTl" firstAttribute="centerX" secondItem="S2G-RS-vAD" secondAttribute="centerX" id="dkV-kX-i3Z"/>
+                            <constraint firstItem="BWh-QL-nCN" firstAttribute="top" secondItem="gOz-qW-Bie" secondAttribute="bottom" constant="20" id="fRh-cf-dts"/>
+                            <constraint firstItem="BWh-QL-nCN" firstAttribute="centerY" secondItem="S2G-RS-vAD" secondAttribute="centerY" id="sNo-ob-Rvg"/>
+                            <constraint firstItem="hJE-8v-yTl" firstAttribute="leading" secondItem="BWh-QL-nCN" secondAttribute="leading" id="zCn-wO-Hwm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h4c-tN-aid"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kJg-9g-CbC"/>
+                    <connections>
+                        <outlet property="actionButton" destination="hJE-8v-yTl" id="sT5-aC-TAq"/>
+                        <outlet property="header" destination="gOz-qW-Bie" id="B2q-hE-b5C"/>
+                        <outlet property="textfield" destination="BWh-QL-nCN" id="MNd-0f-MI9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbJ-9r-H1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="119.70443349753695"/>
+        </scene>
+    </scenes>
 </document>

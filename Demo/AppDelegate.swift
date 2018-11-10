@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			P2PClientID = UUID().uuidString
 			P2PManager()
 			storyboard = UIStoryboard(name: "Main", bundle: nil)
-
 		}
 		
 		let initialViewController = storyboard!.instantiateInitialViewController()
