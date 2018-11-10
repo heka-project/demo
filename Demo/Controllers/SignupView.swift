@@ -35,11 +35,7 @@ class SignupView: BaseView, UITextFieldDelegate {
 		self.actionButton.setTitle(self.name! == " " ? "Next": "👋 Call me \"\(self.name!)\"", for: .normal)
 		return true
 	}
-	
-	func textFieldDidEndEditing(_ textField: UITextField) {
-		self.actionButton.setTitle(self.name! == " " ? "Next": "👋 Call me \"\(self.name!)\"", for: .normal)
-	}
-	
+
 	func openBarcodeScanner() {
 		let barcodeScannerViewController = BarcodeScannerViewController()
 		barcodeScannerViewController.codeDelegate = self

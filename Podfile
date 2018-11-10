@@ -11,6 +11,6 @@ pod 'BarcodeScanner'
 pod 'Hero'
 pod 'ObjectMapper'
 pod 'SwiftHash'
-
+pod 'IQKeyboardManager'
 
 end
