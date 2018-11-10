@@ -9,10 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="manrope-regular.otf">
+        <array key="manrope-medium.otf">
+            <string>Manrope-Medium</string>
+        </array>
+        <array key="manrope-regular.ttf">
             <string>Manrope-Regular</string>
         </array>
-        <array key="manrope-semibold.ttf">
+        <array key="manrope-semibold.otf">
             <string>Manrope-Semibold</string>
         </array>
     </customFonts>
@@ -46,24 +49,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-qW-Bie">
-                                <rect key="frame" x="42" y="336" width="146" height="25"/>
-                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's start with your name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-qW-Bie">
+                                <rect key="frame" x="42.000000000000014" y="346" width="231.33333333333337" height="25"/>
+                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lee Yong Kang" placeholder="Enter name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWh-QL-nCN">
-                                <rect key="frame" x="42" y="381" width="209" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWh-QL-nCN">
+                                <rect key="frame" x="41.999999999999986" y="381" width="200.66666666666663" height="50"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cCB-4s-Oi6"/>
                                 </constraints>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2XO-X0-rXb" id="zPc-mD-Lbe"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-8v-yTl">
-                                <rect key="frame" x="42" y="584" width="291" height="50"/>
+                                <rect key="frame" x="42" y="501" width="291" height="50"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kWu-Bm-eae"/>
@@ -73,17 +79,34 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="2XO-X0-rXb" eventType="touchUpInside" id="I3G-zU-e7e"/>
+                                    <action selector="buttonPressed:" destination="2XO-X0-rXb" eventType="touchUpInside" id="D8G-VV-Yd0"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="JZL-jt-YVf">
+                                <rect key="frame" x="42" y="271" width="54" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="tii-R2-GR3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So people know what to call you" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-nM-IqC">
+                                <rect key="frame" x="41.999999999999986" y="439" width="200.66666666666663" height="18"/>
+                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
-                            <constraint firstItem="hJE-8v-yTl" firstAttribute="top" secondItem="BWh-QL-nCN" secondAttribute="bottom" constant="153" id="1bC-FP-IeX"/>
+                            <constraint firstItem="hJE-8v-yTl" firstAttribute="top" secondItem="BWh-QL-nCN" secondAttribute="bottom" constant="70" id="1bC-FP-IeX"/>
                             <constraint firstItem="BWh-QL-nCN" firstAttribute="leading" secondItem="gOz-qW-Bie" secondAttribute="leading" id="2Nz-be-FVY"/>
+                            <constraint firstItem="gOz-qW-Bie" firstAttribute="top" secondItem="JZL-jt-YVf" secondAttribute="bottom" constant="20" id="CZS-kh-NqY"/>
+                            <constraint firstItem="ZTW-nM-IqC" firstAttribute="width" secondItem="BWh-QL-nCN" secondAttribute="width" id="EB4-AW-hvI"/>
                             <constraint firstItem="gOz-qW-Bie" firstAttribute="leading" secondItem="h4c-tN-aid" secondAttribute="leading" constant="42" id="OWu-fd-vgs"/>
+                            <constraint firstItem="JZL-jt-YVf" firstAttribute="leading" secondItem="gOz-qW-Bie" secondAttribute="leading" id="au4-KE-zY4"/>
+                            <constraint firstItem="ZTW-nM-IqC" firstAttribute="top" secondItem="BWh-QL-nCN" secondAttribute="bottom" constant="8" id="c0o-zE-86n"/>
+                            <constraint firstItem="ZTW-nM-IqC" firstAttribute="leading" secondItem="BWh-QL-nCN" secondAttribute="leading" id="dRF-9R-K3B"/>
                             <constraint firstItem="hJE-8v-yTl" firstAttribute="centerX" secondItem="S2G-RS-vAD" secondAttribute="centerX" id="dkV-kX-i3Z"/>
-                            <constraint firstItem="BWh-QL-nCN" firstAttribute="top" secondItem="gOz-qW-Bie" secondAttribute="bottom" constant="20" id="fRh-cf-dts"/>
+                            <constraint firstItem="BWh-QL-nCN" firstAttribute="top" secondItem="gOz-qW-Bie" secondAttribute="bottom" constant="10" id="fRh-cf-dts"/>
                             <constraint firstItem="BWh-QL-nCN" firstAttribute="centerY" secondItem="S2G-RS-vAD" secondAttribute="centerY" id="sNo-ob-Rvg"/>
                             <constraint firstItem="hJE-8v-yTl" firstAttribute="leading" secondItem="BWh-QL-nCN" secondAttribute="leading" id="zCn-wO-Hwm"/>
                         </constraints>
@@ -101,4 +124,7 @@
             <point key="canvasLocation" x="101.59999999999999" y="119.70443349753695"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar" width="54.666667938232422" height="54.666667938232422"/>
+    </resources>
 </document>

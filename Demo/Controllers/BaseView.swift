@@ -23,6 +23,10 @@ class BaseView: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(BaseView.willBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
 	}
 	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.view.endEditing(true)
+	}
+	
 	@objc func willBecomeActive() {}
 
 }

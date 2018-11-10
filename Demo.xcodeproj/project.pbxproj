@@ -36,7 +36,7 @@
 		97C3EAE1218A8D6600E70C50 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE0218A8D6600E70C50 /* Secrets.plist */; };
 		97C3EAE3218AF0FF00E70C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */; };
 		97DAFC8E21954E7500BF9B9E /* Fragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DAFC8D21954E7500BF9B9E /* Fragment.swift */; };
-		97DB2B78218170B60060CA50 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B77218170B60060CA50 /* Color.swift */; };
+		97DB2B78218170B60060CA50 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B77218170B60060CA50 /* UIColor.swift */; };
 		97DB2B7A2181B9020060CA50 /* P2PServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B792181B9020060CA50 /* P2PServiceProtocols.swift */; };
 		97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B7B2181B90A0060CA50 /* P2PService.swift */; };
 		97DB2B7E2181B97B0060CA50 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B7D2181B97B0060CA50 /* Advertiser.swift */; };
@@ -78,7 +78,7 @@
 		97C3EAE0218A8D6600E70C50 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97DAFC8D21954E7500BF9B9E /* Fragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fragment.swift; sourceTree = "<group>"; };
-		97DB2B77218170B60060CA50 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		97DB2B77218170B60060CA50 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		97DB2B792181B9020060CA50 /* P2PServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PServiceProtocols.swift; sourceTree = "<group>"; };
 		97DB2B7B2181B90A0060CA50 /* P2PService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PService.swift; sourceTree = "<group>"; };
 		97DB2B7D2181B97B0060CA50 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
@@ -136,6 +136,16 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		975BD1652196E90000F0ADA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97DB2B77218170B60060CA50 /* UIColor.swift */,
+				97869C3B218159B6007B0C73 /* Animation.swift */,
+				979A1325219182B10019A29E /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		97664379217F1FAE00EB4C5F = {
 			isa = PBXGroup;
 			children = (
@@ -185,10 +195,8 @@
 		97869C3A2181594B007B0C73 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				97869C3B218159B6007B0C73 /* Animation.swift */,
-				97DB2B77218170B60060CA50 /* Color.swift */,
+				975BD1652196E90000F0ADA7 /* Extensions */,
 				97586ACD218754DC00A05971 /* Global.swift */,
-				979A1325219182B10019A29E /* UIView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -375,7 +383,7 @@
 				97869C3C218159B6007B0C73 /* Animation.swift in Sources */,
 				97DB2B7E2181B97B0060CA50 /* Advertiser.swift in Sources */,
 				979A1324219146130019A29E /* OnboardingView.swift in Sources */,
-				97DB2B78218170B60060CA50 /* Color.swift in Sources */,
+				97DB2B78218170B60060CA50 /* UIColor.swift in Sources */,
 				97DB2B7A2181B9020060CA50 /* P2PServiceProtocols.swift in Sources */,
 				97664386217F1FAE00EB4C5F /* AppDelegate.swift in Sources */,
 			);

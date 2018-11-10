@@ -17,4 +17,8 @@ extension UIColor {
 	static func appPurple(a: CGFloat) -> UIColor {
 		return UIColor(red:0.48, green:0.48, blue:0.73, alpha: a)
 	}
+	
+	static func appBlack(a: CGFloat) -> UIColor {
+		return UIColor(red:0.00, green:0.14, blue:0.22, alpha: a)
+	}
 }
