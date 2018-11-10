@@ -20,6 +20,7 @@
 		9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA902186C54500A6E4DA /* manrope-medium.ttf */; };
 		9700EA9D2186C54600A6E4DA /* manrope-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA912186C54600A6E4DA /* manrope-bold.otf */; };
 		97586ACE218754DC00A05971 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586ACD218754DC00A05971 /* Global.swift */; };
+		975BD1602196898A00F0ADA7 /* P2PManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BD15F2196898A00F0ADA7 /* P2PManager.swift */; };
 		97664386217F1FAE00EB4C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97664385217F1FAE00EB4C5F /* AppDelegate.swift */; };
 		97664388217F1FAE00EB4C5F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97664387217F1FAE00EB4C5F /* BaseViewController.swift */; };
 		9766438B217F1FAE00EB4C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97664389217F1FAE00EB4C5F /* Main.storyboard */; };
@@ -34,7 +35,7 @@
 		97C3EAE3218AF0FF00E70C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */; };
 		97DAFC8E21954E7500BF9B9E /* Fragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DAFC8D21954E7500BF9B9E /* Fragment.swift */; };
 		97DB2B78218170B60060CA50 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B77218170B60060CA50 /* Color.swift */; };
-		97DB2B7A2181B9020060CA50 /* P2PServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B792181B9020060CA50 /* P2PServiceDelegate.swift */; };
+		97DB2B7A2181B9020060CA50 /* P2PServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B792181B9020060CA50 /* P2PServiceProtocols.swift */; };
 		97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B7B2181B90A0060CA50 /* P2PService.swift */; };
 		97DB2B7E2181B97B0060CA50 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B7D2181B97B0060CA50 /* Advertiser.swift */; };
 		97DB2B802181B9B40060CA50 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B7F2181B9B40060CA50 /* Browser.swift */; };
@@ -57,6 +58,7 @@
 		9700EA902186C54500A6E4DA /* manrope-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-medium.ttf"; sourceTree = "<group>"; };
 		9700EA912186C54600A6E4DA /* manrope-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.otf"; sourceTree = "<group>"; };
 		97586ACD218754DC00A05971 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		975BD15F2196898A00F0ADA7 /* P2PManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PManager.swift; sourceTree = "<group>"; };
 		97664382217F1FAE00EB4C5F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97664385217F1FAE00EB4C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97664387217F1FAE00EB4C5F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97DAFC8D21954E7500BF9B9E /* Fragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fragment.swift; sourceTree = "<group>"; };
 		97DB2B77218170B60060CA50 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		97DB2B792181B9020060CA50 /* P2PServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PServiceDelegate.swift; sourceTree = "<group>"; };
+		97DB2B792181B9020060CA50 /* P2PServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PServiceProtocols.swift; sourceTree = "<group>"; };
 		97DB2B7B2181B90A0060CA50 /* P2PService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PService.swift; sourceTree = "<group>"; };
 		97DB2B7D2181B97B0060CA50 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		97DB2B7F2181B9B40060CA50 /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
@@ -209,10 +211,11 @@
 			isa = PBXGroup;
 			children = (
 				97DB2B7B2181B90A0060CA50 /* P2PService.swift */,
-				97DB2B792181B9020060CA50 /* P2PServiceDelegate.swift */,
 				97DB2B7D2181B97B0060CA50 /* Advertiser.swift */,
 				97DB2B7F2181B9B40060CA50 /* Browser.swift */,
 				97DB2B812181B9DB0060CA50 /* Session.swift */,
+				975BD15F2196898A00F0ADA7 /* P2PManager.swift */,
+				97DB2B792181B9020060CA50 /* P2PServiceProtocols.swift */,
 			);
 			path = P2P;
 			sourceTree = "<group>";
@@ -359,12 +362,13 @@
 				979A1329219192B30019A29E /* FragmentMessage.swift in Sources */,
 				97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */,
 				97DB2B802181B9B40060CA50 /* Browser.swift in Sources */,
+				975BD1602196898A00F0ADA7 /* P2PManager.swift in Sources */,
 				97664388217F1FAE00EB4C5F /* BaseViewController.swift in Sources */,
 				97869C3C218159B6007B0C73 /* Animation.swift in Sources */,
 				97DB2B7E2181B97B0060CA50 /* Advertiser.swift in Sources */,
 				979A1324219146130019A29E /* OnboardingView.swift in Sources */,
 				97DB2B78218170B60060CA50 /* Color.swift in Sources */,
-				97DB2B7A2181B9020060CA50 /* P2PServiceDelegate.swift in Sources */,
+				97DB2B7A2181B9020060CA50 /* P2PServiceProtocols.swift in Sources */,
 				97664386217F1FAE00EB4C5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

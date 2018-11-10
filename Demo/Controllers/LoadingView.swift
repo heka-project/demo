@@ -15,11 +15,9 @@ class LoadingView: BaseView {
 	
 	@IBOutlet var logo: UIImageView!
 	
-	let service = P2PService()
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		service.delegate = self
+		P2PManager.addListener(self)
 	}
 	
 	override func willBecomeActive() {
@@ -43,12 +41,16 @@ class LoadingView: BaseView {
 	
 }
 
-extension LoadingView: P2PServiceDelegate {
+extension LoadingView: P2PServiceListener {
 	func receivedUpdate(manager: P2PService, fragment: FragmentMessage) {
 		
 	}
 	
 	func receivedHello(manager: P2PService, fragment: FragmentMessage) {
+		
+	}
+	
+	func log(manager: P2PService, content: String) {
 		
 	}
 	
