@@ -16,12 +16,12 @@ extension P2PService: MCSessionDelegate {
 	func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
 		switch state {
 		case .connecting:
-			print("🔗 - Connecting to peer \(peerID)")
+			print("P2P: 🔗 - Connecting to peer \(peerID)")
 		case .connected:
-			print("✅ - Connected to peer \(peerID)")
+			print("P2P: ✅ - Connected to peer \(peerID)")
 			self.sayHello()
 		case .notConnected:
-			print("⚠️ - Lost connection to peer \(peerID)")
+			print("P2P: ⚠️ - Lost connection to peer \(peerID)")
 			fragmentCache!.removeNode(id: peerID.displayName)
 			if fragmentCache!.nodes.count <= 1 {
 				self.delegate!.lostConnection(manager: self)
@@ -33,11 +33,11 @@ extension P2PService: MCSessionDelegate {
 	func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
 		let str = String(data: data, encoding: .utf8)!
 		guard let networkJSON = try? JSON(data: data) else {
-			print("⚠️ - Failed to parse JSON. Raw: \(str)")
+			print("P2P: ⚠️ - Failed to parse JSON. Raw: \(str)")
 			return
 		}
 		
-//		print("|==> \(networkJSON)")
+		print("Network: |==> \(networkJSON)")
 		
 		let fragmentMessage = Mapper<FragmentMessage>().map(JSON: networkJSON.dictionaryObject!)
 		
@@ -55,16 +55,13 @@ extension P2PService: MCSessionDelegate {
 			self.updatePeers()
 		case .UPDATE:
 			if fragmentMessage.fragment.md5 != self.fragmentCache!.md5 {
-				print("⚠️ Will update self and peers...")
-				// TODO: temp naive fragment updating, need to add a merge helper
-//				self.fragmentCache = fragmentMessage.fragment
-//				self.fragmentCache!.updateHash() // Update hash (no helper method yet)
+				print("P2P: ⚠️ Will update self and peers...")
 				self.fragmentCache!.updateFragment(newFragment: fragmentMessage.fragment)
 				
 				// Update other peers on the network
 				self.updatePeers()
 			} else {
-				print("✅ Node already has latest fragment, not updating.")
+				print("P2P: ✅ Node already has latest fragment, not updating.")
 			}
 		}
 	}
