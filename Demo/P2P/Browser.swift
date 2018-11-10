@@ -11,14 +11,14 @@ import MultipeerConnectivity
 
 extension P2PService: MCNearbyServiceBrowserDelegate {
 	func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-		print("⚠️ P2P: Found peer \(peerID) ...")
+		print("⚠️ P2P: Found peer \(peerID.displayName) ...")
 		
 		// Invite all peers that we find
 		browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 10)
 	}
 	
 	func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
-		print("⚠️ P2P: lostPeer: \(peerID)")
+		print("⚠️ P2P: lostPeer: \(peerID.displayName)")
 	}
 	
 	func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {

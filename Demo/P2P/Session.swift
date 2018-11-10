@@ -16,15 +16,17 @@ extension P2PService: MCSessionDelegate {
 	func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
 		switch state {
 		case .connecting:
-			print("P2P: 🔗 - Connecting to peer \(peerID)")
+			print("P2P: 🔗 - Connecting to peer \(peerID.displayName)")
 		case .connected:
-			print("P2P: ✅ - Connected to peer \(peerID)")
+			print("P2P: ✅ - Connected to peer \(peerID.displayName)")
 			self.sayHello()
 		case .notConnected:
-			print("P2P: ⚠️ - Lost connection to peer \(peerID)")
+			print("P2P: ⚠️ - Lost connection to peer \(peerID.displayName)")
 			fragmentCache!.removeNode(id: peerID.displayName)
 			if fragmentCache!.nodes.count <= 1 {
 				self.delegate!.lostConnection(manager: self)
+			} else {
+				self.updatePeers()
 			}
 			break
 		}
