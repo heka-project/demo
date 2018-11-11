@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.7.3)
   - BarcodeScanner (4.1.3)
   - Hero (1.3.1)
   - IQKeyboardManager (6.1.1)
@@ -7,6 +8,7 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - BarcodeScanner
   - Hero
   - IQKeyboardManager
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - BarcodeScanner
     - Hero
     - IQKeyboardManager
@@ -24,6 +27,7 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BarcodeScanner: fce1ad2b3f28286b1ab5091fe0979789618bee27
   Hero: 782578cbbb9f681c65985fad362cf4df928cb2fd
   IQKeyboardManager: f32d36b455a0834fa72aaa221f3c902bcd5bb611
@@ -31,6 +35,6 @@ SPEC CHECKSUMS:
   SwiftHash: 7501fd647bfc3aac7caca3c6f0ec98c3645c5025
   SwiftyJSON: 4605deb82c5ce2ea044e06ce0c295adf721d892f
 
-PODFILE CHECKSUM: 5d05fbd3fe0191e7bfb4adcba68bb38ea1ed7b8a
+PODFILE CHECKSUM: 09647fdf4817704a48dc5d3cc6a38cf6d5e0f576
 
 COCOAPODS: 1.5.3

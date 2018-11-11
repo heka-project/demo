@@ -6,6 +6,7 @@ target 'Demo' do
 use_frameworks!
 
 # Pods for Demo
+pod 'Alamofire', '~> 4.7'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'BarcodeScanner'
 pod 'Hero'
