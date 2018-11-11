@@ -12,10 +12,10 @@
         <array key="manrope-medium.ttf">
             <string>Manrope-Medium</string>
         </array>
-        <array key="manrope-regular.otf">
+        <array key="manrope-regular.ttf">
             <string>Manrope-Regular</string>
         </array>
-        <array key="manrope-semibold.otf">
+        <array key="manrope-semibold.ttf">
             <string>Manrope-Semibold</string>
         </array>
     </customFonts>
@@ -54,6 +54,9 @@
                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="f1"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWh-QL-nCN">
                                 <rect key="frame" x="44.999999999999986" y="381" width="200.66666666666663" height="50"/>
@@ -81,8 +84,11 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="actionButton"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="2XO-X0-rXb" eventType="touchUpInside" id="D8G-VV-Yd0"/>
+                                    <action selector="actionButtonPressed:" destination="2XO-X0-rXb" eventType="touchUpInside" id="nLb-NZ-9Ml"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="JZL-jt-YVf">
@@ -99,6 +105,9 @@
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="f2"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
@@ -126,7 +135,7 @@
                         <outlet property="actionButton" destination="hJE-8v-yTl" id="sT5-aC-TAq"/>
                         <outlet property="header" destination="gOz-qW-Bie" id="B2q-hE-b5C"/>
                         <outlet property="textfield" destination="BWh-QL-nCN" id="MNd-0f-MI9"/>
-                        <segue destination="Ddg-Yr-gq3" kind="show" id="ONv-dU-tjY"/>
+                        <segue destination="Ddg-Yr-gq3" kind="show" identifier="next" id="ONv-dU-tjY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbJ-9r-H1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,12 +165,18 @@
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="name"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your NRIC No." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYb-yk-Ljy">
                                 <rect key="frame" x="44.999999999999986" y="215.66666666666666" width="175.66666666666663" height="25"/>
                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="f1"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have your NRIC with you?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKl-gL-OXF">
                                 <rect key="frame" x="45" y="503" width="228" height="25"/>
@@ -170,7 +185,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NRIC" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8la-fT-HEh">
-                                <rect key="frame" x="45" y="250.66666666666663" width="172" height="50"/>
+                                <rect key="frame" x="44.999999999999986" y="250.66666666666663" width="171.66666666666663" height="50"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3cl-uA-Kii"/>
@@ -186,10 +201,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For identification purposes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZD-Py-FLm">
-                                <rect key="frame" x="45" y="308.66666666666669" width="172" height="18"/>
+                                <rect key="frame" x="44.999999999999986" y="308.66666666666669" width="171.66666666666663" height="18"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="f2"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKg-B8-J2g">
                                 <rect key="frame" x="45" y="361.66666666666669" width="285" height="50"/>
@@ -201,9 +219,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="2XO-X0-rXb" eventType="touchUpInside" id="msW-WF-hmn"/>
-                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="actionButton"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTI-Tg-WQU">
                                 <rect key="frame" x="45" y="553" width="285" height="67.333333333333371"/>
@@ -263,6 +281,12 @@ passes, etc.</string>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="actionButton" destination="TKg-B8-J2g" id="CnJ-rM-VIu"/>
+                        <outlet property="header" destination="RYb-yk-Ljy" id="6Rc-Py-XPM"/>
+                        <outlet property="textfield" destination="8la-fT-HEh" id="hHO-aU-NIx"/>
+                        <outlet property="username" destination="6OW-gj-NwY" id="wE7-Gf-Y3p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJJ-AH-SVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

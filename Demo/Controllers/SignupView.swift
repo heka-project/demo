@@ -15,24 +15,34 @@ class SignupView: BaseView, UITextFieldDelegate {
 	@IBOutlet var header: UILabel!
 	@IBOutlet var textfield: UITextField!
 	@IBOutlet var actionButton: UIButton!
+	@IBOutlet var username: UILabel!
 	
 	var name: String?
 	var nric: String?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		textfield.attributedPlaceholder =
-			NSAttributedString(string: "Enter name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.appPurple(a: 0.4)])
-		self.actionButton.roundify(5.0)
+		textfield?.attributedPlaceholder =
+			NSAttributedString(string: "Enter \(self.restorationIdentifier!)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.appPurple(a: 0.4)])
+		self.actionButton?.roundify(5.0)
+		self.username?.text = UserDefaults.standard.string(forKey: "user-name")
 	}
 	
-	@IBAction func buttonPressed(_ sender: Any) {
-		
+	@IBAction func actionButtonPressed(_ sender: Any) {
+		if self.restorationIdentifier == "name" {
+			UserDefaults.standard.set(self.name, forKey: "user-name")
+			self.performSegue(withIdentifier: "next", sender: self)
+		}
 	}
 	
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-		self.name = textField.text! + string
-		self.actionButton.setTitle(self.name! == " " ? "Next": "👋 Call me \"\(self.name!)\"", for: .normal)
+		if self.restorationIdentifier == "name" {
+			self.name = textField.text! + string
+			self.actionButton.setTitle(self.name! == " " ? "Next": "👋 Call me \"\(self.name!)\"", for: .normal)
+		} else {
+			
+		}
+		
 		return true
 	}
 
