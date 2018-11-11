@@ -9,13 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="manrope-medium.ttf">
+        <array key="manrope-medium.otf">
             <string>Manrope-Medium</string>
         </array>
         <array key="manrope-regular.ttf">
             <string>Manrope-Regular</string>
         </array>
-        <array key="manrope-semibold.ttf">
+        <array key="manrope-semibold.otf">
             <string>Manrope-Semibold</string>
         </array>
     </customFonts>
@@ -58,8 +58,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="f1"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWh-QL-nCN">
-                                <rect key="frame" x="44.999999999999986" y="381" width="200.66666666666663" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lee Yong  Kang" placeholder="Enter name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWh-QL-nCN">
+                                <rect key="frame" x="45" y="381" width="230" height="50"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cCB-4s-Oi6"/>
@@ -101,7 +101,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So people know what to call you" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-nM-IqC">
-                                <rect key="frame" x="44.999999999999986" y="439" width="200.66666666666663" height="18"/>
+                                <rect key="frame" x="45" y="439" width="230" height="18"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -151,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="5M4-Yt-Thi">
-                                <rect key="frame" x="45" y="107" width="30" height="30"/>
+                                <rect key="frame" x="45" y="175.66666666666666" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="blk-Zz-nhe"/>
                                     <constraint firstAttribute="width" secondItem="5M4-Yt-Thi" secondAttribute="height" multiplier="1:1" id="m3C-sg-yb5"/>
@@ -161,7 +161,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OW-gj-NwY">
-                                <rect key="frame" x="95" y="107" width="260" height="30"/>
+                                <rect key="frame" x="95" y="175.66666666666666" width="260" height="30"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -170,7 +170,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your NRIC No." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYb-yk-Ljy">
-                                <rect key="frame" x="44.999999999999986" y="215.66666666666666" width="175.66666666666663" height="25"/>
+                                <rect key="frame" x="44.999999999999986" y="235.66666666666666" width="175.66666666666663" height="24.999999999999972"/>
                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -179,13 +179,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have your NRIC with you?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKl-gL-OXF">
-                                <rect key="frame" x="45" y="503" width="228" height="25"/>
+                                <rect key="frame" x="45" y="523" width="228" height="25"/>
                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NRIC" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8la-fT-HEh">
-                                <rect key="frame" x="44.999999999999986" y="250.66666666666663" width="171.66666666666663" height="50"/>
+                                <rect key="frame" x="45" y="270.66666666666669" width="172" height="50"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3cl-uA-Kii"/>
@@ -197,11 +197,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="name"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="delegate" destination="2XO-X0-rXb" id="Snw-3v-q9o"/>
+                                    <outlet property="delegate" destination="Ddg-Yr-gq3" id="T4k-rs-YXD"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For identification purposes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZD-Py-FLm">
-                                <rect key="frame" x="44.999999999999986" y="308.66666666666669" width="171.66666666666663" height="18"/>
+                                <rect key="frame" x="45" y="328.66666666666669" width="172" height="18"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -210,7 +210,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKg-B8-J2g">
-                                <rect key="frame" x="45" y="361.66666666666669" width="285" height="50"/>
+                                <rect key="frame" x="45" y="381.66666666666669" width="285" height="50"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Xum-vX-SoF"/>
@@ -222,9 +222,12 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="actionButton"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionButtonPressed:" destination="Ddg-Yr-gq3" eventType="touchUpInside" id="03o-UC-qrn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTI-Tg-WQU">
-                                <rect key="frame" x="45" y="553" width="285" height="67.333333333333371"/>
+                                <rect key="frame" x="45" y="573" width="285" height="67.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tTI-Tg-WQU" secondAttribute="height" multiplier="270:64" id="dWw-Xi-bep"/>
                                 </constraints>
@@ -232,12 +235,15 @@
                                 <state key="normal" backgroundImage="nric-button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nricScannerButtonPress:" destination="Ddg-Yr-gq3" eventType="touchUpInside" id="4Ql-90-Cuh"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="div" translatesAutoresizingMaskIntoConstraints="NO" id="r73-G0-dOE">
-                                <rect key="frame" x="45" y="446.66666666666669" width="285" height="19"/>
+                                <rect key="frame" x="45" y="466.66666666666669" width="285" height="19"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPg-Gi-cCI">
-                                <rect key="frame" x="45" y="635.33333333333337" width="228" height="36"/>
+                                <rect key="frame" x="45" y="655.33333333333337" width="228" height="36"/>
                                 <string key="text">Works with NRIC, concession 
 passes, etc.</string>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
@@ -254,9 +260,8 @@ passes, etc.</string>
                             <constraint firstItem="7t5-6m-Ni5" firstAttribute="trailing" secondItem="6OW-gj-NwY" secondAttribute="trailing" constant="20" id="63v-Hi-rOc"/>
                             <constraint firstItem="6OW-gj-NwY" firstAttribute="leading" secondItem="5M4-Yt-Thi" secondAttribute="trailing" constant="20" id="9Dy-sj-5nH"/>
                             <constraint firstItem="SKl-gL-OXF" firstAttribute="leading" secondItem="r73-G0-dOE" secondAttribute="leading" id="K9o-KQ-foh"/>
-                            <constraint firstItem="5M4-Yt-Thi" firstAttribute="top" secondItem="7t5-6m-Ni5" secondAttribute="top" constant="63" id="L7Q-U3-ak5"/>
                             <constraint firstItem="tTI-Tg-WQU" firstAttribute="leading" secondItem="SKl-gL-OXF" secondAttribute="leading" id="ME5-vu-nsu"/>
-                            <constraint firstItem="r73-G0-dOE" firstAttribute="centerY" secondItem="orO-y2-Fmv" secondAttribute="centerY" constant="50" id="Mce-gP-6e9"/>
+                            <constraint firstItem="r73-G0-dOE" firstAttribute="centerY" secondItem="orO-y2-Fmv" secondAttribute="centerY" constant="70" id="Mce-gP-6e9"/>
                             <constraint firstItem="tTI-Tg-WQU" firstAttribute="top" secondItem="SKl-gL-OXF" secondAttribute="bottom" constant="25" id="RFS-sM-2bV"/>
                             <constraint firstItem="8la-fT-HEh" firstAttribute="top" secondItem="RYb-yk-Ljy" secondAttribute="bottom" constant="10" id="UnH-Cy-S6a"/>
                             <constraint firstItem="5M4-Yt-Thi" firstAttribute="leading" secondItem="7t5-6m-Ni5" secondAttribute="leading" constant="45" id="XP7-NQ-FQt"/>
@@ -266,6 +271,7 @@ passes, etc.</string>
                             <constraint firstItem="SKl-gL-OXF" firstAttribute="top" secondItem="r73-G0-dOE" secondAttribute="bottom" constant="37.333333333333314" id="cmN-f4-BXO"/>
                             <constraint firstItem="TKg-B8-J2g" firstAttribute="top" secondItem="XZD-Py-FLm" secondAttribute="bottom" constant="35" id="fwt-iU-we4"/>
                             <constraint firstItem="8la-fT-HEh" firstAttribute="leading" secondItem="RYb-yk-Ljy" secondAttribute="leading" id="gzN-KU-d98"/>
+                            <constraint firstItem="RYb-yk-Ljy" firstAttribute="top" secondItem="5M4-Yt-Thi" secondAttribute="bottom" constant="30" id="hfv-Y4-6ke"/>
                             <constraint firstItem="r73-G0-dOE" firstAttribute="leading" secondItem="7t5-6m-Ni5" secondAttribute="leading" constant="45" id="iot-CW-6Eu"/>
                             <constraint firstItem="6OW-gj-NwY" firstAttribute="height" secondItem="5M4-Yt-Thi" secondAttribute="height" id="n3u-P8-q0c"/>
                             <constraint firstItem="TKg-B8-J2g" firstAttribute="leading" secondItem="r73-G0-dOE" secondAttribute="leading" id="nsb-aI-Cr3"/>
@@ -282,10 +288,18 @@ passes, etc.</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="actionButton" destination="TKg-B8-J2g" id="CnJ-rM-VIu"/>
+                        <outlet property="actionButton" destination="TKg-B8-J2g" id="jV2-Ig-6bE"/>
                         <outlet property="header" destination="RYb-yk-Ljy" id="6Rc-Py-XPM"/>
+                        <outlet property="nricScannerButton" destination="tTI-Tg-WQU" id="5Ga-i4-rqT"/>
                         <outlet property="textfield" destination="8la-fT-HEh" id="hHO-aU-NIx"/>
                         <outlet property="username" destination="6OW-gj-NwY" id="wE7-Gf-Y3p"/>
+                        <outletCollection property="bottomPanel" destination="SKl-gL-OXF" collectionClass="NSMutableArray" id="TUl-vM-YNh"/>
+                        <outletCollection property="bottomPanel" destination="tTI-Tg-WQU" collectionClass="NSMutableArray" id="xtg-mS-u7O"/>
+                        <outletCollection property="bottomPanel" destination="GPg-Gi-cCI" collectionClass="NSMutableArray" id="ELy-2N-N6c"/>
+                        <outletCollection property="topPanel" destination="TKg-B8-J2g" collectionClass="NSMutableArray" id="Wjh-8A-9dD"/>
+                        <outletCollection property="topPanel" destination="XZD-Py-FLm" collectionClass="NSMutableArray" id="eLg-pd-B2P"/>
+                        <outletCollection property="topPanel" destination="8la-fT-HEh" collectionClass="NSMutableArray" id="dLB-JM-vq0"/>
+                        <outletCollection property="topPanel" destination="RYb-yk-Ljy" collectionClass="NSMutableArray" id="31T-F2-H8R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJJ-AH-SVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
