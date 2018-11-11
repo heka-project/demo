@@ -41,6 +41,8 @@ class SignupView: BaseView, UITextFieldDelegate {
 			self.performSegue(withIdentifier: "next", sender: self)
 		} else if self.restorationIdentifier == "nric" {
 			UserDefaults.standard.set(textfield.text!, forKey: "user-nric")
+			
+			APIManager.shared.registerUser()
 		}
 	}
 	

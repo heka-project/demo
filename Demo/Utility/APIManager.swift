@@ -13,18 +13,32 @@ class APIManager {
 	static let shared = APIManager()
 	let baseURL: String = secrets.value(forKey: "apiBaseUrl") as! String
 	
-	let defaultParams: Parameters = [:]
 	let defaultHeaders: HTTPHeaders = [
-		"Accept": "application/json"
+		"Content-Type": "application/json"
 	]
 	
 	private enum APIRoute: String {
 		case user = "/user"
+		case chain = "/chain"
 	}
 	
-	private func request(path: APIRoute, method: HTTPMethod, _ callback: @escaping ()->Void) {
-		Alamofire.request(baseURL + path.rawValue, method: method, parameters: [:], encoding: URLEncoding.default, headers: [:])
-			.responseJSON { response in
+	func registerUser() {
+		let params: Parameters = [
+			"data": [
+				"name": userName,
+				"uid": userNric,
+				"nrics": ["1", "2"]
+			]
+		]
+		print("API: Register user with params... \(params)")
+		
+		self.request(path: .user, params: params, method: .post) {
+		}
+	}
+	
+	private func request(path: APIRoute, params: Parameters, method: HTTPMethod, _ callback: @escaping ()->Void) {
+		Alamofire.request(baseURL + path.rawValue, method: method, parameters: params, encoding: JSONEncoding.default, headers: [:]).response { dataResponse in
+			print("API: Server responded with status code \(dataResponse.response?.statusCode)")
 		}
 	}
 
