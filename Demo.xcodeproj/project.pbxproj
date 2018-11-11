@@ -20,6 +20,7 @@
 		9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA902186C54500A6E4DA /* manrope-medium.ttf */; };
 		9700EA9D2186C54600A6E4DA /* manrope-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA912186C54600A6E4DA /* manrope-bold.otf */; };
 		971B0C1821980E4400B63C88 /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B0C1721980E4400B63C88 /* BarcodeScanner.swift */; };
+		971B0C1B2198195100B63C88 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B0C1A2198195100B63C88 /* APIManager.swift */; };
 		97586ACE218754DC00A05971 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586ACD218754DC00A05971 /* Global.swift */; };
 		975BD1602196898A00F0ADA7 /* P2PManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BD15F2196898A00F0ADA7 /* P2PManager.swift */; };
 		975BD1622196D7E600F0ADA7 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975BD1612196D7E600F0ADA7 /* SignUp.storyboard */; };
@@ -61,6 +62,7 @@
 		9700EA902186C54500A6E4DA /* manrope-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-medium.ttf"; sourceTree = "<group>"; };
 		9700EA912186C54600A6E4DA /* manrope-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.otf"; sourceTree = "<group>"; };
 		971B0C1721980E4400B63C88 /* BarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
+		971B0C1A2198195100B63C88 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		97586ACD218754DC00A05971 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		975BD15F2196898A00F0ADA7 /* P2PManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PManager.swift; sourceTree = "<group>"; };
 		975BD1612196D7E600F0ADA7 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				975BD1652196E90000F0ADA7 /* Extensions */,
 				97586ACD218754DC00A05971 /* Global.swift */,
 				971B0C1721980E4400B63C88 /* BarcodeScanner.swift */,
+				971B0C1A2198195100B63C88 /* APIManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DAFC8E21954E7500BF9B9E /* Fragment.swift in Sources */,
+				971B0C1B2198195100B63C88 /* APIManager.swift in Sources */,
 				979A1326219182B10019A29E /* UIView.swift in Sources */,
 				97DB2B822181B9DB0060CA50 /* Session.swift in Sources */,
 				97586ACE218754DC00A05971 /* Global.swift in Sources */,
