@@ -48,7 +48,11 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 		} else if point!.x < self.view.frame.width/2 {
 			self.navigationController?.popViewController(animated: true)
 		}
-		
+	}
+	
+	@IBAction func doneButtonPress(_ sender: Any) {
+		let signupView = UIStoryboard(name: "SignUp", bundle: .main).instantiateViewController(withIdentifier: "signup")
+		self.navigationController!.pushViewController(signupView, animated: true)
 	}
 	
 }

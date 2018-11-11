@@ -19,9 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		IQKeyboardManager.shared().isEnabled = true
 
 		self.window = UIWindow(frame: UIScreen.main.bounds)
+		
+		let doneOnboarding = UserDefaults.standard.bool(forKey: "doneOnboarding")
 		let signedUp = UserDefaults.standard.bool(forKey: "signedUp")
 		var storyboard: UIStoryboard?
-		if signedUp == nil || !signedUp {
+		
+		if !doneOnboarding {
+			storyboard = UIStoryboard(name: "Onboarding", bundle: .main)
+		} else if signedUp == nil || !signedUp {
 			storyboard = UIStoryboard(name: "SignUp", bundle: nil)
 		} else {
 			// P2P id

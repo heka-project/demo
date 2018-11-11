@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="manrope-bold.otf">
+        <array key="manrope-bold.ttf">
             <string>Manrope-Bold</string>
         </array>
         <array key="manrope-regular.ttf">
@@ -52,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-1" translatesAutoresizingMaskIntoConstraints="NO" id="wNu-6K-b6I">
-                                <rect key="frame" x="50" y="346.33333333333331" width="64" height="63.666666666666686"/>
+                                <rect key="frame" x="50" y="354.66666666666669" width="58" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wNu-6K-b6I" secondAttribute="height" multiplier="1:1" id="z5N-8a-Hny"/>
                                 </constraints>
@@ -61,7 +61,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is you." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4X-vz-b91">
-                                <rect key="frame" x="50.000000000000007" y="440" width="127.66666666666669" height="32"/>
+                                <rect key="frame" x="50" y="442.66666666666669" width="116" height="27"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="23"/>
                                 <color key="textColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are part of a civilian-driven distribution chain." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2r-Xh-5WP">
-                                <rect key="frame" x="50" y="482" width="265" height="49.666666666666629"/>
+                                <rect key="frame" x="50" y="479.66666666666669" width="265" height="42.000000000000057"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -293,7 +293,7 @@ communities in your zone,</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="when theres a package going around." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwz-C8-riJ">
-                                <rect key="frame" x="50" y="482" width="265" height="49.666666666666629"/>
+                                <rect key="frame" x="50" y="479.66666666666669" width="265" height="42.000000000000057"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -304,7 +304,7 @@ communities in your zone,</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ll notify everyone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-Tf-Dqq">
-                                <rect key="frame" x="50.000000000000014" y="440.33333333333331" width="249.33333333333337" height="31.666666666666686"/>
+                                <rect key="frame" x="50.000000000000014" y="442.66666666666669" width="249.33333333333337" height="27"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="23"/>
                                 <color key="textColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -315,10 +315,10 @@ communities in your zone,</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPD-cl-Dpi">
-                                <rect key="frame" x="50.000000000000014" y="44" width="249.33333333333337" height="388"/>
+                                <rect key="frame" x="50.000000000000014" y="44" width="249.33333333333337" height="390.33333333333331"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="P2F-rn-xhM">
-                                        <rect key="frame" x="0.0" y="172.33333333333334" width="38.666666666666664" height="55"/>
+                                        <rect key="frame" x="0.0" y="174.66666666666666" width="38.666666666666664" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P2F-rn-xhM" secondAttribute="height" multiplier="40:57" id="SKr-Or-a1Z"/>
                                             <constraint firstAttribute="width" constant="38.666666666666664" id="asW-hr-ksh"/>
@@ -328,7 +328,7 @@ communities in your zone,</string>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="ReG-ry-hAT">
-                                        <rect key="frame" x="110.00000000000001" y="170.33333333333334" width="41.666666666666671" height="59"/>
+                                        <rect key="frame" x="110.00000000000001" y="172.66666666666666" width="41.666666666666671" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ReG-ry-hAT" secondAttribute="height" multiplier="40:57" id="9SL-Ja-iVP"/>
                                         </constraints>
@@ -337,43 +337,43 @@ communities in your zone,</string>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="wAh-9Y-2bD">
-                                        <rect key="frame" x="0.0" y="242.33333333333331" width="38.666666666666664" height="55"/>
+                                        <rect key="frame" x="0.0" y="244.66666666666669" width="38.666666666666664" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="wAh-9Y-2bD" secondAttribute="height" multiplier="40:57" id="AG8-T7-Wr4"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="yaH-nF-5rZ">
-                                        <rect key="frame" x="0.0" y="310.33333333333331" width="39.666666666666664" height="56.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="312.66666666666669" width="39.666666666666664" height="56.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yaH-nF-5rZ" secondAttribute="height" multiplier="40:57" id="RfD-pb-OXu"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="Kxl-kv-lCk">
-                                        <rect key="frame" x="54.666666666666671" y="310.33333333333331" width="39.666666666666671" height="56.666666666666686"/>
+                                        <rect key="frame" x="54.666666666666671" y="312.66666666666669" width="39.666666666666671" height="56.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kxl-kv-lCk" secondAttribute="height" multiplier="40:57" id="ybq-hd-OR8"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="ftF-LL-wgu">
-                                        <rect key="frame" x="111.00000000000001" y="310.33333333333331" width="39.666666666666671" height="56.666666666666686"/>
+                                        <rect key="frame" x="111.00000000000001" y="312.66666666666669" width="39.666666666666671" height="56.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ftF-LL-wgu" secondAttribute="height" multiplier="40:57" id="sqB-XK-IqK"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="O2e-e4-Ytr">
-                                        <rect key="frame" x="53.666666666666671" y="240.33333333333331" width="41.333333333333329" height="59"/>
+                                        <rect key="frame" x="53.666666666666671" y="242.66666666666669" width="41.333333333333329" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="O2e-e4-Ytr" secondAttribute="height" multiplier="40:57" id="aQN-no-eCW"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="08j-D9-mam">
-                                        <rect key="frame" x="110.00000000000001" y="240.33333333333331" width="41.666666666666671" height="59"/>
+                                        <rect key="frame" x="110.00000000000001" y="242.66666666666669" width="41.666666666666671" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="08j-D9-mam" secondAttribute="height" multiplier="40:57" id="47K-gx-5Qb"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard-phone" translatesAutoresizingMaskIntoConstraints="NO" id="8yi-vt-nf9">
-                                        <rect key="frame" x="53.666666666666671" y="170.33333333333334" width="41.333333333333329" height="59"/>
+                                        <rect key="frame" x="53.666666666666671" y="172.66666666666666" width="41.333333333333329" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="8yi-vt-nf9" secondAttribute="height" multiplier="40:57" id="pSw-5j-j6v"/>
                                         </constraints>
@@ -657,6 +657,7 @@ your share,</string>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="f2"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O80-6W-pSz">
@@ -685,6 +686,12 @@ medical assistance,</string>
                                 <state key="normal" title="Set up account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="actionButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doneButtonPress:" destination="EC7-cG-DsW" eventType="touchUpInside" id="SFQ-cT-Skh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
