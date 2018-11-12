@@ -15,7 +15,8 @@ class APIManager {
 	let baseURL: String = secrets.value(forKey: "apiBaseUrl") as! String
 	
 	let defaultHeaders: HTTPHeaders = [
-		"Content-Type": "application/json"
+		"Content-Type": "application/json",
+		"Authorization": secrets.value(forKey: "api_secret") as! String
 	]
 	
 	private enum APIRoute: String {
