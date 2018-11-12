@@ -12,6 +12,8 @@ import BarcodeScanner
 
 class SignupView: BaseView, UITextFieldDelegate {
 	
+	let nricRegex = try! NSRegularExpression(pattern: "(?i)^[STFG]\\d{7}[A-Z]$")
+
 	@IBOutlet var header: UILabel!
 	@IBOutlet var textfield: UITextField!
 	@IBOutlet var actionButton: UIButton!
@@ -40,9 +42,7 @@ class SignupView: BaseView, UITextFieldDelegate {
 			UserDefaults.standard.set(self.name, forKey: "user-name")
 			self.performSegue(withIdentifier: "next", sender: self)
 		} else if self.restorationIdentifier == "nric" {
-			UserDefaults.standard.set(textfield.text!, forKey: "user-nric")
-			
-			APIManager.shared.registerUser()
+			self.verifyNRIC(nric: textfield.text!)
 		}
 	}
 	
@@ -52,15 +52,34 @@ class SignupView: BaseView, UITextFieldDelegate {
 			self.name = newString
 			self.actionButton.setTitle(self.name! == " " ? "Next": "👋 Call me \"\(self.name!)\"", for: .normal)
 		} else if self.restorationIdentifier == "nric" {
-			let regex = try! NSRegularExpression(pattern: "(?i)^[STFG]\\d{7}[A-Z]$")
-			if regex.firstMatch(in: newString, options: [], range: NSRange(location: 0, length: newString.utf16.count)) == nil {
-				self.setActionButton(title: "Invalid NRIC", enabled: false)
-			} else {
-				self.setActionButton(title: "Register", enabled: true)
-			}
+			self.validateNRIC(nric: newString)
 		}
 		
 		return true
+	}
+	
+	func validateNRIC(nric: String) {
+		if nricRegex.firstMatch(in: nric, options: [], range: NSRange(location: 0, length: nric.utf16.count)) == nil {
+			self.setActionButton(title: "Invalid NRIC", enabled: false)
+		} else {
+			self.setActionButton(title: "Register", enabled: true)
+		}
+	}
+	
+	func verifyNRIC(nric: String) {
+		self.setActionButton(title: "Verifying...", enabled: false)
+		APIManager.shared.verifyNRIC(nric: nric) { isValid in
+			if !isValid {
+				self.setActionButton(title: "NRIC already registered", enabled: true)
+			} else {
+				self.registerUser()
+			}
+		}
+	}
+	
+	func registerUser () {
+		UserDefaults.standard.set(textfield.text!, forKey: "user-nric")
+		APIManager.shared.registerUser()
 	}
 	
 	func setActionButton(title: String, enabled: Bool) {

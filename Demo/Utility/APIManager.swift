@@ -26,8 +26,7 @@ class APIManager {
 	func registerUser() {
 		let params: Parameters = [
 			"data": [
-				"name": userName ?? "",
-				"uid": userNric ?? "",
+				"name": userName ?? "", "uid": userNric ?? "",
 				"nrics": ["1", "2"]
 			]
 		]
@@ -38,12 +37,20 @@ class APIManager {
 		}
 	}
 	
-	func verifyNRIC(nric: String ) {
+	func verifyNRIC(nric: String, callback: @escaping (_ isValid: Bool) -> Void ) {
 		let params: Parameters = [
 			"queryId": nric
 		]
+		print("API: Verifying user with params ... \(params)")
 		self.request(path: .user, params: params, method: .get) { (succ, res) in
-			
+			if succ {
+				if let uid = res?.dictionaryValue["0"]?.dictionaryObject!["uid"] {
+					print("API: User with UID \(uid) already exists")
+					callback(false)
+				} else {
+					callback(true)
+				}
+			}
 		}
 	}
 	
@@ -55,12 +62,12 @@ class APIManager {
 			.request(baseURL + path.rawValue,
 						  method: method,
 						  parameters: params,
-						  encoding: JSONEncoding.default,
+						  encoding: (method == .get ? URLEncoding.default: JSONEncoding.default),
 						  headers:  self.defaultHeaders)
 			.response { dataResponse in
 				if let response = dataResponse.response, let data = dataResponse.data  {
 					print("API: Server responded with status code \(response.statusCode)")
-					let jsonData = try! JSON(data: data)
+					let jsonData = try? JSON(data: data)
 					callback(true, jsonData)
 				} else {
 					callback(false, nil)
