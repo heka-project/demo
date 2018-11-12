@@ -13,6 +13,16 @@ import IQKeyboardManager
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+	
+	private enum Storyboard: String {
+		case onboarding = "Onboarding"
+		case signup = "SignUp"
+		case main = "Main"
+		
+		func scene() -> UIStoryboard {
+			return UIStoryboard.init(name: self.rawValue , bundle: .main)
+		}
+	}
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
@@ -24,19 +34,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let signedUp = UserDefaults.standard.bool(forKey: "signedUp")
 		var storyboard: UIStoryboard?
 		
-		if !doneOnboarding {
-			storyboard = UIStoryboard(name: "Onboarding", bundle: .main)
-		} else if signedUp == nil || !signedUp {
-			storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+		// Override entry point for debugging
+		let overwriteEntry: UIStoryboard? = Storyboard.signup.scene()
+		
+		if overwriteEntry != nil {
+			storyboard = overwriteEntry
+		} else if !doneOnboarding {
+			storyboard = Storyboard.onboarding.scene()
+		} else if !signedUp {
+			storyboard = Storyboard.signup.scene()
 		} else {
 			// P2P id
 			P2PClientID = UUID().uuidString
 			P2PManager()
-			storyboard = UIStoryboard(name: "Main", bundle: nil)
+			storyboard = Storyboard.main.scene()
 		}
 		
 		let initialViewController = storyboard!.instantiateInitialViewController()
-		
 		self.window?.rootViewController = initialViewController
 		self.window?.makeKeyAndVisible()
 		
