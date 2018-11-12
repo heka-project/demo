@@ -14,16 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 	
-	private enum Storyboard: String {
-		case onboarding = "Onboarding"
-		case signup = "SignUp"
-		case main = "Main"
-		
-		func scene() -> UIStoryboard {
-			return UIStoryboard.init(name: self.rawValue , bundle: .main)
-		}
-	}
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
 		IQKeyboardManager.shared().isEnabled = true
@@ -35,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		var storyboard: UIStoryboard?
 		
 		// Override entry point for debugging
-		let overwriteEntry: UIStoryboard? = nil
+		let overwriteEntry: UIStoryboard? = Storyboard.signup.scene()
 		
 		if overwriteEntry != nil {
 			storyboard = overwriteEntry
@@ -44,9 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		} else if !signedUp {
 			storyboard = Storyboard.signup.scene()
 		} else {
-			// P2P id
-			P2PClientID = UUID().uuidString
-			P2PManager()
 			storyboard = Storyboard.main.scene()
 		}
 		
