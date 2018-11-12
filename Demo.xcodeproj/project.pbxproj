@@ -39,6 +39,7 @@
 		979A1329219192B30019A29E /* FragmentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1328219192B30019A29E /* FragmentMessage.swift */; };
 		97C3EAE1218A8D6600E70C50 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE0218A8D6600E70C50 /* Secrets.plist */; };
 		97C3EAE3218AF0FF00E70C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */; };
+		97D0B1EF219973CD00EFE203 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1EE219973CD00EFE203 /* AlertManager.swift */; };
 		97DAFC8E21954E7500BF9B9E /* Fragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DAFC8D21954E7500BF9B9E /* Fragment.swift */; };
 		97DB2B78218170B60060CA50 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B77218170B60060CA50 /* UIColor.swift */; };
 		97DB2B7A2181B9020060CA50 /* P2PServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB2B792181B9020060CA50 /* P2PServiceProtocols.swift */; };
@@ -85,6 +86,7 @@
 		979A1328219192B30019A29E /* FragmentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentMessage.swift; sourceTree = "<group>"; };
 		97C3EAE0218A8D6600E70C50 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97D0B1EE219973CD00EFE203 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		97DAFC8D21954E7500BF9B9E /* Fragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fragment.swift; sourceTree = "<group>"; };
 		97DB2B77218170B60060CA50 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		97DB2B792181B9020060CA50 /* P2PServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2PServiceProtocols.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				97586ACD218754DC00A05971 /* Global.swift */,
 				971B0C1721980E4400B63C88 /* BarcodeScanner.swift */,
 				971B0C1A2198195100B63C88 /* APIManager.swift */,
+				97D0B1EE219973CD00EFE203 /* AlertManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */,
 				97DB2B802181B9B40060CA50 /* Browser.swift in Sources */,
 				971B0C1821980E4400B63C88 /* BarcodeScanner.swift in Sources */,
+				97D0B1EF219973CD00EFE203 /* AlertManager.swift in Sources */,
 				975BD1602196898A00F0ADA7 /* P2PManager.swift in Sources */,
 				976C4FB52199049600E47590 /* Time.swift in Sources */,
 				97664388217F1FAE00EB4C5F /* BaseView.swift in Sources */,

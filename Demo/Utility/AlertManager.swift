@@ -1,9 +1,79 @@
 //
 //  AlertManager.swift
-//  Demo
 //
-//  Created by Sean Lim on 12/11/18.
-//  Copyright © 2018 Heka. All rights reserved.
+//  Created by Sean Lim on 19/1/18.
 //
-
+//
 import Foundation
+import UIKit
+
+
+public class AlertManager {
+	
+	var alertController: UIAlertController = UIAlertController()
+	
+	var targetViewController: UIViewController?
+	var style: UIAlertController.Style?
+	var title: String?
+	var message: String?
+	var actions: [UIAlertAction]?
+	
+	init(target: UIViewController, type: UIAlertController.Style = .alert) {
+		self.targetViewController = target
+		self.style = type
+	}
+	
+	func withFields(title: String? = "Alert Title", message: String? = "Alert description") -> AlertManager {
+		self.title = title
+		self.message = message
+		return self
+		
+	}
+	
+	func addAction(actionTitle: String?,
+				   style: UIAlertAction.Style = .default,
+				   withCallback: ((_ : UIAlertAction) -> Void)?) -> AlertManager {
+		let action = UIAlertAction.init(title: actionTitle ?? "Dismiss", style: style, handler: withCallback)
+		if self.actions != nil{
+			self.actions!.append(action)
+			
+		}
+		else{
+			self.actions = [action]
+			
+		}
+		return self
+		
+	}
+	
+	// Endpoint of interface
+	func throwsAlert() -> Void {
+		self.targetViewController?.presentAlertView(title: self.title ?? "Alert", message: self.message ??  "Description",style: style ??  .alert , actions: self.actions ?? [])
+		
+		// Cleans
+		self.cleans()
+		
+	}
+	
+	// Resets
+	private func cleans() {
+		self.title = nil
+		self.message = nil
+		self.actions = nil
+		self.targetViewController = nil
+		
+	}
+	
+}
+
+// Extends UIViewController
+extension UIViewController {
+	func presentAlertView (title : String, message : String, style: UIAlertController.Style, actions : [UIAlertAction]) {
+		let av = UIAlertController.init(title: title, message: message, preferredStyle: style)
+		actions.forEach { av.addAction($0) }
+		av.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+		self.present(av, animated: true, completion: nil)
+		
+	}
+	
+}

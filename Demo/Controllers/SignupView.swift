@@ -23,15 +23,12 @@ class SignupView: BaseView, UITextFieldDelegate {
 	@IBOutlet var bottomPanel: [UIView]!
 	@IBOutlet var topPanel: [UIView]!
 	
-	var name: String?
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		textfield?.attributedPlaceholder =
 			NSAttributedString(string: "Enter \(self.restorationIdentifier!)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.appPurple(a: 0.4)])
 		self.actionButton?.roundify(5.0)
-		self.username?.text = UserDefaults.standard.string(forKey: "user-name")
-		
+		self.username?.text = userName
 		if self.restorationIdentifier! == "nric" {
 			self.setActionButton(title: "Enter NRIC to register", enabled: false)
 		}
@@ -39,9 +36,10 @@ class SignupView: BaseView, UITextFieldDelegate {
 	
 	@IBAction func actionButtonPressed(_ sender: Any) {
 		if self.restorationIdentifier == "name" {
-			UserDefaults.standard.set(self.name, forKey: "user-name")
+			userName = self.textfield.text!
 			self.performSegue(withIdentifier: "next", sender: self)
 		} else if self.restorationIdentifier == "nric" {
+			self.setActionButton(title: "Verifying...", enabled: false)
 			self.verifyNRIC(nric: textfield.text!)
 		}
 	}
@@ -49,8 +47,7 @@ class SignupView: BaseView, UITextFieldDelegate {
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		let newString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
 		if self.restorationIdentifier == "name" {
-			self.name = newString
-			self.actionButton.setTitle(self.name! == " " ? "Next": "👋 Call me \"\(self.name!)\"", for: .normal)
+			self.actionButton.setTitle(newString == " " ? "Next": "👋 I'm \"\(newString)\"", for: .normal)
 		} else if self.restorationIdentifier == "nric" {
 			self.validateNRIC(nric: newString)
 		}
@@ -67,23 +64,31 @@ class SignupView: BaseView, UITextFieldDelegate {
 	}
 	
 	func verifyNRIC(nric: String) {
-		self.setActionButton(title: "Verifying...", enabled: false)
 		APIManager.shared.verifyNRIC(nric: nric) { isValid in
 			if !isValid {
 				self.setActionButton(title: "NRIC already registered", enabled: true)
 			} else {
+				userNric = nric
 				self.registerUser()
 			}
 		}
 	}
 	
 	func registerUser () {
-		UserDefaults.standard.set(textfield.text!, forKey: "user-nric")
-		APIManager.shared.registerUser()
+		APIManager.shared.updateUser { succ in
+			if !succ {
+				AlertManager(target: self).withFields(title: "Error", message: "Unable to update/register user").addAction(actionTitle: "Dismiss", withCallback: nil).throwsAlert()
+				self.setActionButton(title: "Try again", enabled: true)
+			} else {
+				// Segue to menu
+				let controller = Storyboard.main.scene().instantiateViewController(withIdentifier: "root")
+				self.navigationController?.pushViewController(controller, animated: true)
+			}
+		}
 	}
 	
 	func setActionButton(title: String, enabled: Bool) {
-		self.actionButton.titleLabel?.text = title
+		self.actionButton.setTitle(title, for: enabled ? .normal:.disabled)
 		self.actionButton.isEnabled = enabled
 		self.actionButton.alpha = enabled ? 1.0: 0.5
 	}
@@ -113,7 +118,7 @@ extension SignupView: BarcodeScannerErrorDelegate, BarcodeScannerCodeDelegate, B
 	}
 	
 	func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
-			controller.dismiss(animated: true, completion: nil)
+		controller.dismiss(animated: true, completion: nil)
 	}
 	
 	func scannerDidDismiss(_ controller: BarcodeScannerViewController) {

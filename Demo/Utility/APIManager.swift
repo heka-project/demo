@@ -24,17 +24,21 @@ class APIManager {
 		case chain = "/chain"
 	}
 	
-	func registerUser() {
+	func updateUser(callback: @escaping (_ succ: Bool) -> Void) {
 		let params: Parameters = [
 			"data": [
-				"name": userName ?? "", "uid": userNric ?? "",
+				"name": userName,
+				"uid": userNric,
 				"nrics": ["1", "2"]
 			]
 		]
 		print("API: Register user with params... \(params)")
 		
 		self.request(path: .user, params: params, method: .post) { (succ, res) in
-			
+			if !succ {
+				print("API: User account failed to update/register")
+			}
+			callback(succ)
 		}
 	}
 	
@@ -51,6 +55,8 @@ class APIManager {
 				} else {
 					callback(true)
 				}
+			} else {
+				fatalError("API: Failed to verify NRIC")
 			}
 		}
 	}

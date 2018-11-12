@@ -17,6 +17,9 @@ class LoadingView: BaseView {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		// P2P id
+		P2PClientID = UUID().uuidString
+		P2PManager()
 		P2PManager.addListener(self)
 	}
 	
