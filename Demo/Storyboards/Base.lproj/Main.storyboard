@@ -28,10 +28,13 @@
                                     <constraint firstAttribute="width" secondItem="JhG-Na-chT" secondAttribute="height" multiplier="1:1" id="TLW-dD-JwI"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Ztv-vU-D6r"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="logo"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for nearby devices…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-R3-c6o">
-                                <rect key="frame" x="66.333333333333329" y="488.33333333333331" width="242.33333333333337" height="23.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-R3-c6o">
+                                <rect key="frame" x="134" y="488.33333333333331" width="107.33333333333331" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -47,13 +50,89 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="EN2-kE-tfF"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="logo" destination="JhG-Na-chT" id="1pN-kh-U2g"/>
+                        <outlet property="messageLabel" destination="oso-R3-c6o" id="3xP-Q3-EFk"/>
+                        <segue destination="UFn-66-1P9" kind="show" identifier="menu" id="V5b-Eq-WCR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="136.69950738916256"/>
+        </scene>
+        <!--Menu View-->
+        <scene sceneID="GW6-qh-Xzn">
+            <objects>
+                <viewController id="UFn-66-1P9" customClass="MenuView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5nK-y8-gAz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwg-Mw-wLe">
+                                <rect key="frame" x="0.0" y="542" width="375" height="270"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="eRC-2y-273"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CpT-fx-VtS">
+                                <rect key="frame" x="20" y="130" width="355" height="413"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="oRS-jk-IVE">
+                                        <rect key="frame" x="0.0" y="28" width="355" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oRS-jk-IVE" id="0wA-ZA-rMd">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="G5Q-31-aRp">
+                                <rect key="frame" x="20" y="60" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G5Q-31-aRp" secondAttribute="height" multiplier="1:1" id="Ask-yY-MLo"/>
+                                    <constraint firstAttribute="width" constant="70" id="X1f-pZ-I5K"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="logo"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwb-b8-a0e">
+                                <rect key="frame" x="90" y="60" width="68.333333333333314" height="70"/>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <constraints>
+                            <constraint firstItem="CpT-fx-VtS" firstAttribute="leading" secondItem="G5Q-31-aRp" secondAttribute="leading" id="0Ru-ec-auV"/>
+                            <constraint firstItem="CpT-fx-VtS" firstAttribute="trailing" secondItem="ppw-cX-3bR" secondAttribute="trailing" id="2Q8-Kx-Dg0"/>
+                            <constraint firstItem="Lwb-b8-a0e" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="top" id="7yW-kc-QoH"/>
+                            <constraint firstItem="Dwg-Mw-wLe" firstAttribute="trailing" secondItem="ppw-cX-3bR" secondAttribute="trailing" id="85T-Kp-YOf"/>
+                            <constraint firstItem="CpT-fx-VtS" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="bottom" id="C5J-vL-iQ4"/>
+                            <constraint firstItem="G5Q-31-aRp" firstAttribute="leading" secondItem="5nK-y8-gAz" secondAttribute="leading" constant="20" id="Gg3-2Q-CCU"/>
+                            <constraint firstItem="Lwb-b8-a0e" firstAttribute="centerY" secondItem="G5Q-31-aRp" secondAttribute="centerY" id="KqB-20-y8m"/>
+                            <constraint firstItem="Lwb-b8-a0e" firstAttribute="leading" secondItem="G5Q-31-aRp" secondAttribute="trailing" id="Upx-w3-fVh"/>
+                            <constraint firstAttribute="bottom" secondItem="Dwg-Mw-wLe" secondAttribute="bottom" id="cWq-EW-vhF"/>
+                            <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="CpT-fx-VtS" secondAttribute="bottom" constant="-1" id="jzG-U1-Abf"/>
+                            <constraint firstItem="G5Q-31-aRp" firstAttribute="top" secondItem="5nK-y8-gAz" secondAttribute="top" constant="60" id="t1d-qi-X9Y"/>
+                            <constraint firstItem="Dwg-Mw-wLe" firstAttribute="leading" secondItem="ppw-cX-3bR" secondAttribute="leading" id="tY1-KN-wpO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ppw-cX-3bR"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6J7-Wx-3n0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="136.69950738916256"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o6y-TY-T0r">

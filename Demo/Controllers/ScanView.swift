@@ -14,6 +14,7 @@ import SwiftyJSON
 class ScanView: BaseView {
 	
 	@IBOutlet var logo: UIImageView!
+	@IBOutlet var messageLabel: UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -47,14 +48,17 @@ class ScanView: BaseView {
 	
 	}
 	
-	@IBAction func ping(_ sender: Any) {
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.performSegue(withIdentifier: "menu", sender: self)
 	}
-	
+
 }
 
 extension ScanView: P2PServiceListener {
 	func joinedNetwork() {
 		print("🍉 - Connected to network!")
+		self.messageLabel.text = "Connected!"
+		self.performSegue(withIdentifier: "menu", sender: self)
 	}
 	
 	func disconnectedNetwork() {

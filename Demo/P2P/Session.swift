@@ -50,6 +50,7 @@ extension P2PService: MCSessionDelegate {
 	func handleFragmentMessage(_ fragmentMessage: FragmentMessage) {
 		switch fragmentMessage.type! {
 		case .SAY_HELLO:
+			self.delegate?.receivedHello(manager: self, fragment: fragmentMessage)
 			self.fragmentCache = fragmentMessage.fragment
 			self.fragmentCache!.addNode(meta: ["name": userName, "qty": userNrics, "id":
 				self.peerID.displayName])
