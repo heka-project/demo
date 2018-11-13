@@ -82,11 +82,11 @@
                                 <rect key="frame" x="20" y="130" width="355" height="413"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="oRS-jk-IVE">
-                                        <rect key="frame" x="0.0" y="28" width="355" height="96"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="128" id="oRS-jk-IVE" customClass="MenuTableCell" customModule="Demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="355" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oRS-jk-IVE" id="0wA-ZA-rMd">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -108,8 +108,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conn-offline" translatesAutoresizingMaskIntoConstraints="NO" id="Dfa-yf-C8U">
-                                <rect key="frame" x="315" y="80" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conn-offline" translatesAutoresizingMaskIntoConstraints="NO" id="Dfa-yf-C8U" customClass="ConnectionStatus" customModule="Demo" customModuleProvider="target">
+                                <rect key="frame" x="310" y="80" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Pbg-Iz-MU1"/>
                                     <constraint firstAttribute="width" secondItem="Dfa-yf-C8U" secondAttribute="height" multiplier="1:1" id="SZJ-Sk-rUa"/>
@@ -127,7 +127,7 @@
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="centerY" secondItem="G5Q-31-aRp" secondAttribute="centerY" id="KqB-20-y8m"/>
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="leading" secondItem="G5Q-31-aRp" secondAttribute="trailing" id="Upx-w3-fVh"/>
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="centerY" secondItem="G5Q-31-aRp" secondAttribute="centerY" id="V8i-xk-hd4"/>
-                            <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="Dfa-yf-C8U" secondAttribute="trailing" constant="30" id="Z8n-0X-Nbn"/>
+                            <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="Dfa-yf-C8U" secondAttribute="trailing" constant="35" id="Z8n-0X-Nbn"/>
                             <constraint firstAttribute="bottom" secondItem="Dwg-Mw-wLe" secondAttribute="bottom" id="cWq-EW-vhF"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="CpT-fx-VtS" secondAttribute="bottom" constant="-1" id="jzG-U1-Abf"/>
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="width" secondItem="Dfa-yf-C8U" secondAttribute="height" multiplier="1:1" id="lZn-ja-cuH"/>
