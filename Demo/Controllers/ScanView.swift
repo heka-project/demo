@@ -11,13 +11,17 @@ import UIKit
 import ObjectMapper
 import SwiftyJSON
 
-class MainView: BaseView {
+class ScanView: BaseView {
 	
 	@IBOutlet var logo: UIImageView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// P2P id
+		self.setupP2PClient()
+	}
+	
+	internal func setupP2PClient() {
+		// Setup uuid for P2P client
 		P2PClientID = UUID().uuidString
 		P2PManager()
 		P2PManager.addListener(self)
@@ -48,7 +52,7 @@ class MainView: BaseView {
 	
 }
 
-extension MainView: P2PServiceListener {
+extension ScanView: P2PServiceListener {
 	func joinedNetwork() {
 		print("🍉 - Connected to network!")
 	}
