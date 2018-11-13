@@ -41,7 +41,7 @@ extension P2PService: MCSessionDelegate {
 		print("Network: |==> \(networkJSON)")
 		
 		let fragmentMessage = Mapper<FragmentMessage>().map(JSON: networkJSON.dictionaryObject!)
-		
+
 		DispatchQueue.main.async {
 			self.handleFragmentMessage(fragmentMessage!)
 		}
@@ -69,11 +69,9 @@ extension P2PService: MCSessionDelegate {
 	}
 	
 	func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
-		print("will start receiving resource")
 	}
 	
 	func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
-		print("did finish receiving resource")
 	}
 	
 	func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

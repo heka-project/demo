@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class P2PManager: P2PServiceDelegate {
-	
+
 	static private var listeners: [P2PServiceListener] = []
 	static let service = P2PService()
 	
@@ -28,7 +28,7 @@ class P2PManager: P2PServiceDelegate {
 	
 	func networkUpdated(manager: P2PService, fragment: FragmentMessage) {
 		P2PManager.listeners.forEach { listener in
-			listener.networkChanged()
+			listener.networkUpdated()
 		}
 	}
 	

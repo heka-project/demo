@@ -79,10 +79,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-WM-mQf" userLabel="Line">
-                                <rect key="frame" x="54" y="93.999999999999972" width="2" height="474.33333333333326"/>
+                                <rect key="frame" x="53.666666666666664" y="93.999999999999972" width="3" height="474.33333333333326"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="2" id="cIi-Sw-mdf"/>
+                                    <constraint firstAttribute="width" constant="3" id="cIi-Sw-mdf"/>
                                 </constraints>
                             </view>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CpT-fx-VtS">
