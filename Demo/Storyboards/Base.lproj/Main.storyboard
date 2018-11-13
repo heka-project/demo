@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="manrope-regular.ttf">
+            <string>Manrope-Regular</string>
+        </array>
         <array key="manrope-semibold.ttf">
             <string>Manrope-Semibold</string>
         </array>
@@ -33,7 +36,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-R3-c6o">
-                                <rect key="frame" x="134" y="488.33333333333331" width="107.33333333333331" height="26.333333333333314"/>
+                                <rect key="frame" x="139.66666666666666" y="488.33333333333331" width="95.666666666666657" height="22.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -72,14 +75,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwg-Mw-wLe">
-                                <rect key="frame" x="0.0" y="542" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="568.33333333333337" width="375" height="243.66666666666663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-WM-mQf" userLabel="Line">
+                                <rect key="frame" x="54" y="93.999999999999972" width="2" height="474.33333333333326"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="eRC-2y-273"/>
+                                    <constraint firstAttribute="width" constant="2" id="cIi-Sw-mdf"/>
                                 </constraints>
                             </view>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CpT-fx-VtS">
-                                <rect key="frame" x="20" y="150" width="355" height="393"/>
+                                <rect key="frame" x="20" y="149.99999999999997" width="355" height="419.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="47" id="oRS-jk-IVE" customClass="MenuTableCell" customModule="Demo" customModuleProvider="target">
@@ -89,24 +96,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connector-body" translatesAutoresizingMaskIntoConstraints="NO" id="0f8-IO-bWP">
-                                                    <rect key="frame" x="15" y="0.0" width="25" height="47"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connection-indicator" translatesAutoresizingMaskIntoConstraints="NO" id="0f8-IO-bWP">
+                                                    <rect key="frame" x="22" y="0.0" width="25" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="0f8-IO-bWP" secondAttribute="height" multiplier="31:58" id="Ee6-oa-H9r"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-cf-Srq">
+                                                    <rect key="frame" x="62" y="0.0" width="265" height="47"/>
+                                                    <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="fGn-cf-Srq" secondAttribute="bottom" id="Fdn-x6-H4w"/>
                                                 <constraint firstAttribute="bottom" secondItem="0f8-IO-bWP" secondAttribute="bottom" id="SF8-o3-own"/>
-                                                <constraint firstItem="0f8-IO-bWP" firstAttribute="leading" secondItem="0wA-ZA-rMd" secondAttribute="leading" constant="15" id="rGu-WG-ei5"/>
+                                                <constraint firstItem="fGn-cf-Srq" firstAttribute="leading" secondItem="0f8-IO-bWP" secondAttribute="trailing" constant="15" id="aw4-Ll-QCQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="fGn-cf-Srq" secondAttribute="trailing" constant="28" id="hdv-sd-IY1"/>
+                                                <constraint firstItem="fGn-cf-Srq" firstAttribute="top" secondItem="0wA-ZA-rMd" secondAttribute="top" id="r36-fX-VTc"/>
+                                                <constraint firstItem="0f8-IO-bWP" firstAttribute="leading" secondItem="0wA-ZA-rMd" secondAttribute="leading" constant="22" id="rGu-WG-ei5"/>
                                                 <constraint firstItem="0f8-IO-bWP" firstAttribute="top" secondItem="0wA-ZA-rMd" secondAttribute="top" id="shp-vz-17p"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="graphImageView" destination="0f8-IO-bWP" id="ZZ1-99-sdw"/>
+                                            <outlet property="graphLabel" destination="fGn-cf-Srq" id="5OZ-O3-Gbw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -145,17 +163,22 @@
                             <constraint firstItem="CpT-fx-VtS" firstAttribute="trailing" secondItem="ppw-cX-3bR" secondAttribute="trailing" id="2Q8-Kx-Dg0"/>
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="top" id="7yW-kc-QoH"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="trailing" secondItem="ppw-cX-3bR" secondAttribute="trailing" id="85T-Kp-YOf"/>
+                            <constraint firstItem="ecI-WM-mQf" firstAttribute="centerX" secondItem="G5Q-31-aRp" secondAttribute="centerX" id="85t-5p-m9X"/>
                             <constraint firstItem="CpT-fx-VtS" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="bottom" constant="20" id="C5J-vL-iQ4"/>
                             <constraint firstItem="G5Q-31-aRp" firstAttribute="leading" secondItem="5nK-y8-gAz" secondAttribute="leading" constant="20" id="Gg3-2Q-CCU"/>
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="centerY" secondItem="G5Q-31-aRp" secondAttribute="centerY" id="KqB-20-y8m"/>
+                            <constraint firstItem="Dwg-Mw-wLe" firstAttribute="height" secondItem="5nK-y8-gAz" secondAttribute="height" multiplier="0.3" id="QZe-EV-OTU"/>
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="leading" secondItem="G5Q-31-aRp" secondAttribute="trailing" id="Upx-w3-fVh"/>
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="centerY" secondItem="G5Q-31-aRp" secondAttribute="centerY" id="V8i-xk-hd4"/>
                             <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="Dfa-yf-C8U" secondAttribute="trailing" constant="35" id="Z8n-0X-Nbn"/>
                             <constraint firstAttribute="bottom" secondItem="Dwg-Mw-wLe" secondAttribute="bottom" id="cWq-EW-vhF"/>
+                            <constraint firstItem="ecI-WM-mQf" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="bottom" constant="-36" id="eB6-oC-8dX"/>
+                            <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="ecI-WM-mQf" secondAttribute="bottom" id="jFi-eK-86a"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="CpT-fx-VtS" secondAttribute="bottom" constant="-1" id="jzG-U1-Abf"/>
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="width" secondItem="Dfa-yf-C8U" secondAttribute="height" multiplier="1:1" id="lZn-ja-cuH"/>
                             <constraint firstItem="G5Q-31-aRp" firstAttribute="top" secondItem="5nK-y8-gAz" secondAttribute="top" constant="60" id="t1d-qi-X9Y"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="leading" secondItem="ppw-cX-3bR" secondAttribute="leading" id="tY1-KN-wpO"/>
+                            <constraint firstItem="Dfa-yf-C8U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lwb-b8-a0e" secondAttribute="trailing" constant="8" symbolic="YES" id="upc-WF-xlX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ppw-cX-3bR"/>
                     </view>
@@ -164,7 +187,8 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="connectionIndicator" destination="Dfa-yf-C8U" id="uFz-Qu-oC9"/>
-                        <outlet property="tableView" destination="CpT-fx-VtS" id="pKY-JA-zGV"/>
+                        <outlet property="logo" destination="G5Q-31-aRp" id="4xY-JG-37c"/>
+                        <outlet property="tableView" destination="CpT-fx-VtS" id="iXq-23-AEi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6J7-Wx-3n0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,7 +216,7 @@
     </scenes>
     <resources>
         <image name="conn-offline" width="33" height="44"/>
-        <image name="connector-body" width="36" height="81"/>
+        <image name="connection-indicator" width="19" height="19"/>
         <image name="logo" width="100" height="100"/>
     </resources>
 </document>

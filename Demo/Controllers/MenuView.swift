@@ -13,22 +13,33 @@ class MenuView: BaseView {
 	
 	@IBOutlet var connectionIndicator: ConnectionStatus!
 	@IBOutlet var tableView: UITableView!
+	@IBOutlet var logo: UIImageView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		P2PManager.addListener(self)
 		connectionIndicator.isOnline = true
+		
+		logo.rotateAnimation(key: "load", rep: .infinity, duration: 3.0)
+		self.view.addRippleEffect(pos: logo.center, size: self.logo.frame)
 	}
 }
 
 extension MenuView: P2PServiceListener {
+	func networkChanged() {
+		self.tableView.reloadData()
+		print("🍉 - Network Changed!")
+	}
+	
 	func joinedNetwork() {
-		tableView.reloadData()
+		print("🍉 - Connected to network!")
+		connectionIndicator.isOnline = true
 	}
 	
 	func disconnectedNetwork() {
-		
+		print("🍉 - Lost connection to network!")
+		connectionIndicator.isOnline = false
 	}
 
 }

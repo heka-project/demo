@@ -59,7 +59,7 @@ extension P2PService: MCSessionDelegate {
 			if fragmentMessage.fragment.md5 != self.fragmentCache!.md5 {
 				print("P2P: ⚠️ Will update self and peers...")
 				self.fragmentCache!.updateFragment(newFragment: fragmentMessage.fragment)
-				
+				self.delegate?.networkUpdated(manager: self, fragment: fragmentMessage)
 				// Update other peers on the network
 				self.updatePeers()
 			} else {

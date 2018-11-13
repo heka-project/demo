@@ -18,4 +18,5 @@ protocol P2PServiceDelegate {
 protocol P2PServiceListener {
 	func joinedNetwork()
 	func disconnectedNetwork()
+	func networkChanged()
 }

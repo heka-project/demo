@@ -55,6 +55,10 @@ class ScanView: BaseView {
 }
 
 extension ScanView: P2PServiceListener {
+	func networkChanged() {
+		print("🍉 - Network Changed!")
+	}
+	
 	func joinedNetwork() {
 		print("🍉 - Connected to network!")
 		self.messageLabel.text = "Connected!"
