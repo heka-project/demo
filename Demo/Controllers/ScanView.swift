@@ -19,6 +19,7 @@ class ScanView: BaseView {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupP2PClient()
+		self.animateLoadScreen()
 	}
 	
 	internal func setupP2PClient() {
@@ -29,10 +30,6 @@ class ScanView: BaseView {
 	}
 	
 	override func willBecomeActive() {
-		self.animateLoadScreen()
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
 		self.animateLoadScreen()
 	}
 
@@ -55,10 +52,10 @@ class ScanView: BaseView {
 }
 
 extension ScanView: P2PServiceListener {
-	func networkChanged() {
+	func networkUpdated() {
 		print("🍉 - Network Changed!")
 	}
-	
+
 	func joinedNetwork() {
 		print("🍉 - Connected to network!")
 		self.messageLabel.text = "Connected!"
