@@ -80,6 +80,7 @@ class SignupView: BaseView, UITextFieldDelegate {
 				AlertManager(target: self).withFields(title: "Error", message: "Unable to update/register user").addAction(actionTitle: "Dismiss", withCallback: nil).throwsAlert()
 				self.setActionButton(title: "Try again", enabled: true)
 			} else {
+				signedUp = true
 				// Segue to menu
 				let controller = Storyboard.main.scene().instantiateViewController(withIdentifier: "root")
 				self.navigationController?.pushViewController(controller, animated: true)

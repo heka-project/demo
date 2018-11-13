@@ -51,6 +51,7 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 	}
 	
 	@IBAction func doneButtonPress(_ sender: Any) {
+		doneOnboarding = true
 		let signupView = UIStoryboard(name: "SignUp", bundle: .main).instantiateViewController(withIdentifier: "signup")
 		self.navigationController!.pushViewController(signupView, animated: true)
 	}

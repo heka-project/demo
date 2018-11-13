@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		
-		let doneOnboarding = UserDefaults.standard.bool(forKey: "doneOnboarding")
-		let signedUp = UserDefaults.standard.bool(forKey: "signedUp")
 		var storyboard: UIStoryboard?
 		
 		// Override entry point for debugging

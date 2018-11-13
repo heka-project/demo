@@ -29,6 +29,22 @@ var userNric: String {
 }
 let userNrics = UserDefaults.standard.string(forKey: "user-nrics") ?? "1, 2, 3"
 
+var doneOnboarding: Bool {
+	get {
+		return UserDefaults.standard.bool(forKey: "done-onboarding")
+	}
+	set {
+		UserDefaults.standard.set(newValue, forKey: "done-onboarding")
+	}
+}
+var signedUp: Bool {
+	get {
+		return UserDefaults.standard.bool(forKey: "signed-up")
+	}
+	set {
+		UserDefaults.standard.set(newValue, forKey: "signed-up")
+	}
+}
 var P2PClientID: String?
 
 enum Storyboard: String {
