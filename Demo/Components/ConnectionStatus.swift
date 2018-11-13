@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 
 class ConnectionStatus: UIImageView {
-	var i1: UIImage? = UIImage(named: "conn-offline")
-	var i2: UIImage? = UIImage(named: "conn-online")
+	private var i1: UIImage? = UIImage(named: "conn-offline")
+	private var i2: UIImage? = UIImage(named: "conn-online")
 	var isOnline: Bool = false
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		Timer.scheduledTimer(withTimeInterval: 1.second, repeats: true) { timer in
-			if self.isOnline {
-				self.image = self.i2
+		Timer.scheduledTimer(withTimeInterval: 0.7.second, repeats: true) { timer in
+			if !self.isOnline {
+				self.image = self.i1
 			} else {
     			self.image = self.image == self.i1 ? self.i2: self.i1
 			}
