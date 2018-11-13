@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		var storyboard: UIStoryboard?
 		
 		// Override entry point for debugging
-		let overwriteEntry: UIStoryboard? = Storyboard.signup.scene()
+		let overwriteEntry: UIStoryboard? = nil
 		
 		if overwriteEntry != nil {
 			storyboard = overwriteEntry

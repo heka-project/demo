@@ -11,7 +11,7 @@ import UIKit
 import ObjectMapper
 import SwiftyJSON
 
-class LoadingView: BaseView {
+class MainView: BaseView {
 	
 	@IBOutlet var logo: UIImageView!
 	
@@ -48,7 +48,7 @@ class LoadingView: BaseView {
 	
 }
 
-extension LoadingView: P2PServiceListener {
+extension MainView: P2PServiceListener {
 	func joinedNetwork() {
 		print("🍉 - Connected to network!")
 	}
