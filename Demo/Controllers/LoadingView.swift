@@ -27,6 +27,10 @@ class LoadingView: BaseView {
 		self.animateLoadScreen()
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		self.animateLoadScreen()
+	}
+
 	func animateLoadScreen() {
 		self.view.alpha = 0
 		UIView.animate(withDuration: 1.0) {

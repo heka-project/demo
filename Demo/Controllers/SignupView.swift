@@ -118,6 +118,8 @@ extension SignupView: BarcodeScannerErrorDelegate, BarcodeScannerCodeDelegate, B
 	}
 	
 	func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
+		self.textfield.text = code
+		self.validateNRIC(nric: code)
 		controller.dismiss(animated: true, completion: nil)
 	}
 	
