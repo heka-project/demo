@@ -73,9 +73,36 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwg-Mw-wLe">
                                 <rect key="frame" x="25" y="536" width="325" height="162.33333333333337"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people-carry-solid" translatesAutoresizingMaskIntoConstraints="NO" id="Jcr-eJ-cwh">
+                                        <rect key="frame" x="15" y="40" width="60" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Tqm-79-wrn"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In progress..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjZ-e5-eBb">
+                                        <rect key="frame" x="92.000000000000014" y="31" width="139.33333333333337" height="29"/>
+                                        <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="21"/>
+                                        <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locate and collect from distributors " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1L-fj-TSR">
+                                        <rect key="frame" x="92" y="66" width="209" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="B1L-fj-TSR" firstAttribute="top" secondItem="vjZ-e5-eBb" secondAttribute="bottom" constant="6" id="0vg-pD-2DO"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="162.33000000000001" id="2L2-rL-DB1"/>
+                                    <constraint firstItem="Jcr-eJ-cwh" firstAttribute="leading" secondItem="Dwg-Mw-wLe" secondAttribute="leading" constant="15" id="AkZ-GU-Lej"/>
+                                    <constraint firstItem="Jcr-eJ-cwh" firstAttribute="top" secondItem="Dwg-Mw-wLe" secondAttribute="top" constant="40" id="BFb-ai-gHw"/>
+                                    <constraint firstItem="vjZ-e5-eBb" firstAttribute="top" secondItem="Dwg-Mw-wLe" secondAttribute="top" constant="31" id="bcs-bo-ILl"/>
+                                    <constraint firstItem="vjZ-e5-eBb" firstAttribute="leading" secondItem="Jcr-eJ-cwh" secondAttribute="trailing" constant="17" id="hee-oL-i4O"/>
+                                    <constraint firstAttribute="trailing" secondItem="B1L-fj-TSR" secondAttribute="trailing" constant="24" id="u77-pr-9Ij"/>
+                                    <constraint firstItem="B1L-fj-TSR" firstAttribute="leading" secondItem="vjZ-e5-eBb" secondAttribute="leading" id="upZ-x9-Cyq"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="card"/>
@@ -257,6 +284,9 @@
                         <outlet property="actionButton" destination="IlS-xh-kOD" id="dXD-A3-bhB"/>
                         <outlet property="connectionIndicator" destination="Dfa-yf-C8U" id="uFz-Qu-oC9"/>
                         <outlet property="footerButton" destination="Bly-qR-62f" id="4he-6z-fw9"/>
+                        <outlet property="infoDescription" destination="B1L-fj-TSR" id="hSq-Zt-GMZ"/>
+                        <outlet property="infoHeader" destination="vjZ-e5-eBb" id="pxb-Va-c7z"/>
+                        <outlet property="infoImage" destination="Jcr-eJ-cwh" id="FNI-4U-PDI"/>
                         <outlet property="logo" destination="G5Q-31-aRp" id="4xY-JG-37c"/>
                         <outlet property="nameLabel" destination="QBl-pV-liK" id="Lq5-AQ-LkN"/>
                         <outlet property="nricLabel" destination="LZg-Ys-DEO" id="nPi-7X-WCx"/>
@@ -358,8 +388,8 @@
                                     <action selector="backButtonPress:" destination="QOs-MH-xp7" eventType="touchUpInside" id="3eB-0N-BJr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan to collect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSN-c0-Ijp">
-                                <rect key="frame" x="113" y="206.33333333333334" width="149" height="27.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan to pass on" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSN-c0-Ijp">
+                                <rect key="frame" x="108" y="206" width="159" height="28"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -399,6 +429,7 @@
         <image name="connection-indicator" width="19" height="19"/>
         <image name="hands-helping-solid" width="50.666667938232422" height="40.333332061767578"/>
         <image name="logo" width="100" height="100"/>
+        <image name="people-carry-solid" width="47.333332061767578" height="38"/>
         <image name="user" width="86" height="86"/>
     </resources>
 </document>

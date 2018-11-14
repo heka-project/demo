@@ -24,6 +24,11 @@ class MenuView: BaseView {
 	@IBOutlet var footerButton: UIButton!
 	@IBOutlet var actionButton: UIButton!
 	
+	@IBOutlet var infoImage: UIImageView!
+	@IBOutlet var infoHeader: UILabel!
+	@IBOutlet var infoDescription: UILabel!
+	
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -38,6 +43,16 @@ class MenuView: BaseView {
 		super.viewDidAppear(animated)
 		if isCurrent {
 			self.actionButton.setTitle("Pass Package", for: .normal)
+			self.infoImage.image = UIImage(named: "people-carry-solid-2")
+			self.infoHeader.text = "It's your turn!"
+			self.infoHeader.textColor = UIColor.appPink(a: 1)
+			self.infoDescription.text = "drop the package off with someone."
+		} else if collected {
+			self.actionButton.setTitle("Collected", for: .disabled)
+			self.infoImage.image = UIImage(named: "people-carry-solid-2")
+			self.infoHeader.text = "Successfully Collected"
+			self.infoHeader.textColor = UIColor.appPink(a: 1)
+			self.infoDescription.text = "Thank you for doing your part!"
 		}
 		self.animate()
 	}
