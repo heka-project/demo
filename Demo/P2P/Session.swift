@@ -53,8 +53,7 @@ extension P2PService: MCSessionDelegate {
 		case .SAY_HELLO:
 			self.delegate!.receivedHello(manager: self, fragment: fragmentMessage.fragment)
 			self.fragmentCache = fragmentMessage.fragment
-			self.fragmentCache!.addNode(meta: ["name": userName, "qty": userNrics, "id":
-				self.peerID.displayName])
+			self.fragmentCache!.addNode(meta: baseFrame)
 			self.updatePeers()
 		case .UPDATE:
 			if fragmentMessage.fragment.md5 != self.fragmentCache!.md5 {

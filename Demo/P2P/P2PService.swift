@@ -23,6 +23,13 @@ class P2PService: NSObject {
 	
 	var fragmentCache: Fragment?
 	
+	var baseFrame: [String: String] = [
+		"name": userName,
+		"qty": userNrics,
+		"id": P2PClientID!,
+		"batch_id": ""
+	]
+	
 	private let serviceType = secrets.value(forKey: "root") as! String
 	internal let peerID = MCPeerID(displayName: P2PClientID!)
 	
@@ -41,7 +48,7 @@ class P2PService: NSObject {
 		self.serviceBrowser.delegate = self
 		self.serviceBrowser.startBrowsingForPeers()
 		
-		self.fragmentCache = Fragment(meta: ["name": userName, "qty": userNrics, "id": peerID.displayName])
+		self.fragmentCache = Fragment(meta: baseFrame)
 	}
 	
 	deinit {

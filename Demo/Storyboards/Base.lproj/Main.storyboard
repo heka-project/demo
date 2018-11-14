@@ -77,6 +77,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwg-Mw-wLe">
                                 <rect key="frame" x="25" y="536" width="325" height="162.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="162.33000000000001" id="2L2-rL-DB1"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-WM-mQf" userLabel="Line">
                                 <rect key="frame" x="53.666666666666664" y="94" width="3" height="442"/>
@@ -205,7 +208,6 @@
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="trailing" secondItem="ppw-cX-3bR" secondAttribute="trailing" constant="-25" id="85T-Kp-YOf"/>
                             <constraint firstItem="ecI-WM-mQf" firstAttribute="centerX" secondItem="G5Q-31-aRp" secondAttribute="centerX" id="85t-5p-m9X"/>
                             <constraint firstItem="CpT-fx-VtS" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="bottom" constant="20" id="C5J-vL-iQ4"/>
-                            <constraint firstAttribute="bottom" secondItem="Bly-qR-62f" secondAttribute="bottom" constant="50" id="GaJ-L5-L4j"/>
                             <constraint firstItem="G5Q-31-aRp" firstAttribute="leading" secondItem="5nK-y8-gAz" secondAttribute="leading" constant="20" id="Gg3-2Q-CCU"/>
                             <constraint firstItem="Bly-qR-62f" firstAttribute="top" secondItem="Dwg-Mw-wLe" secondAttribute="bottom" constant="15" id="J6o-Hf-pRO"/>
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="centerY" secondItem="G5Q-31-aRp" secondAttribute="centerY" id="KqB-20-y8m"/>
@@ -217,7 +219,9 @@
                             <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="Dfa-yf-C8U" secondAttribute="trailing" constant="35" id="Z8n-0X-Nbn"/>
                             <constraint firstItem="LZg-Ys-DEO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QBl-pV-liK" secondAttribute="leading" id="ZT8-gr-jKv"/>
                             <constraint firstItem="Bly-qR-62f" firstAttribute="leading" secondItem="IlS-xh-kOD" secondAttribute="trailing" constant="15" id="cXg-tV-3SA"/>
+                            <constraint firstItem="ppw-cX-3bR" firstAttribute="bottom" secondItem="Bly-qR-62f" secondAttribute="bottom" constant="15.999999999999886" id="d0w-JZ-NG5"/>
                             <constraint firstItem="ecI-WM-mQf" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="bottom" constant="-36" id="eB6-oC-8dX"/>
+                            <constraint firstItem="G5Q-31-aRp" firstAttribute="top" secondItem="ppw-cX-3bR" secondAttribute="top" constant="16" id="gTK-WN-GCi"/>
                             <constraint firstItem="IlS-xh-kOD" firstAttribute="height" secondItem="Bly-qR-62f" secondAttribute="height" id="h9z-Tb-i1w"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="ecI-WM-mQf" secondAttribute="bottom" id="jFi-eK-86a"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="CpT-fx-VtS" secondAttribute="bottom" constant="-1" id="jzG-U1-Abf"/>
@@ -227,7 +231,6 @@
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="width" secondItem="Dfa-yf-C8U" secondAttribute="height" multiplier="1:1" id="lZn-ja-cuH"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="4hq-Ly-rmc" secondAttribute="bottom" constant="-23.666666666666629" id="pUh-Fn-pgN"/>
                             <constraint firstItem="Bly-qR-62f" firstAttribute="height" secondItem="Dwg-Mw-wLe" secondAttribute="height" multiplier="0.3" id="rc7-AP-dsg"/>
-                            <constraint firstItem="G5Q-31-aRp" firstAttribute="top" secondItem="5nK-y8-gAz" secondAttribute="top" constant="60" id="t1d-qi-X9Y"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="leading" secondItem="ppw-cX-3bR" secondAttribute="leading" constant="25" id="tY1-KN-wpO"/>
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lwb-b8-a0e" secondAttribute="trailing" constant="8" symbolic="YES" id="upc-WF-xlX"/>
                             <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="LZg-Ys-DEO" secondAttribute="trailing" constant="30" id="y0o-sR-sJH"/>
