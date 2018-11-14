@@ -36,6 +36,7 @@
 		979A1324219146130019A29E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1323219146130019A29E /* OnboardingView.swift */; };
 		979A1326219182B10019A29E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1325219182B10019A29E /* UIView.swift */; };
 		979A1329219192B30019A29E /* FragmentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1328219192B30019A29E /* FragmentMessage.swift */; };
+		97AC447D219BCE29004FD946 /* BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AC447C219BCE29004FD946 /* BarcodeGenerator.swift */; };
 		97C3EAE1218A8D6600E70C50 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE0218A8D6600E70C50 /* Secrets.plist */; };
 		97C3EAE3218AF0FF00E70C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */; };
 		97D0B1EF219973CD00EFE203 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1EE219973CD00EFE203 /* AlertManager.swift */; };
@@ -85,6 +86,7 @@
 		979A1323219146130019A29E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		979A1325219182B10019A29E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		979A1328219192B30019A29E /* FragmentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentMessage.swift; sourceTree = "<group>"; };
+		97AC447C219BCE29004FD946 /* BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeGenerator.swift; sourceTree = "<group>"; };
 		97C3EAE0218A8D6600E70C50 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97D0B1EE219973CD00EFE203 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				971B0C1721980E4400B63C88 /* BarcodeScanner.swift */,
 				971B0C1A2198195100B63C88 /* APIManager.swift */,
 				97D0B1EE219973CD00EFE203 /* AlertManager.swift */,
+				97AC447C219BCE29004FD946 /* BarcodeGenerator.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				97DB2B822181B9DB0060CA50 /* Session.swift in Sources */,
 				97586ACE218754DC00A05971 /* Global.swift in Sources */,
 				97869C3821815643007B0C73 /* ScanView.swift in Sources */,
+				97AC447D219BCE29004FD946 /* BarcodeGenerator.swift in Sources */,
 				975BD1642196E5C100F0ADA7 /* SignupView.swift in Sources */,
 				979A1329219192B30019A29E /* FragmentMessage.swift in Sources */,
 				97DB2B7C2181B90A0060CA50 /* P2PService.swift in Sources */,
