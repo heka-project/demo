@@ -35,6 +35,10 @@ class Fragment {
 		self.updateHash()
 	}
 	
+	func getConnectedNodes() -> [[String: String]] {
+		return nodes.filter {$0["id"] != P2PClientID!}
+	}
+	
 	func updateFragment(newFragment: Fragment) {
 		var mergeSet: Set<[String: String]> = Set()
 		let combined = self.nodes + newFragment.nodes

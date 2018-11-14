@@ -171,11 +171,25 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBl-pV-liK">
+                                <rect key="frame" x="108" y="476.66666666666669" width="237" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TXXXXXXJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-Ys-DEO">
+                                <rect key="frame" x="108" y="507.33333333333326" width="237" height="22"/>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.43529411759999997" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
                             <constraint firstItem="CpT-fx-VtS" firstAttribute="leading" secondItem="G5Q-31-aRp" secondAttribute="leading" id="0Ru-ec-auV"/>
+                            <constraint firstItem="QBl-pV-liK" firstAttribute="top" secondItem="4hq-Ly-rmc" secondAttribute="top" id="1jE-iE-j6C"/>
                             <constraint firstItem="CpT-fx-VtS" firstAttribute="trailing" secondItem="ppw-cX-3bR" secondAttribute="trailing" id="2Q8-Kx-Dg0"/>
+                            <constraint firstItem="LZg-Ys-DEO" firstAttribute="top" secondItem="QBl-pV-liK" secondAttribute="bottom" constant="3" id="5QX-qs-8lm"/>
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="top" id="7yW-kc-QoH"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="trailing" secondItem="ppw-cX-3bR" secondAttribute="trailing" constant="-25" id="85T-Kp-YOf"/>
                             <constraint firstItem="ecI-WM-mQf" firstAttribute="centerX" secondItem="G5Q-31-aRp" secondAttribute="centerX" id="85t-5p-m9X"/>
@@ -185,12 +199,16 @@
                             <constraint firstItem="Bly-qR-62f" firstAttribute="top" secondItem="Dwg-Mw-wLe" secondAttribute="bottom" constant="8.0000000000001137" id="J6o-Hf-pRO"/>
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="centerY" secondItem="G5Q-31-aRp" secondAttribute="centerY" id="KqB-20-y8m"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="height" secondItem="5nK-y8-gAz" secondAttribute="height" multiplier="0.2" id="QZe-EV-OTU"/>
+                            <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="QBl-pV-liK" secondAttribute="trailing" constant="30" id="Uim-R9-jGu"/>
                             <constraint firstItem="Lwb-b8-a0e" firstAttribute="leading" secondItem="G5Q-31-aRp" secondAttribute="trailing" id="Upx-w3-fVh"/>
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="centerY" secondItem="G5Q-31-aRp" secondAttribute="centerY" id="V8i-xk-hd4"/>
                             <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="Dfa-yf-C8U" secondAttribute="trailing" constant="35" id="Z8n-0X-Nbn"/>
+                            <constraint firstItem="LZg-Ys-DEO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QBl-pV-liK" secondAttribute="leading" id="ZT8-gr-jKv"/>
                             <constraint firstItem="ecI-WM-mQf" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="bottom" constant="-36" id="eB6-oC-8dX"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="ecI-WM-mQf" secondAttribute="bottom" id="jFi-eK-86a"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="CpT-fx-VtS" secondAttribute="bottom" constant="-1" id="jzG-U1-Abf"/>
+                            <constraint firstItem="LZg-Ys-DEO" firstAttribute="width" secondItem="QBl-pV-liK" secondAttribute="width" id="kRc-9K-6SX"/>
+                            <constraint firstItem="QBl-pV-liK" firstAttribute="leading" secondItem="4hq-Ly-rmc" secondAttribute="trailing" constant="8" id="kbE-Ib-tJY"/>
                             <constraint firstItem="4hq-Ly-rmc" firstAttribute="centerX" secondItem="G5Q-31-aRp" secondAttribute="centerX" id="lYf-Fj-VFa"/>
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="width" secondItem="Dfa-yf-C8U" secondAttribute="height" multiplier="1:1" id="lZn-ja-cuH"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="4hq-Ly-rmc" secondAttribute="bottom" constant="-23.666666666666629" id="pUh-Fn-pgN"/>
@@ -200,6 +218,7 @@
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="leading" secondItem="ppw-cX-3bR" secondAttribute="leading" constant="25" id="tY1-KN-wpO"/>
                             <constraint firstItem="Dfa-yf-C8U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lwb-b8-a0e" secondAttribute="trailing" constant="8" symbolic="YES" id="upc-WF-xlX"/>
                             <constraint firstItem="Bly-qR-62f" firstAttribute="width" secondItem="Dwg-Mw-wLe" secondAttribute="width" id="vQZ-2A-dmP"/>
+                            <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="LZg-Ys-DEO" secondAttribute="trailing" constant="30" id="y0o-sR-sJH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ppw-cX-3bR"/>
                     </view>
@@ -209,6 +228,8 @@
                     <connections>
                         <outlet property="connectionIndicator" destination="Dfa-yf-C8U" id="uFz-Qu-oC9"/>
                         <outlet property="logo" destination="G5Q-31-aRp" id="4xY-JG-37c"/>
+                        <outlet property="nameLabel" destination="QBl-pV-liK" id="Lq5-AQ-LkN"/>
+                        <outlet property="nricLabel" destination="LZg-Ys-DEO" id="nPi-7X-WCx"/>
                         <outlet property="tableView" destination="CpT-fx-VtS" id="iXq-23-AEi"/>
                     </connections>
                 </viewController>

@@ -23,8 +23,6 @@ class ScanView: BaseView {
 	}
 	
 	internal func setupP2PClient() {
-		// Setup uuid for P2P client
-		P2PClientID = UUID().uuidString
 		P2PManager()
 		P2PManager.addListener(self)
 	}

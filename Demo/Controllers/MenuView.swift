@@ -15,11 +15,17 @@ class MenuView: BaseView {
 	@IBOutlet var tableView: UITableView!
 	@IBOutlet var logo: UIImageView!
 	
+	@IBOutlet var nameLabel: UILabel!
+	@IBOutlet var nricLabel: UILabel!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		P2PManager.addListener(self)
 		connectionIndicator.isOnline = true
+		
+		nameLabel.text = userName
+		nricLabel.text = userNric
 		
 		self.animate()
 	}
@@ -53,13 +59,13 @@ extension MenuView: P2PServiceListener {
 
 extension MenuView: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return P2PManager.service.fragmentCache?.nodes.count ?? 0
+		return P2PManager.service.fragmentCache?.getConnectedNodes().count ?? 0
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuTableCell
 		
-		cell.setData(index: indexPath.row, nodes: P2PManager.service.fragmentCache!.nodes)
+		cell.setData(index: indexPath.row, nodes: P2PManager.service.fragmentCache!.getConnectedNodes())
 		return cell
 	}
 	
