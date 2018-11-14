@@ -67,7 +67,7 @@ class Fragment {
 		let sortedNodes = self.nodes.map{$0.sorted{$0.key < $1.key}}
 		return JSON([
 			"nodes": sortedNodes.description,
-			"batch_id": batch_id
+			"batch_id": batch_id?.utf8
 			]).rawString()!
 	}
 	
