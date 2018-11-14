@@ -61,6 +61,22 @@ class APIManager {
 		}
 	}
 	
+	func updateChainState() {
+		let params: Parameters = [
+			"chain": [
+				"batch_id": "batch_1",
+				"nodes": P2PManager.service.fragmentCache!.nodes,
+				"md5": P2PManager.service.fragmentCache!.md5 as Any
+			]
+		]
+		print("sending request with param \(params)")
+		self.request(path: .chain, params: params, method: .post) { (succ, data ) in
+			if !succ {
+				fatalError()
+			}
+		}
+	}
+
 	private func request(path: APIRoute,
 						 params: Parameters,
 						 method: HTTPMethod,
