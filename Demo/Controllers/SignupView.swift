@@ -82,7 +82,8 @@ class SignupView: BaseView, UITextFieldDelegate {
 			} else {
 				signedUp = true
 				// Segue to menu
-				let controller = Storyboard.main.scene().instantiateViewController(withIdentifier: "root")
+				let controller = Storyboard.main.scene().instantiateViewController(withIdentifier: "root") as! ScanView
+				controller.animateLoadScreen()
 				self.navigationController?.pushViewController(controller, animated: true)
 			}
 		}

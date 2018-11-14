@@ -19,7 +19,6 @@ class ScanView: BaseView {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupP2PClient()
-		self.animateLoadScreen()
 	}
 	
 	internal func setupP2PClient() {
