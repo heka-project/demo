@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="manrope-semibold.otf">
+        <array key="manrope-semibold.ttf">
             <string>Manrope-Semibold</string>
         </array>
     </customFonts>
@@ -33,7 +33,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-R3-c6o">
-                                <rect key="frame" x="139.66666666666666" y="488.33333333333331" width="95.666666666666657" height="22.333333333333314"/>
+                                <rect key="frame" x="134" y="488.33333333333331" width="107.33333333333331" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -301,10 +301,10 @@
                                 <rect key="frame" x="25" y="284.33333333333331" width="325" height="243.33333333333331"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAI-kL-eBr" userLabel="Barcode container">
-                                        <rect key="frame" x="25" y="31.000000000000007" width="275" height="68.666666666666686"/>
+                                        <rect key="frame" x="16.333333333333343" y="25" width="292.33333333333326" height="73"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-Ix-B78" userLabel="Barcode">
-                                                <rect key="frame" x="10" y="9.9999999999999964" width="255" height="48.666666666666657"/>
+                                                <rect key="frame" x="10" y="10" width="272.33333333333331" height="53"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -317,35 +317,63 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xay-YZ-VXi">
-                                        <rect key="frame" x="25" y="128" width="137.66666666666666" height="68.666666666666686"/>
+                                        <rect key="frame" x="16.333333333333329" y="137.33333333333337" width="146.33333333333337" height="73"/>
                                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h56-zp-Z11">
+                                        <rect key="frame" x="0.0" y="121.33333333333337" width="325" height="1"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="aNN-NY-4TX"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.81381847017919906" blue="0.47041460777592392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="rAI-kL-eBr" firstAttribute="height" secondItem="xoa-mP-HPI" secondAttribute="height" multiplier="0.3" id="2ow-vw-CnH"/>
+                                    <constraint firstAttribute="trailing" secondItem="h56-zp-Z11" secondAttribute="trailing" id="Dev-IM-iZw"/>
+                                    <constraint firstItem="h56-zp-Z11" firstAttribute="centerY" secondItem="xoa-mP-HPI" secondAttribute="centerY" id="Dyf-gy-e17"/>
                                     <constraint firstItem="Xay-YZ-VXi" firstAttribute="leading" secondItem="rAI-kL-eBr" secondAttribute="leading" id="JTS-Dy-N3y"/>
                                     <constraint firstItem="Xay-YZ-VXi" firstAttribute="height" secondItem="rAI-kL-eBr" secondAttribute="height" id="JfI-KK-4Cg"/>
+                                    <constraint firstItem="h56-zp-Z11" firstAttribute="centerX" secondItem="xoa-mP-HPI" secondAttribute="centerX" id="KdU-Ja-hHK"/>
+                                    <constraint firstItem="Xay-YZ-VXi" firstAttribute="top" secondItem="h56-zp-Z11" secondAttribute="bottom" constant="15" id="L6d-7C-Kmy"/>
                                     <constraint firstItem="Xay-YZ-VXi" firstAttribute="width" secondItem="rAI-kL-eBr" secondAttribute="width" multiplier="0.5" id="LHv-eD-r4l"/>
-                                    <constraint firstItem="rAI-kL-eBr" firstAttribute="top" secondItem="xoa-mP-HPI" secondAttribute="top" constant="31" id="M2J-xc-XOp"/>
                                     <constraint firstItem="rAI-kL-eBr" firstAttribute="centerX" secondItem="xoa-mP-HPI" secondAttribute="centerX" id="UeB-as-HVw"/>
-                                    <constraint firstItem="Xay-YZ-VXi" firstAttribute="top" secondItem="rAI-kL-eBr" secondAttribute="bottom" constant="28.333333333333314" id="egv-79-hzK"/>
-                                    <constraint firstAttribute="trailing" secondItem="rAI-kL-eBr" secondAttribute="trailing" constant="25" id="iaj-DX-oX4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="243.33000000000001" id="a6J-MY-meQ"/>
+                                    <constraint firstItem="rAI-kL-eBr" firstAttribute="top" secondItem="xoa-mP-HPI" secondAttribute="top" constant="25" id="pY3-TH-t7A"/>
+                                    <constraint firstItem="h56-zp-Z11" firstAttribute="leading" secondItem="xoa-mP-HPI" secondAttribute="leading" id="ypB-4d-M5G"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K8-C0-fPX">
-                                <rect key="frame" x="132" y="611" width="110" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8K8-C0-fPX">
+                                <rect key="frame" x="157.66666666666666" y="691" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7bg-SQ-BHZ"/>
+                                    <constraint firstAttribute="width" constant="60" id="XjF-Ws-Zap"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="21"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.43529411759999997" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                </state>
                                 <connections>
                                     <action selector="backButtonPress:" destination="QOs-MH-xp7" eventType="touchUpInside" id="3eB-0N-BJr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan to collect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSN-c0-Ijp">
+                                <rect key="frame" x="113" y="206.33333333333334" width="149" height="27.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
                             <constraint firstItem="xoa-mP-HPI" firstAttribute="centerY" secondItem="rOZ-PJ-ARI" secondAttribute="centerY" id="Loh-wP-Eh0"/>
+                            <constraint firstItem="xoa-mP-HPI" firstAttribute="top" secondItem="LSN-c0-Ijp" secondAttribute="bottom" constant="50.329999999999998" id="SnD-ek-PcB"/>
                             <constraint firstItem="xoa-mP-HPI" firstAttribute="leading" secondItem="UPI-di-TdG" secondAttribute="leading" constant="25" id="XP2-lp-THR"/>
+                            <constraint firstItem="UPI-di-TdG" firstAttribute="bottom" secondItem="8K8-C0-fPX" secondAttribute="bottom" constant="37" id="cDu-sX-v38"/>
                             <constraint firstItem="xoa-mP-HPI" firstAttribute="height" secondItem="rOZ-PJ-ARI" secondAttribute="height" multiplier="0.3" id="df3-XB-c18"/>
+                            <constraint firstItem="LSN-c0-Ijp" firstAttribute="centerX" secondItem="rOZ-PJ-ARI" secondAttribute="centerX" id="lTD-FK-Ocj"/>
+                            <constraint firstItem="8K8-C0-fPX" firstAttribute="centerX" secondItem="rOZ-PJ-ARI" secondAttribute="centerX" id="pUU-Kn-e11"/>
                             <constraint firstItem="xoa-mP-HPI" firstAttribute="centerX" secondItem="rOZ-PJ-ARI" secondAttribute="centerX" id="y9Y-zS-YXl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UPI-di-TdG"/>

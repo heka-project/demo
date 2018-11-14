@@ -37,14 +37,6 @@ class CollectedView: BaseView {
 		self.navigationController?.popViewController(animated: true)
 	}
 	
-	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		UIView.animate(withDuration: 0.6, delay: 0.5, options: .curveEaseOut, animations: {
-			self.boxView.center = CGPoint(x: self.boxView.center.x, y: self.view.frame.height * 2)
-		}) { done in
-			self.backButtonPress(self)
-		}
-	}
-	
 }
 
 extension CollectedView: P2PServiceListener {
@@ -60,8 +52,11 @@ extension CollectedView: P2PServiceListener {
 		let currentNode = P2PManager.service.fragmentCache?.getDeviceNode()
 		if !Bool(currentNode!["isCurrent"]!)! {
 			isCurrent = false
-			
-			self.navigationController?.popViewController(animated: true)
+			UIView.animate(withDuration: 0.6, delay: 0.5, options: .curveEaseOut, animations: {
+				self.boxView.center = CGPoint(x: self.boxView.center.x, y: self.view.frame.height * 2)
+			}) { done in
+				self.backButtonPress(self)
+			}
 		}
 	}
 	
