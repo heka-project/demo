@@ -39,6 +39,10 @@ class Fragment {
 		return nodes.filter {$0["id"] != P2PClientID!}
 	}
 	
+	func getDeviceNode() -> [String: String] {
+		return nodes.filter{$0["id"] == P2PClientID}.first!
+	}
+	
 	func updateNodeCollected() {
 		self.nodes = self.nodes.map({ (node) in
 			var newNode = node

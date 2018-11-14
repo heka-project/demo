@@ -29,6 +29,7 @@ class P2PManager: P2PServiceDelegate {
 	}
 	
 	func networkUpdated(manager: P2PService, fragment: Fragment) {
+		APIManager.shared.updateChainState()
 		P2PManager.listeners.forEach { listener in
 			listener.networkUpdated()
 		}

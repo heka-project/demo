@@ -22,6 +22,8 @@ class CollectedView: BaseView {
 		}
 		
 		barcode.image = Barcode.fromString(string: "batch_1")
+		
+		P2PManager.addListener(self)
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -31,8 +33,26 @@ class CollectedView: BaseView {
 			P2PManager.service.fragmentCache?.updateNodeCollected()
 			P2PManager.service.updatePeers()
 		}
+	}
+}
+
+extension CollectedView: P2PServiceListener {
+	func joinedNetwork() {
 		
 	}
+	
+	func disconnectedNetwork() {
+		
+	}
+	
+	func networkUpdated() {
+		let currentNode = P2PManager.service.fragmentCache?.getDeviceNode()
+		if !Bool(currentNode!["isCurrent"]!)! {
+			self.navigationController?.popViewController(animated: true)
+		}
+	}
+	
+	
 }
 
 
