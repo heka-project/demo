@@ -12,46 +12,35 @@ import UIKit
 let secrets = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "Secrets", ofType: "plist") ?? "" )!
 
 var userName: String {
-	get {
-		return UserDefaults.standard.string(forKey: "user-name") ?? ""
-	}
-	set {
-		UserDefaults.standard.set(newValue, forKey: "user-name")
-	}
+	get {return UserDefaults.standard.string(forKey: "user-name") ?? ""}
+	set {UserDefaults.standard.set(newValue, forKey: "user-name")}
 }
 var userNric: String {
-	get {
-		return UserDefaults.standard.string(forKey: "user-nric") ?? ""
-	}
-	set {
-		UserDefaults.standard.set(newValue, forKey: "user-nric")
-	}
+	get {return UserDefaults.standard.string(forKey: "user-nric") ?? ""}
+	set {UserDefaults.standard.set(newValue, forKey: "user-nric")}
 }
 let userNrics = UserDefaults.standard.string(forKey: "user-nrics") ?? "1, 2, 3"
 
 var doneOnboarding: Bool {
-	get {
-		return UserDefaults.standard.bool(forKey: "done-onboarding")
-	}
-	set {
-		UserDefaults.standard.set(newValue, forKey: "done-onboarding")
-	}
+	get {return UserDefaults.standard.bool(forKey: "done-onboarding")}
+	set {UserDefaults.standard.set(newValue, forKey: "done-onboarding")}
 }
 var signedUp: Bool {
-	get {
-		return UserDefaults.standard.bool(forKey: "signed-up")
-	}
-	set {
-		UserDefaults.standard.set(newValue, forKey: "signed-up")
-	}
+	get {return UserDefaults.standard.bool(forKey: "signed-up")}
+	set {UserDefaults.standard.set(newValue, forKey: "signed-up")}
+}
+var collected: Bool {
+	get { return UserDefaults.standard.bool(forKey: "collected")}
+	set { UserDefaults.standard.set(newValue, forKey: "collected")}
+}
+
+var isCurrent: Bool {
+	get { return UserDefaults.standard.bool(forKey: "is-current")}
+	set { UserDefaults.standard.set(newValue, forKey: "is-current")}
 }
 var P2PClientID: String? {
-	get {
-		return UserDefaults.standard.string(forKey: "p2p-id")
-	}
-	set {
-		UserDefaults.standard.set(newValue, forKey: "p2p-id")
-	}
+	get {return UserDefaults.standard.string(forKey: "p2p-id")}
+	set {UserDefaults.standard.set(newValue, forKey: "p2p-id")}
 }
 
 enum Storyboard: String {

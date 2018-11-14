@@ -27,7 +27,9 @@ class P2PService: NSObject {
 		"name": userName,
 		"qty": userNrics,
 		"id": P2PClientID!,
-		"batch_id": "batch_1"
+		"batch_id": "batch_1",
+		"collected": String(collected),
+		"isCurrent": String(isCurrent),
 	]
 	
 	private let serviceType = secrets.value(forKey: "root") as! String

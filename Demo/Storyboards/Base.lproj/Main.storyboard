@@ -9,9 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="manrope-regular.ttf">
-            <string>Manrope-Regular</string>
-        </array>
         <array key="manrope-semibold.ttf">
             <string>Manrope-Semibold</string>
         </array>
@@ -80,6 +77,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="162.33000000000001" id="2L2-rL-DB1"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="card"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-WM-mQf" userLabel="Line">
                                 <rect key="frame" x="53.666666666666664" y="94" width="3" height="442"/>
@@ -92,7 +92,7 @@
                                 <rect key="frame" x="20" y="150" width="355" height="387"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="47" id="oRS-jk-IVE" customClass="MenuTableCell" customModule="Demo" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="47" id="oRS-jk-IVE" customClass="MenuTableCell" customModule="Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="355" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oRS-jk-IVE" id="0wA-ZA-rMd">
@@ -110,7 +110,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-cf-Srq">
                                                             <rect key="frame" x="15" y="0.0" width="260" height="47"/>
-                                                            <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -160,7 +160,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwb-b8-a0e">
-                                <rect key="frame" x="90" y="60" width="60.333333333333343" height="70"/>
+                                <rect key="frame" x="90" y="60" width="68.333333333333314" height="70"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -188,13 +188,13 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBl-pV-liK">
-                                <rect key="frame" x="108" y="469.66666666666669" width="237" height="23.333333333333314"/>
+                                <rect key="frame" x="108" y="469.66666666666669" width="237" height="27.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TXXXXXXJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-Ys-DEO">
-                                <rect key="frame" x="108" y="496" width="237" height="18.666666666666629"/>
+                                <rect key="frame" x="108" y="500.33333333333331" width="237" height="21.999999999999943"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="16"/>
                                 <color key="textColor" red="1" green="0.43529411759999997" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
@@ -206,6 +206,9 @@
                                 <state key="normal" title="Scan">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="scanButtonPressed:" destination="UFn-66-1P9" eventType="touchUpInside" id="Fof-1u-GOS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
@@ -263,11 +266,12 @@
                         <outletCollection property="roundables" destination="Dwg-Mw-wLe" collectionClass="NSMutableArray" id="RsF-n1-8CY"/>
                         <outletCollection property="roundables" destination="IlS-xh-kOD" collectionClass="NSMutableArray" id="tYh-sb-DNf"/>
                         <outletCollection property="roundables" destination="Bly-qR-62f" collectionClass="NSMutableArray" id="Rhp-l4-SdT"/>
+                        <segue destination="QOs-MH-xp7" kind="show" identifier="collected" id="req-lJ-8Kz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6J7-Wx-3n0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="136.69950738916256"/>
+            <point key="canvasLocation" x="898" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o6y-TY-T0r">
@@ -286,6 +290,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jq-hF-JjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-650" y="137"/>
+        </scene>
+        <!--Collected View-->
+        <scene sceneID="b7f-LD-U4S">
+            <objects>
+                <viewController id="QOs-MH-xp7" customClass="CollectedView" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rOZ-PJ-ARI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-mP-HPI">
+                                <rect key="frame" x="25" y="144" width="325" height="524"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAI-kL-eBr" userLabel="Barcode container">
+                                        <rect key="frame" x="25" y="31.000000000000007" width="275" height="68.666666666666686"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-Ix-B78" userLabel="Barcode">
+                                                <rect key="frame" x="10" y="9.9999999999999964" width="255" height="48.666666666666657"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="j6U-Ix-B78" secondAttribute="bottom" constant="10" id="EoX-ty-f20"/>
+                                            <constraint firstItem="j6U-Ix-B78" firstAttribute="leading" secondItem="rAI-kL-eBr" secondAttribute="leading" constant="10" id="f8y-sO-R6F"/>
+                                            <constraint firstAttribute="trailing" secondItem="j6U-Ix-B78" secondAttribute="trailing" constant="10" id="qKt-nD-WPJ"/>
+                                            <constraint firstItem="j6U-Ix-B78" firstAttribute="top" secondItem="rAI-kL-eBr" secondAttribute="top" constant="10" id="t56-Jm-gq9"/>
+                                            <constraint firstAttribute="width" secondItem="rAI-kL-eBr" secondAttribute="height" multiplier="4:1" id="v3R-5a-7i9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rAI-kL-eBr" firstAttribute="top" secondItem="xoa-mP-HPI" secondAttribute="top" constant="31" id="M2J-xc-XOp"/>
+                                    <constraint firstItem="rAI-kL-eBr" firstAttribute="centerX" secondItem="xoa-mP-HPI" secondAttribute="centerX" id="UeB-as-HVw"/>
+                                    <constraint firstAttribute="trailing" secondItem="rAI-kL-eBr" secondAttribute="trailing" constant="25" id="iaj-DX-oX4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="card"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <constraints>
+                            <constraint firstItem="xoa-mP-HPI" firstAttribute="centerY" secondItem="rOZ-PJ-ARI" secondAttribute="centerY" id="Loh-wP-Eh0"/>
+                            <constraint firstItem="xoa-mP-HPI" firstAttribute="leading" secondItem="UPI-di-TdG" secondAttribute="leading" constant="25" id="XP2-lp-THR"/>
+                            <constraint firstItem="xoa-mP-HPI" firstAttribute="top" secondItem="UPI-di-TdG" secondAttribute="top" constant="100" id="ebo-zN-Ryt"/>
+                            <constraint firstItem="xoa-mP-HPI" firstAttribute="centerX" secondItem="rOZ-PJ-ARI" secondAttribute="centerX" id="y9Y-zS-YXl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UPI-di-TdG"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="barcode" destination="j6U-Ix-B78" id="0Il-bI-kbf"/>
+                        <outletCollection property="roundables" destination="xoa-mP-HPI" collectionClass="NSMutableArray" id="YKV-Ww-NSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZj-bV-LPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.5999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
     <resources>

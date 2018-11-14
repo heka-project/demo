@@ -19,8 +19,15 @@ class MenuTableCell: UITableViewCell {
 		super.init(coder: aDecoder)
 	}
 	
-	func setData(index: Int, nodes: [[String: String]] ) {
-		self.graphLabel.text = nodes[index]["name"]
+	func setData(index: Int, node: [String: String] ) {
+		self.layer.removeAllAnimations()
+		self.graphLabel.text = node["name"]
+		let isCurrent = Bool(node["isCurrent"]!)
+
+		if isCurrent ?? false {
+			self.addRippleEffect(pos: self.graphImageView.center, size: CGRect(origin: self.graphImageView.center, size: CGSize(width: 25, height: 25)))
+		}
+		
 		backgroundCard.roundify(5.0)
 	}
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import BarcodeScanner
 
 class MenuView: BaseView {
 	
@@ -41,6 +42,13 @@ class MenuView: BaseView {
 	private func animate() {
 		logo.rotateAnimation(key: "load", rep: .infinity, duration: 3.0)
 	}
+	
+	@IBAction func scanButtonPressed(_ sender: Any) {
+		let barcodeScannerView = buildBarcodeScanner(delegate: self)
+		present(barcodeScannerView, animated: true) {
+			
+		}
+	}
 }
 
 extension MenuView: P2PServiceListener {
@@ -68,7 +76,7 @@ extension MenuView: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuTableCell
 		
-		cell.setData(index: indexPath.row, nodes: P2PManager.service.fragmentCache!.getConnectedNodes())
+		cell.setData(index: indexPath.row, node: P2PManager.service.fragmentCache!.getConnectedNodes()[indexPath.row])
 		return cell
 	}
 	
@@ -77,4 +85,24 @@ extension MenuView: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	
+}
+
+extension MenuView: BarcodeScannerErrorDelegate, BarcodeScannerCodeDelegate, BarcodeScannerDismissalDelegate {
+	func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
+		
+	}
+	
+	func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
+		if code == "batch_1" {
+			controller.dismiss(animated: true) {
+				self.performSegue(withIdentifier: "collected", sender: self)
+			}
+		}
+	}
+	
+	func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
+		controller.dismiss(animated: true) {
+			
+		}
+	}
 }

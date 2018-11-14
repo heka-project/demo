@@ -39,17 +39,48 @@ class Fragment {
 		return nodes.filter {$0["id"] != P2PClientID!}
 	}
 	
+	func updateNodeCollected() {
+		self.nodes = self.nodes.map({ (node) in
+			var newNode = node
+			if newNode["id"] == P2PClientID! {
+    			newNode["isCurrent"] = "true"
+				newNode["collected"] = "true"
+			} else {
+				newNode["isCurrent"] = "false"
+			}
+			return newNode
+		})
+		print(self.nodes)
+		self.updateHash()
+	}
+	
 	func updateFragment(newFragment: Fragment) {
 		var mergeSet: Set<[String: String]> = Set()
 		let combined = self.nodes + newFragment.nodes
 		combined.forEach { (node) in
 			mergeSet.insert(node)
 		}
-		self.nodes = Array(mergeSet)
+		
+		let mergedArray = Array(mergeSet)
+		let nodeIDs = mergedArray.map {$0["id"]}
+		
+		self.nodes = mergedArray.filter { node in
+			let uniqueNodeIds = nodeIDs.filter {$0 == node["id"]}
+			if uniqueNodeIds.count > 1 {
+				// Duplicates for this node
+				if newFragment.nodes.contains(node){
+					return true
+				} else {
+					return false
+				}
+			} else {
+				return true
+			}
+		}
 		
 		self.updateHash()
 	}
-	
+
 	func updateHash() {
 		let stringRepresentation = mapToString()
 		// Generate a hash of self
