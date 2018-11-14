@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
 		IQKeyboardManager.shared().isEnabled = true
+		
+		// Generate P2P client id
+		if P2PClientID == nil {
+			P2PClientID = UUID().uuidString
+		}
 
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		

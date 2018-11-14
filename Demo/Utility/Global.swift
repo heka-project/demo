@@ -45,7 +45,14 @@ var signedUp: Bool {
 		UserDefaults.standard.set(newValue, forKey: "signed-up")
 	}
 }
-var P2PClientID: String?
+var P2PClientID: String? {
+	get {
+		return UserDefaults.standard.string(forKey: "p2p-id")
+	}
+	set {
+		UserDefaults.standard.set(newValue, forKey: "p2p-id")
+	}
+}
 
 enum Storyboard: String {
 	case onboarding = "Onboarding"
