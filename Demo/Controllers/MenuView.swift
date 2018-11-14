@@ -22,6 +22,7 @@ class MenuView: BaseView {
 	@IBOutlet var nricLabel: UILabel!
 	
 	@IBOutlet var footerButton: UIButton!
+	@IBOutlet var actionButton: UIButton!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -32,22 +33,35 @@ class MenuView: BaseView {
 		nricLabel.text = userNric
 		
 		roundables.forEach {$0.roundify(5.0)}
+	}
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		if isCurrent {
+			self.actionButton.setTitle("Pass Package", for: .normal)
+		}
 		self.animate()
 	}
-	
 	override func willBecomeActive() {
 		self.animate()
 	}
-	
+
 	private func animate() {
+		logo.layer.removeAllAnimations()
 		logo.rotateAnimation(key: "load", rep: .infinity, duration: 3.0)
 	}
 	
 	@IBAction func scanButtonPressed(_ sender: Any) {
-		let barcodeScannerView = buildBarcodeScanner(delegate: self)
-		present(barcodeScannerView, animated: true) {
-			
+		if isCurrent {
+			self.performSegue(withIdentifier: "collected", sender: self)
+		} else {
+			let barcodeScannerView = buildBarcodeScanner(delegate: self)
+			present(barcodeScannerView, animated: true) {
+				
+			}
 		}
+	}
+	
+	@IBAction func footerButtonPressed(_ sender: Any) {
 	}
 }
 
@@ -95,7 +109,12 @@ extension MenuView: BarcodeScannerErrorDelegate, BarcodeScannerCodeDelegate, Bar
 	func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
 		if code == "batch_1" {
 			controller.dismiss(animated: true) {
-				self.performSegue(withIdentifier: "collected", sender: self)
+				isCurrent = true
+				DispatchQueue.main.async {
+					P2PManager.service.fragmentCache?.updateNodeCollected()
+					P2PManager.service.updatePeers()
+					self.performSegue(withIdentifier: "collected", sender: self)
+				}
 			}
 		}
 	}

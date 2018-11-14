@@ -8,14 +8,19 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class CollectedView: BaseView {
 	
 	@IBOutlet var barcode: UIImageView!
 	@IBOutlet var roundables: [UIView]!
-
+	@IBOutlet var boxView: UIView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		self.navigationController?.hero.navigationAnimationType = .slide(direction: .left)
+		self.boxView.hero.modifiers = [.translate(y: -self.view.frame.height), .delay(0.5)]
 		
 		roundables.forEach {
 			$0.roundify(5.0)
@@ -24,16 +29,22 @@ class CollectedView: BaseView {
 		barcode.image = Barcode.fromString(string: "batch_1")
 		
 		P2PManager.addListener(self)
+
 	}
 	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		
-		DispatchQueue.main.async {
-			P2PManager.service.fragmentCache?.updateNodeCollected()
-			P2PManager.service.updatePeers()
+	@IBAction func backButtonPress(_ sender: Any) {
+		self.navigationController?.hero.navigationAnimationType = .slide(direction: .right)
+		self.navigationController?.popViewController(animated: true)
+	}
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		UIView.animate(withDuration: 0.6, delay: 0.5, options: .curveEaseOut, animations: {
+			self.boxView.center = CGPoint(x: self.boxView.center.x, y: self.view.frame.height * 2)
+		}) { done in
+			self.backButtonPress(self)
 		}
 	}
+	
 }
 
 extension CollectedView: P2PServiceListener {
@@ -48,6 +59,8 @@ extension CollectedView: P2PServiceListener {
 	func networkUpdated() {
 		let currentNode = P2PManager.service.fragmentCache?.getDeviceNode()
 		if !Bool(currentNode!["isCurrent"]!)! {
+			isCurrent = false
+			
 			self.navigationController?.popViewController(animated: true)
 		}
 	}

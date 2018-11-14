@@ -13,8 +13,7 @@ class MenuTableCell: UITableViewCell {
 
 	@IBOutlet var graphImageView: UIImageView!
 	@IBOutlet var graphLabel: UILabel!
-	@IBOutlet var backgroundCard: UIView!
-	
+
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 	}
@@ -28,6 +27,5 @@ class MenuTableCell: UITableViewCell {
 			self.addRippleEffect(pos: self.graphImageView.center, size: CGRect(origin: self.graphImageView.center, size: CGSize(width: 25, height: 25)))
 		}
 		
-		backgroundCard.roundify(5.0)
 	}
 }
