@@ -13,6 +13,7 @@ class MenuTableCell: UITableViewCell {
 
 	@IBOutlet var graphImageView: UIImageView!
 	@IBOutlet var graphLabel: UILabel!
+	@IBOutlet var backgroundCard: UIView!
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
@@ -20,5 +21,6 @@ class MenuTableCell: UITableViewCell {
 	
 	func setData(index: Int, nodes: [[String: String]] ) {
 		self.graphLabel.text = nodes[index]["name"]
+		backgroundCard.roundify(5.0)
 	}
 }

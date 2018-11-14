@@ -35,7 +35,6 @@ class FragmentMessage: Mappable {
 		type <- map["type"]
 		self.fragment.nodes <- map["nodes"]
 		self.fragment.md5 <- map["md5"]
-		self.fragment.batch_id <- map["batch_id"]
 	}
 	
 }

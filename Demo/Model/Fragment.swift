@@ -15,8 +15,7 @@ class Fragment {
 	
 	var md5: String?
 	var nodes: [[String: String]] = []
-	var batch_id: String?
-	
+
 	init() {
 		
 	}
@@ -48,7 +47,6 @@ class Fragment {
 		}
 		self.nodes = Array(mergeSet)
 		
-		self.batch_id = newFragment.batch_id
 		self.updateHash()
 	}
 	
@@ -67,7 +65,6 @@ class Fragment {
 		let sortedNodes = self.nodes.map{$0.sorted{$0.key < $1.key}}
 		return JSON([
 			"nodes": sortedNodes.description,
-			"batch_id": batch_id?.utf8
 			]).rawString()!
 	}
 	

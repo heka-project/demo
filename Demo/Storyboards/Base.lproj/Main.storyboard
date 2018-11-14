@@ -105,27 +105,40 @@
                                                         <constraint firstAttribute="width" secondItem="0f8-IO-bWP" secondAttribute="height" multiplier="31:58" id="Ee6-oa-H9r"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-cf-Srq">
-                                                    <rect key="frame" x="62" y="0.0" width="265" height="47"/>
-                                                    <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-UP-hgw">
+                                                    <rect key="frame" x="55" y="0.0" width="275" height="47"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-cf-Srq">
+                                                            <rect key="frame" x="15" y="0.0" width="260" height="47"/>
+                                                            <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="0.25243471746575341" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="fGn-cf-Srq" secondAttribute="bottom" id="A1H-iL-aIA"/>
+                                                        <constraint firstItem="fGn-cf-Srq" firstAttribute="top" secondItem="FXD-UP-hgw" secondAttribute="top" id="O3D-Ys-jHa"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fGn-cf-Srq" secondAttribute="trailing" id="gmm-dp-Ret"/>
+                                                        <constraint firstItem="fGn-cf-Srq" firstAttribute="leading" secondItem="FXD-UP-hgw" secondAttribute="leading" constant="15" id="lgO-mk-sgV"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="fGn-cf-Srq" secondAttribute="bottom" id="Fdn-x6-H4w"/>
+                                                <constraint firstItem="FXD-UP-hgw" firstAttribute="leading" secondItem="0f8-IO-bWP" secondAttribute="trailing" constant="8" id="DI6-wy-jF3"/>
                                                 <constraint firstAttribute="bottom" secondItem="0f8-IO-bWP" secondAttribute="bottom" id="SF8-o3-own"/>
-                                                <constraint firstItem="fGn-cf-Srq" firstAttribute="leading" secondItem="0f8-IO-bWP" secondAttribute="trailing" constant="15" id="aw4-Ll-QCQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="fGn-cf-Srq" secondAttribute="trailing" constant="28" id="hdv-sd-IY1"/>
-                                                <constraint firstItem="fGn-cf-Srq" firstAttribute="top" secondItem="0wA-ZA-rMd" secondAttribute="top" id="r36-fX-VTc"/>
+                                                <constraint firstItem="FXD-UP-hgw" firstAttribute="top" secondItem="0wA-ZA-rMd" secondAttribute="top" id="WB7-uI-xHM"/>
+                                                <constraint firstAttribute="trailing" secondItem="FXD-UP-hgw" secondAttribute="trailing" constant="25" id="ok4-Go-09P"/>
                                                 <constraint firstItem="0f8-IO-bWP" firstAttribute="leading" secondItem="0wA-ZA-rMd" secondAttribute="leading" constant="22" id="rGu-WG-ei5"/>
                                                 <constraint firstItem="0f8-IO-bWP" firstAttribute="top" secondItem="0wA-ZA-rMd" secondAttribute="top" id="shp-vz-17p"/>
+                                                <constraint firstAttribute="bottom" secondItem="FXD-UP-hgw" secondAttribute="bottom" id="va0-t4-PHX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="backgroundCard" destination="FXD-UP-hgw" id="Bnn-7k-ei3"/>
                                             <outlet property="graphImageView" destination="0f8-IO-bWP" id="ZZ1-99-sdw"/>
                                             <outlet property="graphLabel" destination="fGn-cf-Srq" id="5OZ-O3-Gbw"/>
                                         </connections>
@@ -147,7 +160,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwb-b8-a0e">
-                                <rect key="frame" x="90" y="60" width="68.333333333333314" height="70"/>
+                                <rect key="frame" x="90" y="60" width="60.333333333333343" height="70"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -175,13 +188,13 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBl-pV-liK">
-                                <rect key="frame" x="108" y="469.66666666666669" width="237" height="27.666666666666686"/>
+                                <rect key="frame" x="108" y="469.66666666666669" width="237" height="23.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TXXXXXXJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-Ys-DEO">
-                                <rect key="frame" x="108" y="500.33333333333331" width="237" height="21.999999999999943"/>
+                                <rect key="frame" x="108" y="496" width="237" height="18.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="16"/>
                                 <color key="textColor" red="1" green="0.43529411759999997" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
