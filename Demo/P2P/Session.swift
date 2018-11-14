@@ -23,6 +23,7 @@ extension P2PService: MCSessionDelegate {
 		case .notConnected:
 			print("P2P: ⚠️ - Lost connection to peer \(peerID.displayName)")
 			fragmentCache!.removeNode(id: peerID.displayName)
+			self.delegate?.networkUpdated(manager: self, fragment: fragmentCache!)
 			if fragmentCache!.nodes.count <= 1 {
 				self.delegate!.lostConnection(manager: self)
 			} else {
@@ -50,7 +51,7 @@ extension P2PService: MCSessionDelegate {
 	func handleFragmentMessage(_ fragmentMessage: FragmentMessage) {
 		switch fragmentMessage.type! {
 		case .SAY_HELLO:
-			self.delegate?.receivedHello(manager: self, fragment: fragmentMessage)
+			self.delegate!.receivedHello(manager: self, fragment: fragmentMessage.fragment)
 			self.fragmentCache = fragmentMessage.fragment
 			self.fragmentCache!.addNode(meta: ["name": userName, "qty": userNrics, "id":
 				self.peerID.displayName])
@@ -59,7 +60,7 @@ extension P2PService: MCSessionDelegate {
 			if fragmentMessage.fragment.md5 != self.fragmentCache!.md5 {
 				print("P2P: ⚠️ Will update self and peers...")
 				self.fragmentCache!.updateFragment(newFragment: fragmentMessage.fragment)
-				self.delegate?.networkUpdated(manager: self, fragment: fragmentMessage)
+				self.delegate?.networkUpdated(manager: self, fragment: fragmentMessage.fragment)
 				// Update other peers on the network
 				self.updatePeers()
 			} else {

@@ -14,6 +14,8 @@ class P2PManager: P2PServiceDelegate {
 	static private var listeners: [P2PServiceListener] = []
 	static let service = P2PService()
 	
+	static var isConnected: Bool = false
+	
 	required init() {
 		P2PManager.service.delegate = self
 	}
@@ -26,19 +28,21 @@ class P2PManager: P2PServiceDelegate {
 		self.listeners.removeAll()
 	}
 	
-	func networkUpdated(manager: P2PService, fragment: FragmentMessage) {
+	func networkUpdated(manager: P2PService, fragment: Fragment) {
 		P2PManager.listeners.forEach { listener in
 			listener.networkUpdated()
 		}
 	}
 	
-	func receivedHello(manager: P2PService, fragment: FragmentMessage) {
+	func receivedHello(manager: P2PService, fragment: Fragment) {
+		P2PManager.isConnected = true
 		P2PManager.listeners.forEach { listener in
 			listener.joinedNetwork()
 		}
 	}
 	
 	func lostConnection(manager: P2PService) {
+		P2PManager.isConnected = false
 		P2PManager.listeners.forEach { listener in
 			listener.disconnectedNetwork()
 		}

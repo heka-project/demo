@@ -15,18 +15,22 @@ class MenuView: BaseView {
 	@IBOutlet var tableView: UITableView!
 	@IBOutlet var logo: UIImageView!
 	
+	@IBOutlet var roundables: [UIView]!
+	
 	@IBOutlet var nameLabel: UILabel!
 	@IBOutlet var nricLabel: UILabel!
+	
+	@IBOutlet var footerButton: UIButton!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		P2PManager.addListener(self)
-		connectionIndicator.isOnline = true
-		
+
 		nameLabel.text = userName
 		nricLabel.text = userNric
 		
+		roundables.forEach {$0.roundify(5.0)}
 		self.animate()
 	}
 	
@@ -41,20 +45,19 @@ class MenuView: BaseView {
 
 extension MenuView: P2PServiceListener {
 	func networkUpdated() {
-		self.tableView.reloadData()
+		DispatchQueue.main.async {
+    		self.tableView.reloadData()
+		}
 		print("🍉 - Network Changed!")
 	}
 
 	func joinedNetwork() {
 		print("🍉 - Connected to network!")
-		connectionIndicator.isOnline = true
 	}
 	
 	func disconnectedNetwork() {
 		print("🍉 - Lost connection to network!")
-		connectionIndicator.isOnline = false
 	}
-
 }
 
 extension MenuView: UITableViewDelegate, UITableViewDataSource {

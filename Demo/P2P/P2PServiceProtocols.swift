@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 protocol P2PServiceDelegate {
-	func networkUpdated(manager: P2PService, fragment: FragmentMessage)
-	func receivedHello(manager: P2PService, fragment: FragmentMessage)
+	func networkUpdated(manager: P2PService, fragment: Fragment)
+	func receivedHello(manager: P2PService, fragment: Fragment)
 	func lostConnection(manager: P2PService)
 }
 
