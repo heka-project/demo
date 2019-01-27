@@ -23,6 +23,8 @@
 		971B0C1B2198195100B63C88 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B0C1A2198195100B63C88 /* APIManager.swift */; };
 		9750BC50219BDA2800E0A0E9 /* CollectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750BC4F219BDA2800E0A0E9 /* CollectedView.swift */; };
 		97586ACE218754DC00A05971 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586ACD218754DC00A05971 /* Global.swift */; };
+		9759602A21FD5C1C001B6516 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9759602921FD5C1C001B6516 /* Secrets.plist */; };
+		9759602C21FD5C4B001B6516 /* ExampleSecrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9759602B21FD5C4B001B6516 /* ExampleSecrets.plist */; };
 		975BD1602196898A00F0ADA7 /* P2PManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BD15F2196898A00F0ADA7 /* P2PManager.swift */; };
 		975BD1622196D7E600F0ADA7 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975BD1612196D7E600F0ADA7 /* SignUp.storyboard */; };
 		975BD1642196E5C100F0ADA7 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BD1632196E5C100F0ADA7 /* SignupView.swift */; };
@@ -38,7 +40,6 @@
 		979A1326219182B10019A29E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1325219182B10019A29E /* UIView.swift */; };
 		979A1329219192B30019A29E /* FragmentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A1328219192B30019A29E /* FragmentMessage.swift */; };
 		97AC447D219BCE29004FD946 /* BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AC447C219BCE29004FD946 /* BarcodeGenerator.swift */; };
-		97C3EAE1218A8D6600E70C50 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE0218A8D6600E70C50 /* Secrets.plist */; };
 		97C3EAE3218AF0FF00E70C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */; };
 		97D0B1EF219973CD00EFE203 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1EE219973CD00EFE203 /* AlertManager.swift */; };
 		97D0B1F1219A92E100EFE203 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1F0219A92E100EFE203 /* MenuView.swift */; };
@@ -72,6 +73,8 @@
 		971B0C1A2198195100B63C88 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9750BC4F219BDA2800E0A0E9 /* CollectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedView.swift; sourceTree = "<group>"; };
 		97586ACD218754DC00A05971 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		9759602921FD5C1C001B6516 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		9759602B21FD5C4B001B6516 /* ExampleSecrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExampleSecrets.plist; sourceTree = "<group>"; };
 		975BD15F2196898A00F0ADA7 /* P2PManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PManager.swift; sourceTree = "<group>"; };
 		975BD1612196D7E600F0ADA7 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		975BD1632196E5C100F0ADA7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		979A1325219182B10019A29E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		979A1328219192B30019A29E /* FragmentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentMessage.swift; sourceTree = "<group>"; };
 		97AC447C219BCE29004FD946 /* BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeGenerator.swift; sourceTree = "<group>"; };
-		97C3EAE0218A8D6600E70C50 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97D0B1EE219973CD00EFE203 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		97D0B1F0219A92E100EFE203 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -196,7 +198,8 @@
 				97869C3A2181594B007B0C73 /* Utility */,
 				97664385217F1FAE00EB4C5F /* AppDelegate.swift */,
 				97664391217F1FB000EB4C5F /* Info.plist */,
-				97C3EAE0218A8D6600E70C50 /* Secrets.plist */,
+				9759602921FD5C1C001B6516 /* Secrets.plist */,
+				9759602B21FD5C4B001B6516 /* ExampleSecrets.plist */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -329,11 +332,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97C3EAE1218A8D6600E70C50 /* Secrets.plist in Resources */,
 				9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */,
 				975BD1622196D7E600F0ADA7 /* SignUp.storyboard in Resources */,
 				9700EA992186C54600A6E4DA /* manrope-medium.otf in Resources */,
 				9700EA932186C54600A6E4DA /* manrope-regular.ttf in Resources */,
+				9759602A21FD5C1C001B6516 /* Secrets.plist in Resources */,
 				9700EA972186C54600A6E4DA /* manrope-semibold.ttf in Resources */,
 				9700EA9B2186C54600A6E4DA /* manrope-light.ttf in Resources */,
 				9700EA952186C54600A6E4DA /* manrope-semibold.otf in Resources */,
@@ -343,6 +346,7 @@
 				979A13222191435E0019A29E /* Onboarding.storyboard in Resources */,
 				9700EA9A2186C54600A6E4DA /* manrope-thin.ttf in Resources */,
 				9700EA962186C54600A6E4DA /* manrope-bold.ttf in Resources */,
+				9759602C21FD5C4B001B6516 /* ExampleSecrets.plist in Resources */,
 				9766438B217F1FAE00EB4C5F /* Main.storyboard in Resources */,
 				9700EA922186C54600A6E4DA /* manrope-regular.otf in Resources */,
 				97C3EAE3218AF0FF00E70C50 /* Assets.xcassets in Resources */,

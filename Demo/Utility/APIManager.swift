@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class APIManager {
 	static let shared = APIManager()
-	let baseURL: String = secrets.value(forKey: "apiBaseUrl") as! String
+	let baseURL: String = secrets.value(forKey: "api_base_url") as! String
 	
 	let defaultHeaders: HTTPHeaders = [
 		"Content-Type": "application/json",
