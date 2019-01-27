@@ -21,4 +21,8 @@ extension UIColor {
 	static func appBlack(a: CGFloat) -> UIColor {
 		return UIColor(red:0.00, green:0.14, blue:0.22, alpha: a)
 	}
+  
+  static func appBlue(a: CGFloat) -> UIColor {
+    return UIColor(red:0.00, green:0.52, blue:0.80, alpha:a)
+  }
 }

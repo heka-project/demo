@@ -7,24 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9700EA922186C54600A6E4DA /* manrope-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA862186C54500A6E4DA /* manrope-regular.otf */; };
-		9700EA932186C54600A6E4DA /* manrope-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA872186C54500A6E4DA /* manrope-regular.ttf */; };
-		9700EA942186C54600A6E4DA /* manrope-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA882186C54500A6E4DA /* manrope-light.otf */; };
-		9700EA952186C54600A6E4DA /* manrope-semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA892186C54500A6E4DA /* manrope-semibold.otf */; };
-		9700EA962186C54600A6E4DA /* manrope-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA8A2186C54500A6E4DA /* manrope-bold.ttf */; };
-		9700EA972186C54600A6E4DA /* manrope-semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA8B2186C54500A6E4DA /* manrope-semibold.ttf */; };
-		9700EA982186C54600A6E4DA /* manrope-thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA8C2186C54500A6E4DA /* manrope-thin.otf */; };
-		9700EA992186C54600A6E4DA /* manrope-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA8D2186C54500A6E4DA /* manrope-medium.otf */; };
-		9700EA9A2186C54600A6E4DA /* manrope-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA8E2186C54500A6E4DA /* manrope-thin.ttf */; };
-		9700EA9B2186C54600A6E4DA /* manrope-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA8F2186C54500A6E4DA /* manrope-light.ttf */; };
-		9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA902186C54500A6E4DA /* manrope-medium.ttf */; };
-		9700EA9D2186C54600A6E4DA /* manrope-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9700EA912186C54600A6E4DA /* manrope-bold.otf */; };
 		971B0C1821980E4400B63C88 /* BarcodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B0C1721980E4400B63C88 /* BarcodeScanner.swift */; };
 		971B0C1B2198195100B63C88 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B0C1A2198195100B63C88 /* APIManager.swift */; };
 		9750BC50219BDA2800E0A0E9 /* CollectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9750BC4F219BDA2800E0A0E9 /* CollectedView.swift */; };
 		97586ACE218754DC00A05971 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97586ACD218754DC00A05971 /* Global.swift */; };
 		9759602A21FD5C1C001B6516 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9759602921FD5C1C001B6516 /* Secrets.plist */; };
 		9759602C21FD5C4B001B6516 /* ExampleSecrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9759602B21FD5C4B001B6516 /* ExampleSecrets.plist */; };
+		9759602F21FD941E001B6516 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9759602E21FD941E001B6516 /* OpenSans-Regular.ttf */; };
+		9759603121FD9425001B6516 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9759603021FD9425001B6516 /* OpenSans-Bold.ttf */; };
+		9759603321FD942D001B6516 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9759603221FD942D001B6516 /* OpenSans-SemiBold.ttf */; };
 		975BD1602196898A00F0ADA7 /* P2PManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BD15F2196898A00F0ADA7 /* P2PManager.swift */; };
 		975BD1622196D7E600F0ADA7 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975BD1612196D7E600F0ADA7 /* SignUp.storyboard */; };
 		975BD1642196E5C100F0ADA7 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BD1632196E5C100F0ADA7 /* SignupView.swift */; };
@@ -57,24 +48,15 @@
 
 /* Begin PBXFileReference section */
 		3F9CDE462D7E4DA33D7E6850 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9700EA862186C54500A6E4DA /* manrope-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-regular.otf"; sourceTree = "<group>"; };
-		9700EA872186C54500A6E4DA /* manrope-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-regular.ttf"; sourceTree = "<group>"; };
-		9700EA882186C54500A6E4DA /* manrope-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-light.otf"; sourceTree = "<group>"; };
-		9700EA892186C54500A6E4DA /* manrope-semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-semibold.otf"; sourceTree = "<group>"; };
-		9700EA8A2186C54500A6E4DA /* manrope-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.ttf"; sourceTree = "<group>"; };
-		9700EA8B2186C54500A6E4DA /* manrope-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-semibold.ttf"; sourceTree = "<group>"; };
-		9700EA8C2186C54500A6E4DA /* manrope-thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-thin.otf"; sourceTree = "<group>"; };
-		9700EA8D2186C54500A6E4DA /* manrope-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-medium.otf"; sourceTree = "<group>"; };
-		9700EA8E2186C54500A6E4DA /* manrope-thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-thin.ttf"; sourceTree = "<group>"; };
-		9700EA8F2186C54500A6E4DA /* manrope-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-light.ttf"; sourceTree = "<group>"; };
-		9700EA902186C54500A6E4DA /* manrope-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-medium.ttf"; sourceTree = "<group>"; };
-		9700EA912186C54600A6E4DA /* manrope-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "manrope-bold.otf"; sourceTree = "<group>"; };
 		971B0C1721980E4400B63C88 /* BarcodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScanner.swift; sourceTree = "<group>"; };
 		971B0C1A2198195100B63C88 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9750BC4F219BDA2800E0A0E9 /* CollectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedView.swift; sourceTree = "<group>"; };
 		97586ACD218754DC00A05971 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		9759602921FD5C1C001B6516 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		9759602B21FD5C4B001B6516 /* ExampleSecrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExampleSecrets.plist; sourceTree = "<group>"; };
+		9759602E21FD941E001B6516 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		9759603021FD9425001B6516 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		9759603221FD942D001B6516 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		975BD15F2196898A00F0ADA7 /* P2PManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PManager.swift; sourceTree = "<group>"; };
 		975BD1612196D7E600F0ADA7 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		975BD1632196E5C100F0ADA7 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -137,21 +119,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9700EA852186C52C00A6E4DA /* Assets */ = {
+		9759602D21FD9402001B6516 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				9700EA912186C54600A6E4DA /* manrope-bold.otf */,
-				9700EA8A2186C54500A6E4DA /* manrope-bold.ttf */,
-				9700EA882186C54500A6E4DA /* manrope-light.otf */,
-				9700EA8F2186C54500A6E4DA /* manrope-light.ttf */,
-				9700EA8D2186C54500A6E4DA /* manrope-medium.otf */,
-				9700EA902186C54500A6E4DA /* manrope-medium.ttf */,
-				9700EA862186C54500A6E4DA /* manrope-regular.otf */,
-				9700EA872186C54500A6E4DA /* manrope-regular.ttf */,
-				9700EA892186C54500A6E4DA /* manrope-semibold.otf */,
-				9700EA8B2186C54500A6E4DA /* manrope-semibold.ttf */,
-				9700EA8C2186C54500A6E4DA /* manrope-thin.otf */,
-				9700EA8E2186C54500A6E4DA /* manrope-thin.ttf */,
+				9759603021FD9425001B6516 /* OpenSans-Bold.ttf */,
+				9759603221FD942D001B6516 /* OpenSans-SemiBold.ttf */,
+				9759602E21FD941E001B6516 /* OpenSans-Regular.ttf */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -170,8 +143,8 @@
 		97664379217F1FAE00EB4C5F = {
 			isa = PBXGroup;
 			children = (
+				9759602D21FD9402001B6516 /* Assets */,
 				97C3EAE2218AF0FE00E70C50 /* Assets.xcassets */,
-				9700EA852186C52C00A6E4DA /* Assets */,
 				97664384217F1FAE00EB4C5F /* Demo */,
 				97664383217F1FAE00EB4C5F /* Products */,
 				3E581CEB744BFAE98DF07FD4 /* Pods */,
@@ -332,25 +305,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9700EA9C2186C54600A6E4DA /* manrope-medium.ttf in Resources */,
 				975BD1622196D7E600F0ADA7 /* SignUp.storyboard in Resources */,
-				9700EA992186C54600A6E4DA /* manrope-medium.otf in Resources */,
-				9700EA932186C54600A6E4DA /* manrope-regular.ttf in Resources */,
 				9759602A21FD5C1C001B6516 /* Secrets.plist in Resources */,
-				9700EA972186C54600A6E4DA /* manrope-semibold.ttf in Resources */,
-				9700EA9B2186C54600A6E4DA /* manrope-light.ttf in Resources */,
-				9700EA952186C54600A6E4DA /* manrope-semibold.otf in Resources */,
-				9700EA9D2186C54600A6E4DA /* manrope-bold.otf in Resources */,
-				9700EA982186C54600A6E4DA /* manrope-thin.otf in Resources */,
+				9759603321FD942D001B6516 /* OpenSans-SemiBold.ttf in Resources */,
 				97664390217F1FB000EB4C5F /* LaunchScreen.storyboard in Resources */,
 				979A13222191435E0019A29E /* Onboarding.storyboard in Resources */,
-				9700EA9A2186C54600A6E4DA /* manrope-thin.ttf in Resources */,
-				9700EA962186C54600A6E4DA /* manrope-bold.ttf in Resources */,
 				9759602C21FD5C4B001B6516 /* ExampleSecrets.plist in Resources */,
+				9759603121FD9425001B6516 /* OpenSans-Bold.ttf in Resources */,
 				9766438B217F1FAE00EB4C5F /* Main.storyboard in Resources */,
-				9700EA922186C54600A6E4DA /* manrope-regular.otf in Resources */,
+				9759602F21FD941E001B6516 /* OpenSans-Regular.ttf in Resources */,
 				97C3EAE3218AF0FF00E70C50 /* Assets.xcassets in Resources */,
-				9700EA942186C54600A6E4DA /* manrope-light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

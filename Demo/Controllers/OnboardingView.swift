@@ -17,14 +17,11 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 	@IBOutlet var doneButton: UIButton!
 	
 	var animationType: HeroDefaultAnimationType {
-		switch self.restorationIdentifier {
-		case "onboard7": return .slide(direction: .left)
-		default: return .slide(direction: .up)
-		}
+    return .slide(direction: .up)
 	}
 	
 	var onboardCompletion: Float {
-		return (["onboard1" : 0, "onboard2" : 1, "onboard3" : 2, "onboard4" : 3, "onboard5" : 4, "onboard6" : 5, "onboard7" : 6][self.restorationIdentifier] ?? 0 ) / 6
+		return (["onboard1" : 0, "onboard2" : 1, "onboard3" : 2, "onboard4" : 3, "onboard5" : 4, "onboard6" : 5][self.restorationIdentifier] ?? 0 ) / 5
 	}
 	
 	override func viewDidLoad() {
@@ -32,7 +29,7 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 		self.navigationController?.hero.navigationAnimationType = animationType
 		
 		let progressIndicator = UIProgressView.init(frame: CGRect.init(x: 0, y: self.view.frame.height - 2, width: self.view.frame.width, height: 20))
-		progressIndicator.tintColor = UIColor.appPink(a: 1)
+		progressIndicator.tintColor = UIColor.appBlue(a: 1.0)
 		progressIndicator.trackTintColor = .clear
 		progressIndicator.setProgress(onboardCompletion, animated: false)
 		progressIndicator.hero.id = "progress"
@@ -43,7 +40,7 @@ class OnboardingView: BaseView, UIGestureRecognizerDelegate {
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		let point = touches.first?.location(in: self.view)
-		if point!.x > self.view.frame.width/2 && self.restorationIdentifier != "onboard7" {
+		if point!.x > self.view.frame.width/2 && self.restorationIdentifier != "onboard6" {
 				self.performSegue(withIdentifier: "next", sender: self)
 		} else if point!.x < self.view.frame.width/2 {
 			self.navigationController?.popViewController(animated: true)
