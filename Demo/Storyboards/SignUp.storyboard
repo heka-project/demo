@@ -9,8 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="manrope-medium.otf">
-            <string>Manrope-Medium</string>
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
         </array>
         <array key="manrope-regular.ttf">
             <string>Manrope-Regular</string>
@@ -50,22 +56,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's start with your name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-qW-Bie">
-                                <rect key="frame" x="45.000000000000014" y="346" width="231.33333333333337" height="25"/>
-                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="44.999999999999986" y="346.33333333333331" width="227.66666666666663" height="24.666666666666686"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="f1"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lee Yong  Kang" placeholder="Enter name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWh-QL-nCN">
-                                <rect key="frame" x="45" y="381" width="230" height="50"/>
+                                <rect key="frame" x="45" y="381" width="215" height="50"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cCB-4s-Oi6"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="30"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="name"/>
@@ -76,11 +82,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-8v-yTl">
                                 <rect key="frame" x="45" y="501" width="285" height="50"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.50196078430000002" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kWu-Bm-eae"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -91,9 +97,10 @@
                                     <action selector="actionButtonPressed:" destination="2XO-X0-rXb" eventType="touchUpInside" id="nLb-NZ-9Ml"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="JZL-jt-YVf">
-                                <rect key="frame" x="45" y="271" width="54" height="55"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="JZL-jt-YVf">
+                                <rect key="frame" x="45" y="271.33333333333331" width="70" height="55"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="qKL-ay-Hru"/>
                                     <constraint firstAttribute="height" constant="55" id="tii-R2-GR3"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -101,8 +108,8 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So people know what to call you" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-nM-IqC">
-                                <rect key="frame" x="45" y="439" width="230" height="18"/>
-                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
+                                <rect key="frame" x="45" y="439" width="215" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -110,7 +117,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hJE-8v-yTl" firstAttribute="top" secondItem="BWh-QL-nCN" secondAttribute="bottom" constant="70" id="1bC-FP-IeX"/>
                             <constraint firstItem="BWh-QL-nCN" firstAttribute="leading" secondItem="gOz-qW-Bie" secondAttribute="leading" id="2Nz-be-FVY"/>
@@ -150,8 +157,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="5M4-Yt-Thi">
-                                <rect key="frame" x="45" y="175.66666666666666" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="5M4-Yt-Thi">
+                                <rect key="frame" x="45" y="176" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="blk-Zz-nhe"/>
                                     <constraint firstAttribute="width" secondItem="5M4-Yt-Thi" secondAttribute="height" multiplier="1:1" id="m3C-sg-yb5"/>
@@ -161,37 +168,37 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OW-gj-NwY">
-                                <rect key="frame" x="95" y="175.66666666666666" width="260" height="30"/>
-                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="95" y="176" width="260" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="22"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="name"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your NRIC No." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYb-yk-Ljy">
-                                <rect key="frame" x="44.999999999999986" y="235.66666666666666" width="175.66666666666663" height="24.999999999999972"/>
-                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="45.000000000000014" y="236" width="173.33333333333337" height="24.666666666666686"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="f1"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have your NRIC with you?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKl-gL-OXF">
-                                <rect key="frame" x="45" y="523" width="228" height="25"/>
-                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="44.999999999999986" y="523" width="223.66666666666663" height="24.666666666666629"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NRIC" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8la-fT-HEh">
-                                <rect key="frame" x="44.999999999999986" y="270.66666666666669" width="171.66666666666663" height="50"/>
+                                <rect key="frame" x="45" y="270.66666666666669" width="162.66666666666666" height="50"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3cl-uA-Kii"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="30"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="name"/>
@@ -201,8 +208,8 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For identification purposes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZD-Py-FLm">
-                                <rect key="frame" x="44.999999999999986" y="328.66666666666669" width="171.66666666666663" height="18"/>
-                                <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
+                                <rect key="frame" x="45" y="328.66666666666669" width="162.66666666666666" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -211,11 +218,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKg-B8-J2g">
                                 <rect key="frame" x="45" y="381.66666666666669" width="285" height="50"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.50196078430000002" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Xum-vX-SoF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Manrope-Semibold" family="Manrope" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -227,7 +234,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTI-Tg-WQU">
-                                <rect key="frame" x="45" y="573" width="285" height="67.333333333333371"/>
+                                <rect key="frame" x="45" y="572.66666666666663" width="285" height="67.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tTI-Tg-WQU" secondAttribute="height" multiplier="270:64" id="dWw-Xi-bep"/>
                                 </constraints>
@@ -243,7 +250,7 @@
                                 <rect key="frame" x="45" y="466.66666666666669" width="285" height="19"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPg-Gi-cCI">
-                                <rect key="frame" x="45" y="655.33333333333337" width="228" height="36"/>
+                                <rect key="frame" x="44.999999999999986" y="655" width="223.66666666666663" height="30.333333333333371"/>
                                 <string key="text">Works with NRIC, concession 
 passes, etc.</string>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="13"/>
@@ -251,7 +258,7 @@ passes, etc.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="r73-G0-dOE" firstAttribute="centerX" secondItem="orO-y2-Fmv" secondAttribute="centerX" id="06L-xf-0k3"/>
                             <constraint firstItem="XZD-Py-FLm" firstAttribute="width" secondItem="8la-fT-HEh" secondAttribute="width" id="1XS-93-lb4"/>
@@ -308,8 +315,8 @@ passes, etc.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="avatar" width="54.666667938232422" height="54.666667938232422"/>
         <image name="div" width="265" height="19"/>
+        <image name="logo-1" width="619.33331298828125" height="547.33331298828125"/>
         <image name="nric-button" width="270" height="64"/>
     </resources>
 </document>
