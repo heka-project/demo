@@ -36,7 +36,7 @@ class ScanView: BaseView {
 			self.view.alpha = 1
 		}
 		self.view.addParticleEffect(center: self.logo.center)
-		self.logo.rotateAnimation(key: "load", rep: .infinity, duration: 2.5)
+		self.logo.rotateAnimation(key: "load", rep: .infinity, duration: 4.0)
 		self.view.addRippleEffect(pos: self.view.center, size: self.logo.frame)
 		self.view.bringSubviewToFront(self.logo)
 	

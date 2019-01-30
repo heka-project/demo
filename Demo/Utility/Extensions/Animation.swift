@@ -17,8 +17,8 @@ extension UIView {
 		let cell = CAEmitterCell()
 		cell.birthRate = 3
 		cell.emissionRange = .pi * 2
-		cell.color = UIColor.appPink(a: 1.0).cgColor
-		cell.alphaRange = 1.0
+		cell.color = UIColor.appPink(a: 0.6).cgColor
+		cell.alphaRange = 0.5
 		cell.lifetime = 5
 		cell.velocity = 80
 		cell.scale = 0.6
@@ -45,8 +45,7 @@ extension UIView {
 		let shape = CAShapeLayer()
 		shape.bounds = size
 		shape.path = path.cgPath
-		shape.fillColor = UIColor.appPink(a: 0.1).cgColor
-		shape.strokeColor = UIColor.appPurple(a: 1).cgColor
+		shape.fillColor = UIColor.appPink(a: 0.3).cgColor
 		shape.lineWidth = 1
 		shape.position = pos
 		shape.opacity = 0

@@ -17,7 +17,6 @@ class Fragment {
 	var nodes: [[String: String]] = []
 
 	init() {
-		
 	}
 	
 	init(meta: [String: String]) {
