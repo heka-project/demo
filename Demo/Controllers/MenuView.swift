@@ -66,6 +66,7 @@ class MenuView: BaseView {
     self.view.addParticleEffect(center: self.logo.center)
     logo.rotateAnimation(key: "load", rep: .infinity, duration: 5.0)
     self.view.bringSubviewToFront(self.logo)
+    self.view.bringSubviewToFront(self.debugOverlay)
   }
   
   @IBAction func scanButtonPressed(_ sender: Any) {
