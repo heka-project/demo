@@ -65,18 +65,21 @@ class P2PService: NSObject {
 				try self.session.send(try! JSON(parseJSON: fragment.toJSONString() ?? "{}").rawData(), toPeers: session.connectedPeers, with: .reliable)
 			} catch {
 				print("P2P: ⚠️ Fragment delivery failed with error \(error.localizedDescription)")
+        debug.append("P2P: ⚠️ Fragment delivery failed with error \(error.localizedDescription)\n")
 			}
 		}
 	}
 	
 	internal func sayHello() {
 		print("P2P: 👋 Saying hello...")
+    debug.append("P2P: 👋 Saying hello...\n")
 		let fragmentMessage = FragmentMessage(type: .SAY_HELLO, fragment: self.fragmentCache!)
 		self.send(fragmentMessage)
 	}
 	
 	internal func updatePeers() {
 		print("P2P: 🔗 Updating peers...")
+    debug.append("P2P: 🔗 Updating peers...\n")
 		let fragmentMessage = FragmentMessage(type: .UPDATE, fragment: self.fragmentCache!)
 		self.send(fragmentMessage)
 	}

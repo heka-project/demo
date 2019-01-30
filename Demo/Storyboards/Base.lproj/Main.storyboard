@@ -39,8 +39,8 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oso-R3-c6o">
-                                <rect key="frame" x="138.33333333333334" y="487.33333333333331" width="98.666666666666657" height="25.999999999999943"/>
-                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="19"/>
+                                <rect key="frame" x="136.66666666666666" y="487.33333333333331" width="102" height="25.999999999999943"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
                                 <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -124,9 +124,10 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bly-qR-62f">
                                 <rect key="frame" x="252.66666666666666" y="713.33333333333337" width="97.333333333333343" height="48.666666666666629"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.40000000000000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal">
+                                <state key="normal" title="DEBUG">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -156,9 +157,12 @@
                                     <action selector="scanButtonPressed:" destination="UFn-66-1P9" eventType="touchUpInside" id="Fof-1u-GOS"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hands-helping-solid" translatesAutoresizingMaskIntoConstraints="NO" id="XGW-mC-ZzT">
-                                <rect key="frame" x="270" y="723.33333333333337" width="62.666666666666686" height="28.666666666666629"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 peers connected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXU-xq-R9Z">
+                                <rect key="frame" x="119.00000000000001" y="177" width="137.33333333333337" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -167,15 +171,14 @@
                             <constraint firstItem="LZg-Ys-DEO" firstAttribute="top" secondItem="QBl-pV-liK" secondAttribute="bottom" constant="3" id="5QX-qs-8lm"/>
                             <constraint firstItem="Bly-qR-62f" firstAttribute="width" secondItem="Dwg-Mw-wLe" secondAttribute="width" multiplier="0.3" id="5we-pO-qtg"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="trailing" secondItem="ppw-cX-3bR" secondAttribute="trailing" constant="-25" id="85T-Kp-YOf"/>
+                            <constraint firstItem="VXU-xq-R9Z" firstAttribute="centerX" secondItem="G5Q-31-aRp" secondAttribute="centerX" id="Eky-Lv-LW0"/>
                             <constraint firstItem="G5Q-31-aRp" firstAttribute="centerY" secondItem="Dfa-yf-C8U" secondAttribute="centerY" id="FqK-kr-XbY"/>
+                            <constraint firstItem="VXU-xq-R9Z" firstAttribute="top" secondItem="G5Q-31-aRp" secondAttribute="bottom" constant="23" id="HaJ-XG-19i"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="top" secondItem="LZg-Ys-DEO" secondAttribute="bottom" constant="14" id="HnL-wt-NNg"/>
                             <constraint firstItem="Bly-qR-62f" firstAttribute="top" secondItem="Dwg-Mw-wLe" secondAttribute="bottom" constant="15" id="J6o-Hf-pRO"/>
                             <constraint firstItem="QBl-pV-liK" firstAttribute="leading" secondItem="Dwg-Mw-wLe" secondAttribute="leading" id="Kvn-9h-YQe"/>
-                            <constraint firstItem="XGW-mC-ZzT" firstAttribute="centerY" secondItem="Bly-qR-62f" secondAttribute="centerY" id="MKU-mG-WcP"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="height" secondItem="5nK-y8-gAz" secondAttribute="height" multiplier="0.2" id="QZe-EV-OTU"/>
-                            <constraint firstItem="XGW-mC-ZzT" firstAttribute="centerX" secondItem="Bly-qR-62f" secondAttribute="centerX" id="RTS-NA-U1K"/>
                             <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="QBl-pV-liK" secondAttribute="trailing" constant="30" id="Uim-R9-jGu"/>
-                            <constraint firstItem="XGW-mC-ZzT" firstAttribute="top" secondItem="Bly-qR-62f" secondAttribute="top" constant="10" id="WIQ-Ox-HhA"/>
                             <constraint firstItem="IlS-xh-kOD" firstAttribute="leading" secondItem="ppw-cX-3bR" secondAttribute="leading" constant="25" id="Woc-Nt-5Cd"/>
                             <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="Dfa-yf-C8U" secondAttribute="trailing" constant="35" id="Z8n-0X-Nbn"/>
                             <constraint firstItem="LZg-Ys-DEO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QBl-pV-liK" secondAttribute="leading" id="ZT8-gr-jKv"/>
@@ -188,7 +191,6 @@
                             <constraint firstItem="Bly-qR-62f" firstAttribute="height" secondItem="Dwg-Mw-wLe" secondAttribute="height" multiplier="0.3" id="rc7-AP-dsg"/>
                             <constraint firstItem="Dwg-Mw-wLe" firstAttribute="leading" secondItem="ppw-cX-3bR" secondAttribute="leading" constant="25" id="tY1-KN-wpO"/>
                             <constraint firstItem="G5Q-31-aRp" firstAttribute="centerX" secondItem="5nK-y8-gAz" secondAttribute="centerX" id="v1z-YX-yVq"/>
-                            <constraint firstItem="XGW-mC-ZzT" firstAttribute="leading" secondItem="Bly-qR-62f" secondAttribute="trailing" constant="-80" id="xUu-B8-b8J"/>
                             <constraint firstItem="ppw-cX-3bR" firstAttribute="trailing" secondItem="LZg-Ys-DEO" secondAttribute="trailing" constant="30" id="y0o-sR-sJH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ppw-cX-3bR"/>
@@ -199,12 +201,15 @@
                     <connections>
                         <outlet property="actionButton" destination="IlS-xh-kOD" id="dXD-A3-bhB"/>
                         <outlet property="connectionIndicator" destination="Dfa-yf-C8U" id="uFz-Qu-oC9"/>
+                        <outlet property="debugOverlay" destination="QTN-PF-lWw" id="qck-Pc-paG"/>
                         <outlet property="footerButton" destination="Bly-qR-62f" id="4he-6z-fw9"/>
                         <outlet property="infoDescription" destination="B1L-fj-TSR" id="hSq-Zt-GMZ"/>
                         <outlet property="infoHeader" destination="vjZ-e5-eBb" id="pxb-Va-c7z"/>
+                        <outlet property="logDump" destination="Stn-0n-9xs" id="0zh-jq-oPT"/>
                         <outlet property="logo" destination="G5Q-31-aRp" id="4xY-JG-37c"/>
                         <outlet property="nameLabel" destination="QBl-pV-liK" id="Lq5-AQ-LkN"/>
                         <outlet property="nricLabel" destination="LZg-Ys-DEO" id="nPi-7X-WCx"/>
+                        <outlet property="peerLabel" destination="VXU-xq-R9Z" id="nvx-v9-n1X"/>
                         <outletCollection property="roundables" destination="Dwg-Mw-wLe" collectionClass="NSMutableArray" id="RsF-n1-8CY"/>
                         <outletCollection property="roundables" destination="IlS-xh-kOD" collectionClass="NSMutableArray" id="tYh-sb-DNf"/>
                         <outletCollection property="roundables" destination="Bly-qR-62f" collectionClass="NSMutableArray" id="Rhp-l4-SdT"/>
@@ -212,6 +217,43 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6J7-Wx-3n0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="QTN-PF-lWw" userLabel="Debug View">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" contentMode="scaleToFill" editable="NO" text="The logs" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stn-0n-9xs">
+                            <rect key="frame" x="16" y="16" width="268" height="484"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gz8-Ra-uiN">
+                            <rect key="frame" x="200" y="464" width="100" height="36"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="HRE-9m-P7R"/>
+                                <constraint firstAttribute="width" constant="100" id="nCH-We-9vA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" red="0.19215686269999999" green="0.50196078430000002" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                            </state>
+                            <connections>
+                                <action selector="dismissDebugOverlay:" destination="UFn-66-1P9" eventType="touchUpInside" id="6g5-T9-MKp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.88465558978873238" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Stn-0n-9xs" firstAttribute="top" secondItem="QTN-PF-lWw" secondAttribute="top" constant="16" id="1dP-7X-u7J"/>
+                        <constraint firstAttribute="bottom" secondItem="Gz8-Ra-uiN" secondAttribute="bottom" id="Jmt-Wf-Tfy"/>
+                        <constraint firstAttribute="bottom" secondItem="Stn-0n-9xs" secondAttribute="bottom" id="LFt-iT-HWH"/>
+                        <constraint firstItem="Stn-0n-9xs" firstAttribute="leading" secondItem="TNl-QU-1qm" secondAttribute="leading" constant="16" id="klY-pr-rUl"/>
+                        <constraint firstItem="TNl-QU-1qm" firstAttribute="trailing" secondItem="Gz8-Ra-uiN" secondAttribute="trailing" id="kvw-85-mYb"/>
+                        <constraint firstItem="TNl-QU-1qm" firstAttribute="trailing" secondItem="Stn-0n-9xs" secondAttribute="trailing" constant="16" id="odN-1W-9Uk"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="TNl-QU-1qm"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="896.79999999999995" y="136.69950738916256"/>
         </scene>
@@ -340,7 +382,6 @@
     </scenes>
     <resources>
         <image name="conn-offline" width="33" height="44"/>
-        <image name="hands-helping-solid" width="50.666667938232422" height="40.333332061767578"/>
         <image name="loader" width="329.66665649414062" height="329.66665649414062"/>
     </resources>
 </document>

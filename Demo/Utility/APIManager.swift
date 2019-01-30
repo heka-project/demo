@@ -33,10 +33,12 @@ class APIManager {
 			]
 		]
 		print("API: Register user with params... \(params)")
+    debug.append("API: Register user with params... \(params)\n")
 		
 		self.request(path: .user, params: params, method: .post) { (succ, res) in
 			if !succ {
 				print("API: User account failed to update/register")
+        debug.append("API: User account failed to update/register\n")
 			}
 			callback(succ)
 		}
@@ -47,10 +49,12 @@ class APIManager {
 			"queryId": nric
 		]
 		print("API: Verifying user with params ... \(params)")
+    debug.append("API: Verifying user with params ... \(params)\n")
 		self.request(path: .user, params: params, method: .get) { (succ, res) in
 			if succ {
 				if let uid = res?.dictionaryValue["0"]?.dictionaryObject!["uid"] {
 					print("API: User with UID \(uid) already exists")
+          debug.append("API: User with UID \(uid) already exists\n")
 					callback(false)
 				} else {
 					callback(true)

@@ -11,6 +11,20 @@ import UIKit
 
 let secrets = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "Secrets", ofType: "plist") ?? "" )!
 
+var debug: String = """
+_______ _       _______
+|\\     /(  ____ | \\    /(  ___  )
+| )   ( | (    \\|  \\  / | (   ) |
+| (___) | (__   |  (_/ /| (___) |
+|  ___  |  __)  |   _ ( |  ___  |
+| (   ) | (     |  ( \\ \\| (   ) |
+| )   ( | (____/|  /  \\ \\ | ) ( |
+|/     \\(_______|_/    \\|/     \\|
+
+(\(P2PClientID!))
+\n\n
+"""
+
 var userName: String {
 	get {return UserDefaults.standard.string(forKey: "user-name") ?? ""}
 	set {UserDefaults.standard.set(newValue, forKey: "user-name")}

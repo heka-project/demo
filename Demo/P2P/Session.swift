@@ -17,11 +17,14 @@ extension P2PService: MCSessionDelegate {
 		switch state {
 		case .connecting:
 			print("P2P: 🔗 - Connecting to peer \(peerID.displayName)")
+      debug.append("P2P: 🔗 - Connecting to peer \(peerID.displayName)\n")
 		case .connected:
 			print("P2P: ✅ - Connected to peer \(peerID.displayName)")
+      debug.append("P2P: ✅ - Connected to peer \(peerID.displayName)\n")
 			self.sayHello()
 		case .notConnected:
 			print("P2P: ⚠️ - Lost connection to peer \(peerID.displayName)")
+      debug.append("P2P: ⚠️ - Lost connection to peer \(peerID.displayName)\n")
 			fragmentCache!.removeNode(id: peerID.displayName)
 			self.delegate?.networkUpdated(manager: self, fragment: fragmentCache!)
 			if fragmentCache!.nodes.count <= 1 {
@@ -40,6 +43,7 @@ extension P2PService: MCSessionDelegate {
 		}
 		
 		print("Network: |==> \(networkJSON)")
+    debug.append("Network: |==> \(networkJSON)\n")
 		
 		let fragmentMessage = Mapper<FragmentMessage>().map(JSON: networkJSON.dictionaryObject!)
 
@@ -60,12 +64,14 @@ extension P2PService: MCSessionDelegate {
 		case .UPDATE:
 			if fragmentMessage.fragment.md5 != self.fragmentCache!.md5 {
 				print("P2P: ⚠️ Will update self and peers...")
+        debug.append("P2P: ⚠️ Will update self and peers...\n")
 				self.fragmentCache!.updateFragment(newFragment: fragmentMessage.fragment)
 				self.delegate?.networkUpdated(manager: self, fragment: fragmentMessage.fragment)
 				// Update other peers on the network
 				self.updatePeers()
 			} else {
 				print("P2P: ✅ Node already has latest fragment, not updating.")
+        debug.append("P2P: ✅ Node already has latest fragment, not updating.\n")
 			}
 		}
 	}
